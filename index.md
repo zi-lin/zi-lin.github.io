@@ -35,7 +35,7 @@ Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/EN/People/Fac
 * **Semantic Role Labeling for Learner Chinese: the Importance of Syntactic Parsing and L2-L1 Parallel Data**\\
 **Zi Lin**, Yuguang Duan, Yuanyuan Zhao, Weiwei Sun, Xiaojun Wan\\
 *In Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP), 2018*\\
-\[[**Conference**](http://emnlp2018.org/)\] \[[**PDF**](http://aclweb.org/anthology/D18-1414)\] \[[**Arxiv**](https://arxiv.org/abs/1808.09409)\] \[[**Data**](https://github.com/PKUzilin/srl4il)\]
+\[[**Conference**](http://emnlp2018.org/)\] \[[**PDF**](http://aclweb.org/anthology/D18-1414)\] \[[**Arxiv**](https://arxiv.org/abs/1808.09409)\] \[[**Data**](https://github.com/pkucoli/srl4il)\]
 
 * **Is Argument Structure of Learner Chinese Understandable: A Corpus-Based Analysis**\\
 Yuguang Duan, **Zi Lin**, Weiwei Sun\\

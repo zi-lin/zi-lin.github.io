@@ -1,6 +1,7 @@
 ---
 title: "Brief Introduction to Ontologies"
 date: 2017-09-21
+tag: Meaning Representation
 ---
 
 Have you ever heard of WordNet, HowNet, FrameNet and ConceptNet? There are different kinds of ontologies towards lexicon, syntax and commonsense knowledge.

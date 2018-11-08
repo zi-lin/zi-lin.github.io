@@ -1,6 +1,7 @@
 ---
 title: "Brief Introduction to Chinese Morphology"
 date: 2017-03-06
+tag: Linguistics
 ---
 
 This is the draft I wrote for my presentation for the course called **English Lexicoiogy**, where I was asked to introduce something about Chinese morphology to student from College of Foreign Languages.

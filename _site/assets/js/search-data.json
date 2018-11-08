@@ -1,1 +1,21 @@
-var store = []
+var store = [{
+        "title": "Brief Introduction to Chinese Morphology",
+        "excerpt":"This is the draft I wrote for my presentation for the course called English Lexicoiogy, where I was asked to introduce something about Chinese morphology to student from College of Foreign Languages. Chinese morphology, or rather, Chinese word-formation is quite different from English for it has less derivation. Also, parataxis...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/chinese-morphology/"
+      },{
+        "title": "Build a Simple C Compiler with a Parse Tree!",
+        "excerpt":"Hi, there! I has completed my assignment for the course called Principles of Compilers eventually - building a simple C compiler. Additionally, I also wrote a Python draft to visualize the parse tree :) For more information about the process, please click here. ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/build-c-compiler/"
+      },{
+        "title": "Brief Introduction to Ontologies",
+        "excerpt":"Have you ever heard of WordNet, HowNet, FrameNet and ConceptNet? There are different kinds of ontologies towards lexicon, syntax and commonsense knowledge. I have made a slides helping you to learn something about them, click here if you are interested! ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/intro-ontology/"
+      },{
+        "title": "Brief Introduction to Abstract Meaning Representation",
+        "excerpt":"AMR (Abstract Meaning Representation), is a set of sentences paired with simple, readable semantic representations. Remember that we have talked about FrameNet, a well-known ontology for frame semantic representations. If you want to know more about AMR, click here. ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/intro-amr/"
+      }]

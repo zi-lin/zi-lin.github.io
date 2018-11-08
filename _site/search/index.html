@@ -37,7 +37,7 @@
 
 </head>
 
-  <body class="layout--home  ">
+  <body class="layout--search  ">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -83,77 +83,14 @@
         
       </header>
       <div class="page-content">
-        <p>I’m an undergraduate student in the <a href="http://chinese.pku.edu.cn/"><strong>Department of Chinese language and literature</strong></a> at <a href="http://pku.edu.cn"><strong>Peking University</strong></a>. I use Computational Linguistics methods to study morphology and semantics in Chinese. My work touches on the fields of Computational Linguistics, Natural Language Processing and Traditional Linguistics.</p>
+        
 
-<h2 id="education">Education</h2>
-<ul>
-  <li>
-    <p>The Department of Chinese Language and Literature, Peking University<br />
-<em>Sept. 2015 - Present</em><br />
-B.A. in <strong>Computational and Applied Linguistics</strong></p>
-  </li>
-  <li>
-    <p>Summer Session, University of California at Berkeley<br />
-<em>Summer 2017</em><br />
-Selected two courses</p>
-  </li>
-</ul>
 
-<h2 id="experience">Experience</h2>
-<ul>
-  <li>
-    <p><strong>Language Computing and Web Mining Group, Institute of Computer Sicence and Techolology, Peking University</strong><br />
-<em>Aug. 2017 - Present</em><br />
-Research Assistant, Advisor: <a href="http://www.icst.pku.edu.cn/lcwm/wsun/"><strong>Weiwei Sun</strong></a></p>
-  </li>
-  <li>
-    <p><strong>Key Laboratory of Computational Linguistics, Peking University</strong><br />
-<em>Jul. 2016 - Present</em><br />
-Research Assistant, Advisor: <a href="http://eecs.pku.edu.cn/EN/People/Faculty/Detail/?ID=6029"><strong>Yang Liu</strong></a></p>
-  </li>
-</ul>
+<form onsubmit="return false;">
+  <input type="input" id="search" class="search-input" placeholder="Enter your search term..." autofocus>
+</form>
 
-<h2 id="publication">Publication</h2>
-<h3 id="conference">Conference</h3>
-<ul>
-  <li>
-    <p><strong>Implanting Rational Knowledge into Distributed Representation at Morpheme Level</strong><br />
-<strong>Zi Lin</strong>, Yang Liu<br />
-<em>In Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2019</em><br />
-[<a href="https://aaai.org/Conferences/AAAI-19/"><strong>Conference</strong></a>]</p>
-  </li>
-  <li>
-    <p><strong>Semantic Role Labeling for Learner Chinese: the Importance of Syntactic Parsing and L2-L1 Parallel Data</strong><br />
-<strong>Zi Lin</strong>, Yuguang Duan, Yuanyuan Zhao, Weiwei Sun, Xiaojun Wan<br />
-<em>In Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP), 2018</em><br />
-[<a href="http://emnlp2018.org/"><strong>Conference</strong></a>] [<a href="http://aclweb.org/anthology/D18-1414"><strong>PDF</strong></a>] [<a href="https://arxiv.org/abs/1808.09409"><strong>Arxiv</strong></a>] [<a href="https://github.com/PKUzilin/srl4il"><strong>Data</strong></a>]</p>
-  </li>
-  <li>
-    <p><strong>Is Argument Structure of Learner Chinese Understandable: A Corpus-Based Analysis</strong><br />
-Yuguang Duan, <strong>Zi Lin</strong>, Weiwei Sun<br />
-<em>In Proceedings of the International Conference on Bilingual Learning and Teaching (ICBLT), 2018</em><br />
-[<a href="http://ouhk2018icblt.mozello.com/"><strong>Conference</strong></a>]</p>
-  </li>
-</ul>
-
-<h3 id="journal">Journal</h3>
-<ul>
-  <li><strong>Towards a Description of Chinese Morpheme Conceptions and Semantic Word Formation</strong><br />
-Yang Liu, <strong>Zi Lin</strong>, Sichen Kang<br />
-<em>Journal of Chinese Information Processing (Vol. 32, Issue(2): 12-21), 2018</em><br />
-[<a href="http://www.cips-cl.org/static/CCL2017/en/callfor.html"><strong>Conference</strong></a>] [<a href="http://jcip.cipsc.org.cn/CN/article/downloadArticleFile.do?attachType=PDF&amp;id=2510"><strong>PDF</strong></a>]<br />
-*: this paper also appears in <em>the 16th China National Conference on Computational Linguistics (CCL), 2017</em></li>
-</ul>
-
-<h2 id="honor--award">Honor &amp; Award</h2>
-<ul>
-  <li>2018 <strong>National Scholarship</strong> (Top 1%), Peking University</li>
-  <li>2017 <strong>Award for Academic Excellents</strong>, Peking University</li>
-  <li>2017 <strong>EAP Scholarship</strong>, Peking University</li>
-  <li>2016 <strong>Merit Student</strong>, Peking University</li>
-  <li>2016 <strong>Kwang-Hua Scholarship</strong>, Peking University</li>
-</ul>
-
+<div id="results"></div>
 
 
         
@@ -178,6 +115,68 @@ Yang Liu, <strong>Zi Lin</strong>, Sichen Kang<br />
   <script src="/assets/js/main.min.js"></script>
   <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
 
+<script src="http://localhost:4000/assets/js/lunr/lunr.min.js"></script>
+  <script src="http://localhost:4000/assets/js/search-data.json"></script>
+  <script>
+    var idx = lunr(function () {
+      
+      // the, the normal lunr index initialization
+      this.field('title')
+      this.field('excerpt')
+      this.field('categories')
+      this.field('tags')
+      this.ref('id')
+
+      this.pipeline.remove(lunr.trimmer)
+
+      // add documents to index
+      for (var item in store) {
+        this.add({
+          title: store[item].title,
+          excerpt: store[item].excerpt,
+          categories: store[item].categories,
+          tags: store[item].tags,
+          id: item
+        })
+      }
+    });
+
+    console.log(jQuery.type(idx));
+
+    $(document).ready(function () {
+      $('input#search').on('keyup', function () {
+        var resultdiv = $('#results');
+        var query = $(this).val().toLowerCase();
+        var result =
+          idx.query(function (q) {
+            query.split(lunr.tokenizer.separator).forEach(function (term) {
+              q.term(term, { boost: 100 })
+              if (query.lastIndexOf(" ") != query.length - 1) {
+                q.term(term, { usePipeline: false, wildcard: lunr.Query.wildcard.TRAILING, boost: 10 })
+              }
+              if (term != "") {
+                q.term(term, { usePipeline: false, editDistance: 1, boost: 1 })
+              }
+            })
+          });
+        resultdiv.empty();
+        resultdiv.prepend('<p class="results__found">' + result.length + ' Result(s) found</p>');
+        for (var item in result) {
+          var ref = result[item].ref;
+          var searchitem =
+            '<article class="entry">' +
+              '<h3 class="entry-title">' +
+                '<a href="' + store[ref].url + '">' + store[ref].title + '</a>' +
+              '</h3>' +
+              '<div class="entry-excerpt">' +
+                '<p>' + store[ref].excerpt.split(" ").splice(0, 20).join(" ") + '...</p>' +
+              '</div>' +
+            '</article>';
+          resultdiv.append(searchitem);
+        }
+      });
+    });
+  </script>
 
   </body>
 

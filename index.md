@@ -7,6 +7,8 @@ search_omit: true
 
 I'm an undergraduate student in the [**Department of Chinese language and literature**](http://chinese.pku.edu.cn/) at [**Peking University**](http://pku.edu.cn). I use Computational Linguistics methods to study morphology and semantics in Chinese. My work touches on the fields of Computational Linguistics, Natural Language Processing and Traditional Linguistics.
 
+I am applying for a PhD program for Fall 2019, please do not hesitate to contact me if you are interested!
+
 ## Education
 * The Department of Chinese Language and Literature, Peking University\\
 *Sept. 2015 - Present*\\

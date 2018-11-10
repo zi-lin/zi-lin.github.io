@@ -130,7 +130,9 @@
   <p>[I]<sub>ARG0</sub> [<strong>eat</strong>]<sub>predicate</sub> [breakfast]<sub>ARG1</sub> [quickly]<sub>ARGM-MNR</sub> [in the car]<sub>ARGM-LOC</sub> [this morning]<sub>ARGM-TMP</sub> [because I was in a hurry]<sub>ARGM-CAU</sub> .</p>
 </blockquote>
 
-<p>The argument structure of each predicate is outlined in the PropBank frame file for that predicate. The frame file denotes the correspondences between numbered arguments and semantic roles, as this is somewhat unique for each predicate. Numbered arguments reflect either the arguments that are requied for the valency of a predicate (e.g., agent, patient, benefactive), or if not requied, those that occur with high-frequency in actual usage. Although numbered arguments correspond to slightly different semantic roles given the usage of each predicate, in general numbered arguments correspond to the following semantic roles:</p>
+<p>The argument structure of each predicate is outlined in the PropBank frame file for that predicate. The frame file denotes the correspondences between numbered arguments and semantic roles, as this is somewhat unique for each predicate.</p>
+
+<p>Numbered arguments reflect either the arguments that are requied for the valency of a predicate (e.g., agent, patient, benefactive), or if not requied, those that occur with high-frequency in actual usage. Although numbered arguments correspond to slightly different semantic roles given the usage of each predicate, in general numbered arguments correspond to the following semantic roles:</p>
 
 <table>
   <tbody>
@@ -155,14 +157,29 @@
   </tbody>
 </table>
 
+<h2 id="framenet">FrameNet</h2>
+<p>The FrameNet project is to design a lexical database of English based on a linguistic theory called <strong>Frame Semantics</strong>. The meaning of most words can best be understood on the basis of a semantic frame, and the basic assumption on which the frames are built is that each word evokes a particular situation with particular participants<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>.</p>
+
+<p>For example, the concept of <em>eat</em> usually involves a person doing the eating (<code class="highlighter-rouge">Ingester</code>), the food that is to be eaten (<code class="highlighter-rouge">Ingestibles</code>). In FrameNet, this event is represented as a frame called <code class="highlighter-rouge">Ingestion</code>, while the <code class="highlighter-rouge">Ingester</code> and <code class="highlighter-rouge">Ingestibles</code> are all frame elements (FEs), and predicates <em>eat</em> evoking frames are called lexical unites (LUs). One frame can have multiple lexical unites, e.g., for the frame <code class="highlighter-rouge">Ingestion</code>, we can have <em>consume, devour, drink, eat, fead</em>, etc.</p>
+
+<blockquote>
+  <p>[I]<sub>Ingester</sub> [<strong>eat</strong>]<sub>LUs</sub> [breakfast]<sub>Ingestibles</sub> [quickly]<sub>Manner</sub> [in the car]<sub>Place</sub> [this morning]<sub>Time</sub> because I was in a hurry.</p>
+</blockquote>
+
+<h2 id="verbnet">VerbNet</h2>
+
+<blockquote>
+  <p>[I]<sub>Agent</sub> [<strong>eat</strong>]<sub>Verb</sub> [breakfast]<sub>Patient</sub> quickly in the car this morning because I was in a hurry.</p>
+</blockquote>
+
 <h1 id="data">Data</h1>
 
 <ul>
   <li>
-    <p><strong><a href="http://www.lsi.upc.edu/~srlconll/conll05st-release.tar.gz">CoNLL-2005</a>:</strong> The CoNLL-2005 dataset takes section 2-21 of the Wall Street Journal (WSJ) corpus as training set, and section 24 as development set. The test set consist of section 23 of the <strong>WSJ</strong> corpus (in-domain test) as well as 3 section from the <strong>Brown</strong> corpus (out-of-domain test) <sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>.</p>
+    <p><strong><a href="http://www.lsi.upc.edu/~srlconll/conll05st-release.tar.gz">CoNLL-2005</a>:</strong> The CoNLL-2005 dataset takes section 2-21 of the Wall Street Journal (WSJ) corpus as training set, and section 24 as development set. The test set consist of section 23 of the <strong>WSJ</strong> corpus (in-domain test) as well as 3 section from the <strong>Brown</strong> corpus (out-of-domain test) <sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>.</p>
   </li>
   <li>
-    <p><strong><a href="http://conll.cemantix.org/2012/data.html">CoNLL-2012</a>:</strong> The CoNLL-2012 dataset is extracted from the OntoNotes v5.0 corpus <sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>. The description and separation of training, development and test set can be found in <a href="http://www.aclweb.org/anthology/W13-3516">Pardhan et al. (2013)</a>.</p>
+    <p><strong><a href="http://conll.cemantix.org/2012/data.html">CoNLL-2012</a>:</strong> The CoNLL-2012 dataset is extracted from the OntoNotes v5.0 corpus <sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>. The description and separation of training, development and test set can be found in <a href="http://www.aclweb.org/anthology/W13-3516">Pardhan et al. (2013)</a>.</p>
   </li>
 </ul>
 
@@ -318,10 +335,13 @@
       <p>Mitchell P. Marcus, Mary Ann Marcinkiewicz, and Beatrice Santorini. 1993. Building a large annotated corpus of english: the penn treebank. Computational Linguistics, 19(2):313-330. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:3">
-      <p>Xavier Carreras and Lluis Marquez. 2005. Introduction to the conll-2005 shared task: Semantic role labeling. In CoNLL. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+      <p>Charles J Fillmore. 1968. The Case for Case. Universals in Linguistic Theory. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:4">
-      <p>Sameer Pradhan, Alessandro Moschitti, Nianwen Xue, Hwee Tou Ng, Anders Bjorkelund, Olga Uryupina, Yuchen Zhang, and Zhi Zhong. 2013. Towards robust linguistic analysis using ontonotes. In CoNLL. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+      <p>Xavier Carreras and Lluis Marquez. 2005. Introduction to the conll-2005 shared task: Semantic role labeling. In CoNLL. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>Sameer Pradhan, Alessandro Moschitti, Nianwen Xue, Hwee Tou Ng, Anders Bjorkelund, Olga Uryupina, Yuchen Zhang, and Zhi Zhong. 2013. Towards robust linguistic analysis using ontonotes. In CoNLL. <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>

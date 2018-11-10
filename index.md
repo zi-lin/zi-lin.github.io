@@ -27,6 +27,10 @@ Research Assistant, Advisor: [**Weiwei Sun**](http://www.icst.pku.edu.cn/lcwm/ws
 *Jul. 2016 - Present*\\
 Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/EN/People/Faculty/Detail/?ID=6029)
 
+* **Chinese Language Processing Group, Computer Science Department, Brandeis University**\\
+*Jul. 2018 - Sept. 2018*\\
+Research Assistant, Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/)
+
 ## Publication
 ### Conference
 * **Implanting Rational Knowledge into Distributed Representation at Morpheme Level**\\

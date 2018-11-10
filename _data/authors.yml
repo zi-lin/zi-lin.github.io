@@ -1,16 +1,24 @@
 # Sample Authors
 # Remove file or replace with your own
 
-Billy Rick:
-  name: Billy Rick
-  picture: /images/bio-photo-2.jpg
-  twitter: "@billyrick"
+Zi Lin:
+  name: "Zi Lin"
+  picture: /images/zilin.jpg
+  twitter: "@zilin97"
+  github: "zi-lin"
   links:
     - title: Twitter
-      url: https://twitter.com/billyrick
+      url: https://twitter.com/zilin97
       icon: fab fa-twitter-square
+    - title: Github
+      url: https://github.com/zi-lin
+      icon: fab fa-github-square
 
-Cornelius Fiddlebone:
-  name: Cornelius Fiddlebone
-  picture: /images/bio-photo.jpg
-  twitter: corneliusfiddlebone
+Zhuohan Li:
+  name: "Zhuohan Li"
+  picture: https://zhuohan.li/img/photo.jpg
+  github: "zhuohan123"
+  links:
+    - title: Github
+      url: https://github.com/zhuohan123
+      icon: fab fa-github-square

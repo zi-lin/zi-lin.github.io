@@ -103,6 +103,8 @@
         </li>
       
     
+      
+    
   
     
       
@@ -121,6 +123,14 @@
         </li>
       
     
+      
+    
+      
+        <li>
+          <a href="#nlp-task">
+            <strong>NLP Task</strong> <span class="taxonomy-count">1</span>
+          </a>
+        </li>
       
     
   
@@ -212,6 +222,8 @@
       </section>
     
   
+    
+  
 
   
     
@@ -301,6 +313,265 @@
       </section>
     
   
+    
+  
+    
+      <section id="nlp-task" class="taxonomy-section">
+        <h2 class="taxonomy-title">NLP Task</h2>
+        <div class="entries-list">
+          
+            
+
+<article class="entry h-entry">
+  <header class="entry-header">
+    <h3 class="entry-title p-name">
+      
+        <a href="/SRL/" rel="bookmark">Semantic Role Labeling
+</a>
+      
+    </h3>
+    
+  </header>
+  
+    <div class="entry-excerpt p-summary">
+      
+        <h1 id="introduction">Introduction</h1>
+
+<p><strong>Semantic Role Labeling (SRL)</strong>, sometimes called <em>shallow semantic parsing</em>, is a process in natrual language processing that assigns semantic roles to constituents or their head words in a sentence according to their relationship to the predicates expressed in the sentence. Typical semantic roles can be divided into core <strong>arguments</strong> and <strong>adjuncts</strong>. The core arguments include <em>Agent, Patient, Source, Goal</em>, etc, While the adjunts include <em>Location, Time, Manner, Cause</em>, etc.</p>
+
+<p>For example, in the sentence <code class="highlighter-rouge">I ate breakfast quickly in the car this morning because I was in a hurry</code>, we can have the labeled sentence like this:</p>
+
+<blockquote>
+  <p>[I]<sub>agent</sub> [<strong>eat</strong>]<sub>predicate</sub> [breakfast]<sub>patient</sub> [quickly]<sub>manner</sub> [in the car]<sub>location</sub> [this morning]<sub>time</sub> [because I was in a hurry]<sub>cause</sub> .</p>
+</blockquote>
+
+<h1 id="source">Source</h1>
+<p>There are mainly three sources for SRL, namely, <a href="https://propbank.github.io/">PropBank</a>, <a href="https://framenet.icsi.berkeley.edu/fndrupal/">FrameNet</a> and <a href="https://verbs.colorado.edu/~mpalmer/projects/verbnet.html">VerbNet</a>.</p>
+
+<h2 id="propbank">PropBank</h2>
+<p>PropBank is a corpus in which the arguments of each predicate are annotated with their semantic roles in relation to the predicate <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. Currently, all the PropBank annotations are done on top of the phrase structure annotation of the <strong>Pen TreeBank</strong> <sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>. In addition to semantic role annotation, PropBank annotation requires the choice of a sense ID (also known as <em>frameset</em> or <em>roleset</em> ID) for each predicate. Thus, for each verb in every tree (representing the phrase structure of the corresponding sentence), PropBank has the instance that consists of the sense ID of the predicate (e.g. eat.01) and its arguments labeled with semantic roles.</p>
+
+<p>An important goal is to provide consistent argument labels across different syntactic realizations of the same verb, as in…</p>
+
+<blockquote>
+  <p>[I]<sub>ARG0</sub> [<strong>eat</strong>]<sub>predicate</sub> [breakfast]<sub>ARG1</sub> [quickly]<sub>ARGM-MNR</sub> [in the car]<sub>ARGM-LOC</sub> [this morning]<sub>ARGM-TMP</sub> [because I was in a hurry]<sub>ARGM-CAU</sub> .</p>
+</blockquote>
+
+<p>The argument structure of each predicate is outlined in the PropBank frame file for that predicate. The frame file denotes the correspondences between numbered arguments and semantic roles, as this is somewhat unique for each predicate. Numbered arguments reflect either the arguments that are requied for the valency of a predicate (e.g., agent, patient, benefactive), or if not requied, those that occur with high-frequency in actual usage. Although numbered arguments correspond to slightly different semantic roles given the usage of each predicate, in general numbered arguments correspond to the following semantic roles:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>ARG0</strong></td>
+      <td>agent</td>
+      <td><strong>ARG3</strong></td>
+      <td>starting point, benefactive, attribute</td>
+    </tr>
+    <tr>
+      <td><strong>ARG1</strong></td>
+      <td>patient</td>
+      <td><strong>ARG4</strong></td>
+      <td>ending point</td>
+    </tr>
+    <tr>
+      <td><strong>ARG2</strong></td>
+      <td>instrument, benefactive, attribute</td>
+      <td><strong>ARGM</strong></td>
+      <td>modifier</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="data">Data</h1>
+
+<ul>
+  <li>
+    <p><strong>CoNLL-2005:</strong> The CoNLL-2005 dataset takes section 2-21 of the Wall Street Journal (WSJ) corpus as training set, and section 24 as development set. The test set consist of section 23 of the <strong>WSJ</strong> corpus (in-domain test) as well as 3 section from the <strong>Brown</strong> corpus (out-of-domain test) <sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>.</p>
+  </li>
+  <li>
+    <p><strong>CoNLL-2012:</strong> The CoNLL-2012 dataset is extracted from the OntoNotes v5.0 corpus <sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>. The description and separation of training, development and test set can be found in <a href="http://www.aclweb.org/anthology/W13-3516">Pardhan et al. (2013)</a>.</p>
+  </li>
+</ul>
+
+<h1 id="experiments--results">Experiments &amp; Results</h1>
+
+<p>Note: All the statistics are obtained from the exact papers or papers citing the excact papers. Contact me if the statistics are not correct or you think your model should be listed as one of them.</p>
+
+<h2 id="with-gold-predicate">With Gold Predicate</h2>
+
+<p>Of course, for each model, we can have different versions, e.g., using the word embeddings from Glove or ELMo, and different versions can lead to different results. Here I just list the results for one of the versions, most of which are single models without using any tricks. I will specify if there are tricks leveraged, e.g., LISA+<strong>D&amp;M</strong>. You should look the original paper if you are intersted in the model, and check whether there are some other versions of the model yielding better results.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Paper</th>
+      <th style="text-align: center">Model</th>
+      <th style="text-align: center">WSJ</th>
+      <th style="text-align: center">Brown</th>
+      <th style="text-align: center">CoNLL-2012</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/D18-1548">EMNLP-18</a></td>
+      <td style="text-align: center">LISA+D&amp;M<br /><em>University of Massachusetts Amherst &amp; Google AI Language</em></td>
+      <td style="text-align: center"><strong>86.04</strong></td>
+      <td style="text-align: center"><strong>76.54</strong></td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/N18-1202">NAACL-18</a></td>
+      <td style="text-align: center">Peter et al. (2018)+ELMo<br /><em>Allen Institute for Artificial Intelligence &amp; University of Washington</em></td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center"><strong>84.6</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/download/16725/16025">AAAI-18</a></td>
+      <td style="text-align: center">Tan et al. (2018)<br /><em>Xiamen University &amp; Tencent Technology Co.</em></td>
+      <td style="text-align: center">84.8</td>
+      <td style="text-align: center">74.1</td>
+      <td style="text-align: center">82.7</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/P18-2058">ACL-18</a></td>
+      <td style="text-align: center">He et al. (2018)<br /><em>University of Washington</em></td>
+      <td style="text-align: center">83.9</td>
+      <td style="text-align: center">73.7</td>
+      <td style="text-align: center">82.1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/P17-1044">ACL-17</a></td>
+      <td style="text-align: center">He et al. (2017)<br /><em>University of Wahsington, Facebook AI Research &amp; Allen Institute for Artificial Intelligence</em></td>
+      <td style="text-align: center">83.1</td>
+      <td style="text-align: center">72.1</td>
+      <td style="text-align: center">81.7</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/D17-1128">EMNLP-17</a></td>
+      <td style="text-align: center">Yang and Mitchell (2017)<br /><em>Carnegie Mellon University</em></td>
+      <td style="text-align: center">81.9</td>
+      <td style="text-align: center">72.0</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://www.aclweb.org/anthology/P15-1109">ACL-15</a></td>
+      <td style="text-align: center">Zhou and Xu (2015)<br /><em>Baidu Research</em></td>
+      <td style="text-align: center">82.8</td>
+      <td style="text-align: center">69.4</td>
+      <td style="text-align: center">81.1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/D15-1112">EMNLP-15</a></td>
+      <td style="text-align: center">FitzGerald at al. (2015)<br /><em>University of Washington &amp; Google</em></td>
+      <td style="text-align: center">80.3</td>
+      <td style="text-align: center">72.2</td>
+      <td style="text-align: center">80.1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/Q15-1003">TACL-15</a></td>
+      <td style="text-align: center">Tackstrom et al. (2015)<br /><em>Google</em></td>
+      <td style="text-align: center">79.9</td>
+      <td style="text-align: center">71.3</td>
+      <td style="text-align: center">79.4</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://www.aclweb.org/anthology/W13-3516">CoNLL-13</a></td>
+      <td style="text-align: center">Pradhan et al. (2013)<br /><em>Boston Childrens Hospital and Harvard Medical School, University of Trento, QCRI, Brandeis University, National University of Singapore &amp; University of Stuttgart</em></td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">77.5</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://www.aclweb.org/anthology/J/J08/J08-2002.pdf">CL-08</a></td>
+      <td style="text-align: center">Toutanova et al. (2008)<br /><em>Microsoft Research, University of California berkeley &amp; Stanford University</em></td>
+      <td style="text-align: center">80.3</td>
+      <td style="text-align: center">68.8</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://www.mitpressjournals.org/doi/pdf/10.1162/coli.2008.34.2.257">CL-08</a></td>
+      <td style="text-align: center">Punyakanok et al. (2008)<br /><em>BBN Technologies, University of Illinois at Urbana-Champaign &amp; Microsoft Research</em></td>
+      <td style="text-align: center">79.4</td>
+      <td style="text-align: center">67.8</td>
+      <td style="text-align: center">-</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="without-gold-predicate">Without Gold Predicate</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Paper</th>
+      <th style="text-align: center">Model</th>
+      <th style="text-align: center">WSJ</th>
+      <th style="text-align: center">Brown</th>
+      <th style="text-align: center">CoNLL-2012</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/D18-1548">EMNLP-18</a></td>
+      <td style="text-align: center">LISA+ELMo+D&amp;M<br /><em>University of Massachusetts Amherst &amp; Google AI Language</em></td>
+      <td style="text-align: center"><strong>86.90</strong></td>
+      <td style="text-align: center"><strong>78.25</strong></td>
+      <td style="text-align: center"><strong>83.38</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/P18-2058">ACL-18</a></td>
+      <td style="text-align: center">He et al. (2018) ELMo<br /><em>University of Washington</em></td>
+      <td style="text-align: center">86.0</td>
+      <td style="text-align: center">76.1</td>
+      <td style="text-align: center">82.9</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/P17-1044">ACL-17</a></td>
+      <td style="text-align: center">He et al. (2017) GloVe+PoE<br /><em>University of Wahsington, Facebook AI Research &amp; Allen Institute for Artificial Intelligence</em></td>
+      <td style="text-align: center">82.7</td>
+      <td style="text-align: center">70.1</td>
+      <td style="text-align: center">78.4</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Martha Palmer, Daniel Gildea, and Paul Kingsbury. 2005. The proposition bank: An annotated corpus of semantic roles. Computational Linguistics, 31(1):71-106. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Mitchell P. Marcus, Mary Ann Marcinkiewicz, and Beatrice Santorini. 1993. Building a large annotated corpus of english: the penn treebank. Computational Linguistics, 19(2):313{330. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>Xavier Carreras and Lluis Marquez. 2005. Introduction to the conll-2005 shared task: Semantic role labeling. In CoNLL. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>Sameer Pradhan, Alessandro Moschitti, Nianwen Xue, Hwee Tou Ng, Anders Bjorkelund, Olga Uryupina, Yuchen Zhang, and Zhi Zhong. 2013. Towards robust linguistic analysis using ontonotes. In CoNLL. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        <div class="more-link">
+          <a href="/SRL/">Read more&hellip;</a>
+        </div>
+      
+    </div>
+  
+  
+    <footer class="entry-meta">
+      
+      <time class="entry-date dt-published" datetime="2018-11-10T00:00:00+08:00">November 10, 2018
+  </time>
+    </footer>
+  
+</article>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to Top &uarr;</a>
+      </section>
     
   
 

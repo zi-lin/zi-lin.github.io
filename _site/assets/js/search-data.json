@@ -18,4 +18,9 @@ var store = [{
         "excerpt":"AMR (Abstract Meaning Representation), is a set of sentences paired with simple, readable semantic representations. Remember that we have talked about FrameNet, a well-known ontology for frame semantic representations. If you want to know more about AMR, click here. ","categories": [],
         "tags": ["Meaning Representation"],
         "url": "http://localhost:4000/intro-amr/"
+      },{
+        "title": "Semantic Role Labeling",
+        "excerpt":"Introduction Semantic Role Labeling (SRL), sometimes called shallow semantic parsing, is a process in natrual language processing that assigns semantic roles to constituents or their head words in a sentence according to their relationship to the predicates expressed in the sentence. Typical semantic roles can be divided into core arguments...","categories": [],
+        "tags": ["NLP Task"],
+        "url": "http://localhost:4000/SRL/"
       }]

@@ -56,7 +56,8 @@ Yang Liu, **Zi Lin**, Sichen Kang\\
 \*: this paper also appears in *the 16th China National Conference on Computational Linguistics (CCL), 2017*
 
 ## Honor & Award
-* 2018 **National Scholarship** (Top 1%), Peking University
+* 2018 **Merit Student Pacesetter** (Top 1%), Peking University
+* 2018 **China National Scholarship** (Top 1%), Ministry of Education of the People's Republic of China
 * 2017 **Award for Academic Excellents**, Peking University
 * 2017 **EAP Scholarship**, Peking University
 * 2016 **Merit Student**, Peking University

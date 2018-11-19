@@ -37,6 +37,10 @@
 <loc>http://localhost:4000/tag/tag/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/pdfs/amr-mrs-drs.pdf</loc>
+<lastmod>2018-11-02T02:53:54+08:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/pdfs/assignment_report.pdf</loc>
 <lastmod>2018-11-10T18:41:07+08:00</lastmod>
 </url>

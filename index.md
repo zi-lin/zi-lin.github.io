@@ -57,7 +57,7 @@ Yang Liu, **Zi Lin**, Sichen Kang\\
 
 ## Honor & Award
 * 2018 **Merit Student Pacesetter** (Top 1%), Peking University
-* 2018 **China National Scholarship**, Ministry of Education of the People's Republic of China
+* 2018 **China National Scholarship**, Ministry of Education of the P.R.China
 * 2017 **Award for Academic Excellents**, Peking University
 * 2017 **EAP Scholarship**, Peking University
 * 2016 **Merit Student**, Peking University

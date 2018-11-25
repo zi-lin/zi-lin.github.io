@@ -141,10 +141,253 @@
 
 <h1 id="abstract-meaning-representation">Abstract Meaning Representation</h1>
 
+<p>Abstract Meaning Representation (AMR) <sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> is a semantic formalism in which the meaning of a sentence is encoded as a rooted, directed, acyclic graph. Nodes represent concepts, and labeled directed graph edges represent the relationships between them. For example, for the sentence “the boy wants to believe the girl” we can have the corresponding AMR graph (in penman format) as:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(w / want-01
+	:ARG0 (b / boy)
+	:ARG1 (b2 / believe-01
+		:ARG0 (g / girl)
+		:ARG1 b))
+</code></pre></div></div>
+
+<p>AMR parsing, the task of transforming a sentence into its AMR graph, is a challenging task as it requires the parser to learn to predict not only concepts, which consist of <strong>predicates</strong>, <strong>lemmas</strong>, <strong>named entites</strong>, <strong>wiki-links</strong> and <strong>co-references</strong>, but also a large number of <strong>relation types</strong> based on the semantic role in PropBank (see the previous blog <a href="../SRL/">Semantic Role Labeling</a> if you are interested).</p>
+
+<h2 id="data">Data</h2>
+<p>There are multiple version of AMR data, including:</p>
+<ul>
+  <li><strong>LDC2013E117:</strong> 10,853 sentences with 13,050 AMRs (corpus includes multiple annotations for some sentences)</li>
+  <li><strong><a href="https://catalog.ldc.upenn.edu/LDC2014T12">LDC2014T12</a> (AMR 1.0):</strong> 13,051 sentences.</li>
+  <li><strong>LDC2015E86:</strong> 19,572 sentences. This version includes more AMRs, wikification, AMR adoption of new unfied PropBank frames, AMR deepening, automatic AMR-English alignments, and correction of AMR annotation errors.</li>
+  <li><strong>LDC2016E25:</strong> 39,260 sentences.</li>
+  <li><strong><a href="https://catalog.ldc.upenn.edu/LDC2017T10">LDC2017T10</a> (AMR 2.0):</strong> 39,260 sentences.</li>
+</ul>
+
+<h2 id="experiment">Experiment</h2>
+
+<p>These are the AMR parsing results on LDC2014T12, LDC2015E86 and LDC2017T10 test sets, where 2014N refers to the newswire section of LDC2014T12. You should look the original paper if you are intersted in the model. <strong>Please contact me (through email) if the statistics is incorrect.</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Paper</th>
+      <th style="text-align: center">Model</th>
+      <th style="text-align: center">LDC2014N</th>
+      <th style="text-align: center">LDC2014</th>
+      <th style="text-align: center">LDC2015</th>
+      <th style="text-align: center">LDC2017</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/P18-1037">ACL-18</a></td>
+      <td style="text-align: center">Lyu &amp; Titov<br /><em>University of Edinburgh &amp; University of Amsterdam</em></td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">73.7</td>
+      <td style="text-align: center">74.4</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/P18-1170">ACL-18</a></td>
+      <td style="text-align: center">Groschwitz et al.<br /><em>Saarland University &amp; Macquerie University</em></td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">70.2</td>
+      <td style="text-align: center">71.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://www.aclweb.org/anthology/P17-1112.pdf">ACL-17</a></td>
+      <td style="text-align: center">Buys &amp; Blunsom<br /><em>University of Oxford &amp; Deepmind</em></td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">61.9</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://www.aclweb.org/anthology/P17-1043">ACL-17</a></td>
+      <td style="text-align: center">Foland &amp; Martin<br /><em>University of Colorado</em></td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">70.7</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/D18-1198">EMNLP-18</a></td>
+      <td style="text-align: center">Guo &amp; Lu<br /><em>Singapore University of Technology &amp; Design</em></td>
+      <td style="text-align: center">74.0</td>
+      <td style="text-align: center">68.3</td>
+      <td style="text-align: center">68.7</td>
+      <td style="text-align: center">69.8</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://arxiv.org/abs/1705.09980">Arxiv-17</a></td>
+      <td style="text-align: center">van Noord &amp; Bos<br /><em>University of Groningen</em></td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">68.5</td>
+      <td style="text-align: center">71.0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/D17-1129">EMNLP-17</a></td>
+      <td style="text-align: center">Wang &amp; Xue<br /><em>Brandeis University</em></td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">68.1</td>
+      <td style="text-align: center">68.1</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://www.aclweb.org/anthology/S16-1181">Semeval-16</a></td>
+      <td style="text-align: center">Wang et al. (CAMR)<br /><em>Brandeis University &amp; Boulder Language Technologies</em></td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">66.5</td>
+      <td style="text-align: center">67.3</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://www.aclweb.org/anthology/S16-1176">Semeval-16</a></td>
+      <td style="text-align: center">Barzdins &amp; Gosko<br /><em>University of Latvia</em></td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">67.2</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/S16-1186">Semeval-16</a></td>
+      <td style="text-align: center">Flanigan et al. (JAMR)<br /><em>Carnegie Mellon University &amp; University of Washington</em></td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">66</td>
+      <td style="text-align: center">67</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://www.aclweb.org/anthology/E17-1051">EACL-17</a></td>
+      <td style="text-align: center">Damonte et al.<br /><em>University of Edinburgh &amp; University of Padua</em></td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">64</td>
+      <td style="text-align: center">64</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/N18-2023">NAACL-18</a></td>
+      <td style="text-align: center">Vilares &amp; Gómez-Rodríguez<br /><em>Universidade da Coruña</em></td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">64</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16563/16021">AAAI-18</a></td>
+      <td style="text-align: center">Peng et al.<br /><em>University of Rochester &amp; University of Padua</em></td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">64</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/P17-1014">ACL-17</a></td>
+      <td style="text-align: center">Konstas et al.<br /><em>University of Washington &amp; Allen Institute for Artificial Intelligence</em></td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">62.1</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/E17-1035">EACL-17</a></td>
+      <td style="text-align: center">Peng et al.<br /><em>University of Rochester &amp; Brandeis University</em></td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">52</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://www.aclweb.org/anthology/D15-1136">EMNLP-15</a></td>
+      <td style="text-align: center">Pust et al.<br /><em>Univerisity of Southern California</em></td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">67.1</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/D16-1065">EMNLP-16</a></td>
+      <td style="text-align: center">Zhou et al.<br /><em>Nianjin Normal University &amp; DFKI, Germany</em></td>
+      <td style="text-align: center">71</td>
+      <td style="text-align: center">66</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://www.aclweb.org/anthology/S16-1180">Semeval-16</a></td>
+      <td style="text-align: center">Goodman et al.<br /><em>University College London &amp; University of Sheffeld</em></td>
+      <td style="text-align: center">70</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">64</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://www.aclweb.org/anthology/P15-2141.pdf">ACL-IJCNLP-15</a></td>
+      <td style="text-align: center">Wang et al. (CAMR)<br /><em>Brandeis University &amp; Boulder Language Technologies</em></td>
+      <td style="text-align: center">70</td>
+      <td style="text-align: center">66</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/D17-1130">EMNLP-17</a></td>
+      <td style="text-align: center">Ballesteros &amp; AI-Onaizan<br /><em>IBM T.J Waston Research Center</em></td>
+      <td style="text-align: center">69</td>
+      <td style="text-align: center">64</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://www.aclweb.org/anthology/D15-1198">EMNLP-15</a></td>
+      <td style="text-align: center">Artzi et al.<br /><em>Cornell University &amp; University of Washington</em></td>
+      <td style="text-align: center">67</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/P15-1095">ACL-IJCNLP-15</a></td>
+      <td style="text-align: center">Werling et al.<br /><em>Stanford University</em></td>
+      <td style="text-align: center">62</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://www.aclweb.org/anthology/N15-1040">NAACL-15</a></td>
+      <td style="text-align: center">Wang et al. (CAMR)<br /><em>Brandeis University &amp; Harvard Medical School</em></td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">59</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/P14-1134">ACL-14</a></td>
+      <td style="text-align: center">Flanigan et al. (JAMR)<br /><em>Carnegie Mellon University</em></td>
+      <td style="text-align: center">59</td>
+      <td style="text-align: center">58</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://www.aclweb.org/anthology/K15-1004">CoNLL-15</a></td>
+      <td style="text-align: center">Peng et al.<br /><em>University of Rochester</em></td>
+      <td style="text-align: center">58</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+    </tr>
+  </tbody>
+</table>
+
 <div class="footnotes">
   <ol>
     <li id="fn:1">
       <p>Rohit J Kate and YukWahWong. 2010. Semantic parsing: The task, the state of the art and the future. Tutorial Abstracts of ACL 2010 page 6. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Laura Banarescu, Claire Bonial, Shu Cai, Madalina Georgescu, Kira Griffitt, Ulf Hermjakob, Kevin Knight, Philipp Koehn, Martha Palmer, and Nathan Schneider. 2013. Abstract meaning representation for SemBanking. In Proc. of the 7th Linguistic Annotation Workshop and Interoperability with Discourse. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -202,6 +445,15 @@
 <!-- MathJax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129673678-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-129673678-1');
+</script>
   </body>
 
 </html>

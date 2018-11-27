@@ -36,7 +36,7 @@ Research Assistant, Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/
 * **Implanting Rational Knowledge into Distributed Representation at Morpheme Level**\\
 **Zi Lin**, Yang Liu\\
 *In Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2019*\\
-\[[**Conference**](https://aaai.org/Conferences/AAAI-19/)\]
+\[[**Conference**](https://aaai.org/Conferences/AAAI-19/)\] \[[**Arxiv**](https://arxiv.org/abs/1811.10188)\] \[[**Data**](https://github.com/zi-lin/MC)\]
 
 * **Semantic Role Labeling for Learner Chinese: the Importance of Syntactic Parsing and L2-L1 Parallel Data**\\
 **Zi Lin**, Yuguang Duan, Yuanyuan Zhao, Weiwei Sun, Xiaojun Wan\\

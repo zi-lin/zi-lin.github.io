@@ -132,10 +132,7 @@
     <p><strong>Abstract Meaning Representation (AMR)</strong></p>
   </li>
   <li>
-    <p><strong>Minimal Recursion Semantics (MRS)</strong></p>
-  </li>
-  <li>
-    <p><strong>Universal Dependency (UD)</strong></p>
+    <p><strong>Semantic Dependency Parsing (SDP)</strong></p>
   </li>
 </ul>
 
@@ -162,7 +159,7 @@
   <li><strong><a href="https://catalog.ldc.upenn.edu/LDC2017T10">LDC2017T10</a> (AMR 2.0):</strong> 39,260 sentences.</li>
 </ul>
 
-<h2 id="experiment">Experiment</h2>
+<h2 id="experiment--results">Experiment &amp; Results</h2>
 
 <p>These are the AMR parsing results on LDC2014T12, LDC2015E86 and LDC2017T10 test sets, where 2014N refers to the newswire section of LDC2014T12. You should look the original paper if you are intersted in the model. <strong>Please contact me (through email) if the statistics is incorrect.</strong></p>
 
@@ -381,6 +378,207 @@
   </tbody>
 </table>
 
+<h1 id="semantic-dependency-parsing">Semantic Dependency Parsing</h1>
+
+<p>Task 8 at SemEval 2014 defines <em>Broad-Coverage Semantic Dependency Parsing</em> (SDP) as the problem of recovering sentence-internal predicate-argument relationships for <em>all content words</em>, i.e., the semantic structure constituting the relational core of sentence meaning <sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>.</p>
+
+<p>SDP seeks to stimulate the dependency parsing community to move towards more general graph processing, to thus enable a more direct analysis of <em>Who did What to Whom?</em> In additon to its relation to syntactic dependency parsing, the task also has some overlap with Semantic Role Labeling (SRL) <sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>.</p>
+
+<p>The SDP parsers are required to identify all semantic dependencies, i.e., compute a representation that integrates all content words in one structure. Different from SRL, SDP task does not encompass predicate disambiguation, a design decision in part owed to SDP’s goal to focus on parsing-oriented, i.e., structural, analysis, and in part to lacking consensus on sense inventories for all content words.</p>
+
+<p>SDP uses three distinct targer representations for semantic dependencies. Including:</p>
+
+<h2 id="dm-delph-in-mrs-derived-bi-lexical-dependencies">DM: DELPH-IN MRS-Derived Bi-Lexical Dependencies</h2>
+
+<p>These semantic dependency graphs originate in a manual re-annotation of Sections 00–21 of the WSJ Corpus with syntactico-semantic analyses derived from the LinGO English Resource Grammar (ERG) <sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>. The DM targer representations are derived through a two-step ‘lossy’ conversion of MRSs, first to variable-free Elementary Dependency Structures (EDS) <sup id="fnref:6"><a href="#fn:6" class="footnote">6</a></sup>, then to ‘pure’ bi-lexical form - projecting some construction semantics onto word-to-word dependencies <sup id="fnref:7"><a href="#fn:7" class="footnote">7</a></sup>. For example, for the sentence “Ms. Haag plays Elianti.”, we have the DM representation as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">id</th>
+      <th style="text-align: center">form</th>
+      <th style="text-align: center">lemma</th>
+      <th style="text-align: center">pos</th>
+      <th style="text-align: center">top</th>
+      <th style="text-align: center">pred</th>
+      <th style="text-align: center">arg1</th>
+      <th style="text-align: center">arg2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">Ms.</td>
+      <td style="text-align: center">Ms.</td>
+      <td style="text-align: center">NNP</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">_</td>
+      <td style="text-align: center">_</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">Haag</td>
+      <td style="text-align: center">Haag</td>
+      <td style="text-align: center">NNP</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">compound</td>
+      <td style="text-align: center">ARG1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">plays</td>
+      <td style="text-align: center">play</td>
+      <td style="text-align: center">VBZ</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">+</td>
+      <td style="text-align: center">_</td>
+      <td style="text-align: center">_</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">Elianti</td>
+      <td style="text-align: center">Elianti</td>
+      <td style="text-align: center">NNP</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">_</td>
+      <td style="text-align: center">ARG2</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td style="text-align: center">.</td>
+      <td style="text-align: center">.</td>
+      <td style="text-align: center">.</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">_</td>
+      <td style="text-align: center">_</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="pas-enju-predicate-argument-structures">PAS: Enju Predicate-Argument Structures</h2>
+
+<p>The Enju parsing system is an HPSG-based parser for English. The grammar and the dismbiguation model of this parser are derived from the Enju HPSG treebank, which is automatically converted from the phrase structure and predicate-argument structure annotation of the PTB. The PAS data set is extracted from the WSJ portion of the Enju HPSG treebank. While the Enju treebank is annotated with full HPSG-style structures, only its predicate-argument strcutres are converte into the SDP data format for use in the SDP task.</p>
+
+<h2 id="pcedt-prague-tectogrammatical-bi-lexical-dependencies">PCEDT: Prague Tectogrammatical Bi-Lexical Dependencies</h2>
+
+<p>The Prague Czech-English Dependency TreeBank (PCEDT) <sup id="fnref:8"><a href="#fn:8" class="footnote">8</a></sup> is a set of parallel dependency trees over the WSJ texts from the PTB, and their Czech translations. The specifics of the PCEDT representations are best observed in the procedure that converts the original PCEDT data to the SDP data format; see Miyao et al. 2014 <sup id="fnref:9"><a href="#fn:9" class="footnote">9</a></sup>.</p>
+
+<h1 id="data-1">Data</h1>
+<ul>
+  <li><strong><a href="http://sdp.delph-in.net/2014/data.html">Semeval-2014 Task 8</a>:</strong> For this task, there will be three data sets: training, development, and test.  On November 4, 2013, a sample (of some 190 dependency graphs) from the training data was published as <a href="http://svn.delph-in.net/sdp/public/2014/trial/current.tgz">trial data</a>, demonstrating key characteristics of the task.  Since December 13, some 750,000 tokens of annotated text are available as training data; please subscribe to the task <a href="http://lists.emmtee.net/mailman/listinfo/sdp-participants">mailing list</a> for access information.</li>
+  <li><strong><a href="http://sdp.delph-in.net/2015/data.html">Semeval-2015 Task 8</a>:</strong> This Task is a re-run with some extensions of Task 8 at SemEval-2014.</li>
+</ul>
+
+<h1 id="experiment--results-1">Experiment &amp; Results</h1>
+
+<p>The results are the labeled parsing performance (F1 score) on both in-domain and out-of-domain test data and are based on the English dataset from SemEval 2015 Task 18 closed track. The data split is 33,964 training sentences from 00-19 of the WSJ corpus, 1,692 development sentences from 20, 1,410 sentences from 21 as in domain test data, and 1,849 sentences sampled from the Brown Corpus as out-of-domain test data.</p>
+
+<h2 id="in-domain">In-Domain</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">paper</th>
+      <th style="text-align: center">model</th>
+      <th style="text-align: center">DM</th>
+      <th style="text-align: center">PAS</th>
+      <th style="text-align: center">PSD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/P18-2077">ACL-2018</a></td>
+      <td style="text-align: center">Dozat &amp; Manning<br /><em>Stanford University</em></td>
+      <td style="text-align: center"><strong>93.7</strong></td>
+      <td style="text-align: center"><strong>93.9</strong></td>
+      <td style="text-align: center"><strong>81.0</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/P17-1186">ACL-2017</a></td>
+      <td style="text-align: center">Peng et al.<br /><em>University of Washington &amp; Carnegie Mellon University</em></td>
+      <td style="text-align: center">90.4</td>
+      <td style="text-align: center">92.7</td>
+      <td style="text-align: center">78.5</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16549/16113">AAAI-2018</a></td>
+      <td style="text-align: center">Wang et al.<br /><em>Harbin Institute of Technology</em></td>
+      <td style="text-align: center">90.3</td>
+      <td style="text-align: center">91.7</td>
+      <td style="text-align: center">78.6</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/S15-2154">Semeval-2015</a></td>
+      <td style="text-align: center">Du et al.<br /><em>Peking University</em></td>
+      <td style="text-align: center">89.1</td>
+      <td style="text-align: center">91.3</td>
+      <td style="text-align: center">75.7</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/S15-2162">Semeval-2015</a></td>
+      <td style="text-align: center">Almeida &amp; Martins<br /><em>Priberam Labs &amp; Instituto de Telecomunicacoes</em></td>
+      <td style="text-align: center">88.2</td>
+      <td style="text-align: center">90.9</td>
+      <td style="text-align: center">76.4</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="out-of-domain">Out-Of-Domain</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">paper</th>
+      <th style="text-align: center">model</th>
+      <th style="text-align: center">DM</th>
+      <th style="text-align: center">PAS</th>
+      <th style="text-align: center">PSD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/P18-2077">ACL-2018</a></td>
+      <td style="text-align: center">Dozat &amp; Manning<br /><em>Stanford University</em></td>
+      <td style="text-align: center"><strong>88.9</strong></td>
+      <td style="text-align: center"><strong>90.6</strong></td>
+      <td style="text-align: center"><strong>79.4</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/P17-1186">ACL-2017</a></td>
+      <td style="text-align: center">Peng et al.<br /><em>University of Washington &amp; Carnegie Mellon University</em></td>
+      <td style="text-align: center">85.3</td>
+      <td style="text-align: center">89.0</td>
+      <td style="text-align: center">76.4</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/view/16549/16113">AAAI-2018</a></td>
+      <td style="text-align: center">Wang et al.<br /><em>Harbin Institute of Technology</em></td>
+      <td style="text-align: center">84.9</td>
+      <td style="text-align: center">87.6</td>
+      <td style="text-align: center">75.9</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/S15-2154">Semeval-2015</a></td>
+      <td style="text-align: center">Du et al.<br /><em>Peking University</em></td>
+      <td style="text-align: center">81.8</td>
+      <td style="text-align: center">87.2</td>
+      <td style="text-align: center">73.3</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="http://aclweb.org/anthology/S15-2162">Semeval-2015</a></td>
+      <td style="text-align: center">Almeida &amp; Martins<br /><em>Priberam Labs &amp; Instituto de Telecomunicacoes</em></td>
+      <td style="text-align: center">81.8</td>
+      <td style="text-align: center">86.9</td>
+      <td style="text-align: center">74.8</td>
+    </tr>
+  </tbody>
+</table>
+
 <div class="footnotes">
   <ol>
     <li id="fn:1">
@@ -388,6 +586,27 @@
     </li>
     <li id="fn:2">
       <p>Laura Banarescu, Claire Bonial, Shu Cai, Madalina Georgescu, Kira Griffitt, Ulf Hermjakob, Kevin Knight, Philipp Koehn, Martha Palmer, and Nathan Schneider. 2013. Abstract meaning representation for SemBanking. In Proc. of the 7th Linguistic Annotation Workshop and Interoperability with Discourse. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>Oepen, S., Kuhlmann, M., Miyao, Y., Zeman, D., Flickinger, D., Hajic, J., Ivanova, Angelina, Zhang, Y. 2014. SemEval 2014 Task 8: Broad-coverage semantic dependency parsing. In Proceedings of the 8th International Workshop on Semantic Evaluation. Dublin, Ireland. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>Gildea, D., &amp; Jurafsky, D. 2002. Automatic labeling of semantic roles. Computational Linguistics, 28, 71:245–288. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>Flickinger, D., Zhang, Y., &amp; Kordoni, V. 2012. DeepBank. A dynamically annotated treebank of the Wall Street Journal. In Proceedings of the 11th International Workshop on Treebanks and Linguistic Theories (p. 85–96). Lisbon, Portugal: Edições Colibri. <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>Oepen, S., &amp; Lønning, J. T. 2006. Discriminantbased MRS banking. In Proceedings of the 5th International Conference on Language Resources and Evaluation (p. 1250–1255). Genoa, Italy. <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:7">
+      <p>Ivanova, A., Oepen, S., Øvrelid, L., &amp; Flickinger, D. 2012. Who did what to whom? A contrastive study of syntacto-semantic dependencies. In Proceedings of the Sixth Linguistic Annotation Workshop (p. 2–11). Jeju, Republic of Korea. <a href="#fnref:7" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:8">
+      <p>Hajic, J., Hajicová, E., Panevová, J., Sgall, P., Bojar, O., Cinková, S., … &amp; Semecký, J. 2012. Announcing Prague Czech-English Dependency Treebank 2.0. In LREC (pp. 3153-3160). <a href="#fnref:8" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:9">
+      <p>Miyao, Y., Oepen, S., &amp; Zeman, D. 2014. In-house: An ensemble of pre-existing off-the-shelf parsers. In Proceedings of the 8th International Workshop on Semantic Evaluation. Dublin, Ireland. <a href="#fnref:9" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>

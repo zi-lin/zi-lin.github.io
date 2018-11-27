@@ -32,7 +32,6 @@ Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/EN/People/Fac
 Research Assistant, Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/)
 
 ## Publication
-### Conference
 * **Implanting Rational Knowledge into Distributed Representation at Morpheme Level**\\
 **Zi Lin**, Yang Liu\\
 *In Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2019*\\
@@ -46,10 +45,14 @@ Research Assistant, Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/
 * **Is Argument Structure of Learner Chinese Understandable: A Corpus-Based Analysis**\\
 Yuguang Duan, **Zi Lin**, Weiwei Sun\\
 *In Proceedings of the International Conference on Bilingual Learning and Teaching (ICBLT), 2018*\\
-\[[**Conference**](http://ouhk2018icblt.mozello.com/)\]
+\[[**Conference**](http://ouhk2018icblt.mozello.com/)\] \[[**PDF**](./pdf/icblt2018.pdf)\]
 
-### Journal
-* **Towards a Description of Chinese Morpheme Conceptions and Semantic Word Formation**\\
+* **Acoustic Analysis on the Monosyllable and Disyllable of Rui'an Dialect (In Chinese)**\\
+**Zi Lin**\\
+Science Press, 2018\\
+\[[**Manuscript**](./pdf/ruian-dialect.pdf)\]
+
+* **Towards a Description of Chinese Morpheme Conceptions and Semantic Word Formation (In Chinese)**\\
 Yang Liu, **Zi Lin**, Sichen Kang\\
 *Journal of Chinese Information Processing (Vol. 32, Issue(2): 12-21), 2018*\\
 \[[**Conference**](http://www.cips-cl.org/static/CCL2017/en/callfor.html)\] \[[**PDF**](http://jcip.cipsc.org.cn/CN/article/downloadArticleFile.do?attachType=PDF&id=2510)\]\\

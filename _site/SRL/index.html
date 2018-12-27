@@ -110,7 +110,7 @@
         <div class="e-content">
           <h1 id="introduction">Introduction</h1>
 
-<p><strong>Semantic Role Labeling (SRL)</strong>, sometimes called <em>shallow semantic parsing</em>, is a process in natrual language processing that assigns semantic roles to constituents or their head words in a sentence according to their relationship to the predicates expressed in the sentence. Typical semantic roles can be divided into core <strong>arguments</strong> and <strong>adjuncts</strong>. The core arguments include <em>Agent, Patient, Source, Goal</em>, etc, While the adjunts include <em>Location, Time, Manner, Cause</em>, etc.</p>
+<p><strong>Semantic Role Labeling (SRL)</strong>, sometimes called <em>shallow semantic parsing</em>, is a process in natural language processing that assigns semantic roles to constituents or their head words in a sentence according to their relationship to the predicates expressed in the sentence. Typical semantic roles can be divided into core <strong>arguments</strong> and <strong>adjuncts</strong>. The core arguments include <em>Agent, Patient, Source, Goal</em>, etc, While the adjuncts include <em>Location, Time, Manner, Cause</em>, etc.</p>
 
 <p>For example, in the sentence <code class="highlighter-rouge">I ate breakfast quickly in the car this morning because I was in a hurry</code>, we can have the labeled sentence like this:</p>
 
@@ -132,7 +132,7 @@
 
 <p>The argument structure of each predicate is outlined in the PropBank frame file for that predicate. The frame file denotes the correspondences between numbered arguments and semantic roles, as this is somewhat unique for each predicate.</p>
 
-<p>Numbered arguments reflect either the arguments that are requied for the valency of a predicate (e.g., agent, patient, benefactive), or if not requied, those that occur with high-frequency in actual usage. Although numbered arguments correspond to slightly different semantic roles given the usage of each predicate, in general numbered arguments correspond to the following semantic roles:</p>
+<p>Numbered arguments reflect either the arguments that are required for the valency of a predicate (e.g., agent, patient, benefactive), or if not required, those that occur with high-frequency in actual usage. Although numbered arguments correspond to slightly different semantic roles given the usage of each predicate, in general numbered arguments correspond to the following semantic roles:</p>
 
 <table>
   <tbody>
@@ -160,7 +160,7 @@
 <h2 id="framenet">FrameNet</h2>
 <p>The FrameNet project is to design a lexical database of English based on a linguistic theory called <strong>Frame Semantics</strong>. The meaning of most words can best be understood on the basis of a semantic frame, and the basic assumption on which the frames are built is that each word evokes a particular situation with particular participants<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>.</p>
 
-<p>For example, the concept of <em>eat</em> usually involves a person doing the eating (<code class="highlighter-rouge">Ingester</code>), the food that is to be eaten (<code class="highlighter-rouge">Ingestibles</code>). In FrameNet, this event is represented as a frame called <code class="highlighter-rouge">Ingestion</code>, while the <code class="highlighter-rouge">Ingester</code> and <code class="highlighter-rouge">Ingestibles</code> are all frame elements (FEs), and predicates <em>eat</em> evoking frames are called lexical unites (LUs). One frame can have multiple lexical unites, e.g., for the frame <code class="highlighter-rouge">Ingestion</code>, we can have <em>consume, devour, drink, eat, fead</em>, etc.</p>
+<p>For example, the concept of <em>eat</em> usually involves a person doing the eating (<code class="highlighter-rouge">Ingester</code>), the food that is to be eaten (<code class="highlighter-rouge">Ingestibles</code>). In FrameNet, this event is represented as a frame called <code class="highlighter-rouge">Ingestion</code>, while the <code class="highlighter-rouge">Ingester</code> and <code class="highlighter-rouge">Ingestibles</code> are all frame elements (FEs), and predicates <em>eat</em> evoking frames are called lexical unites (LUs). One frame can have multiple lexical unites, e.g., for the frame <code class="highlighter-rouge">Ingestion</code>, we can have <em>consume, devour, drink, eat, feed</em>, etc.</p>
 
 <blockquote>
   <p>[I]<sub>Ingester</sub> [<strong>eat</strong>]<sub>LUs</sub> [breakfast]<sub>Ingestibles</sub> [quickly]<sub>Manner</sub> [in the car]<sub>Place</sub> [this morning]<sub>Time</sub> because I was in a hurry.</p>
@@ -185,11 +185,11 @@
 
 <h1 id="experiments--results">Experiments &amp; Results</h1>
 
-<p>Note: All the statistics are obtained from the exact papers or papers citing the excact papers. Contact me if the statistics are not correct or you think your model should be listed as one of them.</p>
+<p>Note: All the statistics are obtained from the exact papers or papers citing the exact papers. Contact me if the statistics are not correct or you think your model should be listed as one of them.</p>
 
 <h2 id="with-gold-predicate">With Gold Predicate</h2>
 
-<p>Of course, for each model, we can have different versions, e.g., using the word embeddings from Glove or ELMo, and different versions can lead to different results. Here I just list the results for one of the versions, most of which are single models without using any tricks. I will specify if there are tricks leveraged, e.g., LISA+<strong>D&amp;M</strong>. You should look the original paper if you are intersted in the model, and check whether there are some other versions of the model yielding better results. <strong>Please contact me (through email) if the statistics is incorrect.</strong></p>
+<p>Of course, for each model, we can have different versions, e.g., using the word embeddings from Glove or ELMo, and different versions can lead to different results. Here I just list the results for one of the versions, most of which are single models without using any tricks. I will specify if there are tricks leveraged, e.g., LISA+<strong>D&amp;M</strong>. You should look the original paper if you are interested in the model, and check whether there are some other versions of the model yielding better results. <strong>Please contact me (through email) if the statistics is incorrect.</strong></p>
 
 <table>
   <thead>
@@ -232,7 +232,7 @@
     </tr>
     <tr>
       <td style="text-align: center"><a href="http://aclweb.org/anthology/P17-1044">ACL-17</a></td>
-      <td style="text-align: center">He et al.<br /><em>University of Wahsington, Facebook AI Research &amp; Allen Institute for Artificial Intelligence</em></td>
+      <td style="text-align: center">He et al.<br /><em>University of Washington, Facebook AI Research &amp; Allen Institute for Artificial Intelligence</em></td>
       <td style="text-align: center">83.1</td>
       <td style="text-align: center">72.1</td>
       <td style="text-align: center">81.7</td>
@@ -267,14 +267,14 @@
     </tr>
     <tr>
       <td style="text-align: center"><a href="http://www.aclweb.org/anthology/W13-3516">CoNLL-13</a></td>
-      <td style="text-align: center">Pradhan et al.<br /><em>Boston Childrens Hospital and Harvard Medical School, University of Trento, QCRI, Brandeis University, National University of Singapore &amp; University of Stuttgart</em></td>
+      <td style="text-align: center">Pradhan et al.<br /><em>Boston Children’s Hospital and Harvard Medical School, University of Trento, QCRI, Brandeis University, National University of Singapore &amp; University of Stuttgart</em></td>
       <td style="text-align: center">-</td>
       <td style="text-align: center">-</td>
       <td style="text-align: center">77.5</td>
     </tr>
     <tr>
       <td style="text-align: center"><a href="https://www.aclweb.org/anthology/J/J08/J08-2002.pdf">CL-08</a></td>
-      <td style="text-align: center">Toutanova et al.<br /><em>Microsoft Research, University of California berkeley &amp; Stanford University</em></td>
+      <td style="text-align: center">Toutanova et al.<br /><em>Microsoft Research, University of California Berkeley &amp; Stanford University</em></td>
       <td style="text-align: center">80.3</td>
       <td style="text-align: center">68.8</td>
       <td style="text-align: center">-</td>
@@ -318,7 +318,7 @@
     </tr>
     <tr>
       <td style="text-align: center"><a href="http://aclweb.org/anthology/P17-1044">ACL-17</a></td>
-      <td style="text-align: center">He et al.+GloVe+PoE<br /><em>University of Wahsington, Facebook AI Research &amp; Allen Institute for Artificial Intelligence</em></td>
+      <td style="text-align: center">He et al.+GloVe+PoE<br /><em>University of Washington, Facebook AI Research &amp; Allen Institute for Artificial Intelligence</em></td>
       <td style="text-align: center">82.7</td>
       <td style="text-align: center">70.1</td>
       <td style="text-align: center">78.4</td>
@@ -332,7 +332,7 @@
       <p>Martha Palmer, Daniel Gildea, and Paul Kingsbury. 2005. The proposition bank: An annotated corpus of semantic roles. Computational Linguistics, 31(1):71-106. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:2">
-      <p>Mitchell P. Marcus, Mary Ann Marcinkiewicz, and Beatrice Santorini. 1993. Building a large annotated corpus of english: the penn treebank. Computational Linguistics, 19(2):313-330. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+      <p>Mitchell P. Marcus, Mary Ann Marcinkiewicz, and Beatrice Santorini. 1993. Building a large annotated corpus of English: the penn treebank. Computational Linguistics, 19(2):313-330. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:3">
       <p>Charles J Fillmore. 1968. The Case for Case. Universals in Linguistic Theory. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>

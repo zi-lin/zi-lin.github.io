@@ -116,10 +116,10 @@
 <ul>
   <li>Semantic role labeling (also known as shallow semantic parsing, see previous post for more information).</li>
   <li>Finding generic relations in text.</li>
-  <li>Transforming a natrual language sentence into its meaning representation.</li>
+  <li>Transforming a natural language sentence into its meaning representation.</li>
 </ul>
 
-<p>In this post, semantic parsing is the task of mapping natrual language sentences (NL) into complete <strong>formal meaning representation</strong> (MRs) which a computer can execute for some domain -specific application <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. Representing the meaning of natural language is ultimately a difficult philosophical question and many attempts have been made to define generic formal semantics of natural language, including:</p>
+<p>In this post, semantic parsing is the task of mapping natural language sentences (NL) into complete <strong>formal meaning representation</strong> (MRs) which a computer can execute for some domain -specific application <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. Representing the meaning of natural language is ultimately a difficult philosophical question and many attempts have been made to define generic formal semantics of natural language, including:</p>
 
 <ul>
   <li>
@@ -147,7 +147,7 @@
 		:ARG1 b))
 </code></pre></div></div>
 
-<p>AMR parsing, the task of transforming a sentence into its AMR graph, is a challenging task as it requires the parser to learn to predict not only concepts, which consist of <strong>predicates</strong>, <strong>lemmas</strong>, <strong>named entites</strong>, <strong>wiki-links</strong> and <strong>co-references</strong>, but also a large number of <strong>relation types</strong> based on the semantic role in PropBank (see the previous blog <a href="../SRL/">Semantic Role Labeling</a> if you are interested).</p>
+<p>AMR parsing, the task of transforming a sentence into its AMR graph, is a challenging task as it requires the parser to learn to predict not only concepts, which consist of <strong>predicates</strong>, <strong>lemmas</strong>, <strong>named entities</strong>, <strong>wiki-links</strong> and <strong>co-references</strong>, but also a large number of <strong>relation types</strong> based on the semantic role in PropBank (see the previous blog <a href="../SRL/">Semantic Role Labeling</a> if you are interested).</p>
 
 <h2 id="data">Data</h2>
 <p>There are multiple version of AMR data, including:</p>
@@ -159,7 +159,7 @@
     <p><strong><a href="https://catalog.ldc.upenn.edu/LDC2014T12">LDC2014T12</a> (AMR 1.0):</strong> 13,051 sentences.</p>
   </li>
   <li>
-    <p><strong>LDC2015E86:</strong> 19,572 sentences. This version includes more AMRs, wikification, AMR adoption of new unfied PropBank frames, AMR deepening, automatic AMR-English alignments, and correction of AMR annotation errors.</p>
+    <p><strong>LDC2015E86:</strong> 19,572 sentences. This version includes more AMRs, wikification, AMR adoption of new unified PropBank frames, AMR deepening, automatic AMR-English alignments, and correction of AMR annotation errors.</p>
   </li>
   <li>
     <p><strong>LDC2016E25:</strong> 39,260 sentences.</p>
@@ -171,7 +171,7 @@
 
 <h2 id="experiment--results">Experiment &amp; Results</h2>
 
-<p>These are the AMR parsing results on LDC2014T12, LDC2015E86 and LDC2017T10 test sets, where 2014N refers to the newswire section of LDC2014T12. You should look the original paper if you are intersted in the model. <strong>Please contact me (through email) if the statistics is incorrect.</strong></p>
+<p>These are the AMR parsing results on LDC2014T12, LDC2015E86 and LDC2017T10 test sets, where 2014N refers to the newswire section of LDC2014T12. You should look the original paper if you are interested in the model. <strong>Please contact me (through email) if the statistics is incorrect.</strong></p>
 
 <table>
   <thead>
@@ -392,15 +392,15 @@
 
 <p>Task 8 at SemEval 2014 defines <em>Broad-Coverage Semantic Dependency Parsing</em> (SDP) as the problem of recovering sentence-internal predicate-argument relationships for <em>all content words</em>, i.e., the semantic structure constituting the relational core of sentence meaning <sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>.</p>
 
-<p>SDP seeks to stimulate the dependency parsing community to move towards more general graph processing, to thus enable a more direct analysis of <em>Who did What to Whom?</em> In additon to its relation to syntactic dependency parsing, the task also has some overlap with Semantic Role Labeling (SRL) <sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>.</p>
+<p>SDP seeks to stimulate the dependency parsing community to move towards more general graph processing, to thus enable a more direct analysis of <em>Who did What to Whom?</em> In addition to its relation to syntactic dependency parsing, the task also has some overlap with Semantic Role Labeling (SRL) <sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>.</p>
 
 <p>The SDP parsers are required to identify all semantic dependencies, i.e., compute a representation that integrates all content words in one structure. Different from SRL, SDP task does not encompass predicate disambiguation, a design decision in part owed to SDP’s goal to focus on parsing-oriented, i.e., structural, analysis, and in part to lacking consensus on sense inventories for all content words.</p>
 
-<p>SDP uses three distinct targer representations for semantic dependencies. Including:</p>
+<p>SDP uses three distinct target representations for semantic dependencies. Including:</p>
 
 <h2 id="dm-delph-in-mrs-derived-bi-lexical-dependencies">DM: DELPH-IN MRS-Derived Bi-Lexical Dependencies</h2>
 
-<p>These semantic dependency graphs originate in a manual re-annotation of Sections 00–21 of the WSJ Corpus with syntactico-semantic analyses derived from the LinGO English Resource Grammar (ERG) <sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>. The DM targer representations are derived through a two-step ‘lossy’ conversion of MRSs, first to variable-free Elementary Dependency Structures (EDS) <sup id="fnref:6"><a href="#fn:6" class="footnote">6</a></sup>, then to ‘pure’ bi-lexical form - projecting some construction semantics onto word-to-word dependencies <sup id="fnref:7"><a href="#fn:7" class="footnote">7</a></sup>. For example, for the sentence “Ms. Haag plays Elianti.”, we have the DM representation as follows:</p>
+<p>These semantic dependency graphs originate in a manual re-annotation of Sections 00–21 of the WSJ Corpus with syntactico-semantic analyses derived from the LinGO English Resource Grammar (ERG) <sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>. The DM target representations are derived through a two-step ‘lossy’ conversion of MRSs, first to variable-free Elementary Dependency Structures (EDS) <sup id="fnref:6"><a href="#fn:6" class="footnote">6</a></sup>, then to ‘pure’ bi-lexical form - projecting some construction semantics onto word-to-word dependencies <sup id="fnref:7"><a href="#fn:7" class="footnote">7</a></sup>. For example, for the sentence “Ms. Haag plays Elianti.”, we have the DM representation as follows:</p>
 
 <table>
   <thead>
@@ -471,7 +471,7 @@
 
 <h2 id="pas-enju-predicate-argument-structures">PAS: Enju Predicate-Argument Structures</h2>
 
-<p>The Enju parsing system is an HPSG-based parser for English. The grammar and the dismbiguation model of this parser are derived from the Enju HPSG treebank, which is automatically converted from the phrase structure and predicate-argument structure annotation of the PTB. The PAS data set is extracted from the WSJ portion of the Enju HPSG treebank. While the Enju treebank is annotated with full HPSG-style structures, only its predicate-argument strcutres are converte into the SDP data format for use in the SDP task.</p>
+<p>The Enju parsing system is an HPSG-based parser for English. The grammar and the disambiguation model of this parser are derived from the Enju HPSG treebank, which is automatically converted from the phrase structure and predicate-argument structure annotation of the PTB. The PAS data set is extracted from the WSJ portion of the Enju HPSG treebank. While the Enju treebank is annotated with full HPSG-style structures, only its predicate-argument structures are convert into the SDP data format for use in the SDP task.</p>
 
 <h2 id="pcedt-prague-tectogrammatical-bi-lexical-dependencies">PCEDT: Prague Tectogrammatical Bi-Lexical Dependencies</h2>
 
@@ -604,18 +604,18 @@ Query: answer(C, largest(C, (city(C), loc(C, S), const(S, stateid(texas)))))
 
 <p>Objects are represented as logical terms and are typed with a semantic category using logical functions applied to possibly ambiguous English constants (e.g. <code class="highlighter-rouge">stateid(Mississippi), riverid(Mississippi)</code>). Relationships between objects are expressed using predicates; for instance, <code class="highlighter-rouge">loc(X, Y)</code> states that <code class="highlighter-rouge">X</code> is located in <code class="highlighter-rouge">Y</code>.</p>
 
-<p>We also need to handle quantifiers such as ‘largest’. We represent these using <em>meta-predicates</em> for which at least one argument is a conjunction of literals. For example, <code class="highlighter-rouge">largest(X, Goal)</code> states that the object <code class="highlighter-rouge">X</code> satisfies <code class="highlighter-rouge">Goal</code> and is the largest object that does so, using the appropriate measure of size for objects of its type (e.g. area for states, population for cities). Finally, an unspecifies object required as an argument to a predicate can appear elsewhere in the sentence, requiring the use of the predicate <code class="highlighter-rouge">const(X, C)</code> to bind the variable <code class="highlighter-rouge">X</code> to the constant <code class="highlighter-rouge">C</code>.</p>
+<p>We also need to handle quantifiers such as ‘largest’. We represent these using <em>meta-predicates</em> for which at least one argument is a conjunction of literals. For example, <code class="highlighter-rouge">largest(X, Goal)</code> states that the object <code class="highlighter-rouge">X</code> satisfies <code class="highlighter-rouge">Goal</code> and is the largest object that does so, using the appropriate measure of size for objects of its type (e.g. area for states, population for cities). Finally, an unspecified object required as an argument to a predicate can appear elsewhere in the sentence, requiring the use of the predicate <code class="highlighter-rouge">const(X, C)</code> to bind the variable <code class="highlighter-rouge">X</code> to the constant <code class="highlighter-rouge">C</code>.</p>
 
 <h2 id="data-2">Data</h2>
 <ul>
   <li>
-    <p><strong><a href="https://github.com/zi-lin/zi-lin.github.io/tree/master/data/geo880">Geo 880</a>:</strong>  A set of 880 queries to a database of U.S. geography containing basic information about the U.S. states like population, area, capital city, neighboring states, and so on. It is originally annatated with Prolog style semantics. Geo has 880 instances split into a training set of 680 training examples and 200 test examples <sup id="fnref:11"><a href="#fn:11" class="footnote">11</a></sup>.</p>
+    <p><strong><a href="https://github.com/zi-lin/zi-lin.github.io/tree/master/data/geo880">Geo 880</a>:</strong>  A set of 880 queries to a database of U.S. geography containing basic information about the U.S. states like population, area, capital city, neighboring states, and so on. It is originally annotated with Prolog style semantics. Geo has 880 instances split into a training set of 680 training examples and 200 test examples <sup id="fnref:11"><a href="#fn:11" class="footnote">11</a></sup>.</p>
   </li>
   <li>
     <p><strong><a href="https://github.com/zi-lin/zi-lin.github.io/tree/master/data/jobs640">Jobs 640</a>:</strong> A set of 640 queries to a database of computer-related job postings, such as job announcements, from the USENET newsgroup <code class="highlighter-rouge">austin.jobs</code>. Information from these job postings are extracted to create a database which contains the following types of information: 1) the job title, 2) the company, 3) the recruiter, 4) the location, 5) the salary, 6) the languages and platforms used, and 7) required or desired years of experience and degrees. The training-test split contains 500 training and 140 test instances.</p>
   </li>
   <li>
-    <p><strong><a href="https://www.kaggle.com/siddhadev/ms-cntk-atis">ATIS</a>:</strong>  A set of 5,410 queries to a flight booking system, and the representations are of lambda-calculas logical forms. The ATIS database consists of data obtained from the Official Airline Guide (OAG, 1990), organized under a relational schema. The database remained fixed throughout the pilot phase. It contains information about flights, fares, airlines, cities, airports, and ground services, and includes twenty-five supporting tables. The large majority of the questions posed by subjects can be answered from the database with a single relational query.</p>
+    <p><strong><a href="https://www.kaggle.com/siddhadev/ms-cntk-atis">ATIS</a>:</strong>  A set of 5,410 queries to a flight booking system, and the representations are of lambda-calculus logical forms. The ATIS database consists of data obtained from the Official Airline Guide (OAG, 1990), organized under a relational schema. The database remained fixed throughout the pilot phase. It contains information about flights, fares, airlines, cities, airports, and ground services, and includes twenty-five supporting tables. The large majority of the questions posed by subjects can be answered from the database with a single relational query.</p>
   </li>
 </ul>
 
@@ -794,7 +794,7 @@ CFLDraft WHERE College = "York"
 
 <h2 id="data-3">Data</h2>
 <ul>
-  <li><strong><a href="https://github.com/salesforce/WikiSQL">WikiSQL</a>:</strong> WikiSQL is a collection of questions, corresponding SQL queries, and SQL tables. It is the largest hand-annotated semantic parsing dataset to data - it is an orfer of magnituge larger than other datasets that have logical forms, either in terms of the number of examples or the number of tables. The corpus consists of 80654 hand-annotated instances of natural language questions, SQL queries, and SQL tables extracted from 24241 HTML tables from Wikipedia <sup id="fnref:12"><a href="#fn:12" class="footnote">12</a></sup>.</li>
+  <li><strong><a href="https://github.com/salesforce/WikiSQL">WikiSQL</a>:</strong> WikiSQL is a collection of questions, corresponding SQL queries, and SQL tables. It is the largest hand-annotated semantic parsing dataset to data - it is an order of magnitude larger than other datasets that have logical forms, either in terms of the number of examples or the number of tables. The corpus consists of 80654 hand-annotated instances of natural language questions, SQL queries, and SQL tables extracted from 24241 HTML tables from Wikipedia <sup id="fnref:12"><a href="#fn:12" class="footnote">12</a></sup>.</li>
 </ul>
 
 <h2 id="experiment-and-results">Experiment and Results</h2>

@@ -20,12 +20,12 @@ var store = [{
         "url": "http://localhost:4000/intro-amr/"
       },{
         "title": "Semantic Role Labeling",
-        "excerpt":"Introduction Semantic Role Labeling (SRL), sometimes called shallow semantic parsing, is a process in natrual language processing that assigns semantic roles to constituents or their head words in a sentence according to their relationship to the predicates expressed in the sentence. Typical semantic roles can be divided into core arguments...","categories": [],
+        "excerpt":"Introduction Semantic Role Labeling (SRL), sometimes called shallow semantic parsing, is a process in natural language processing that assigns semantic roles to constituents or their head words in a sentence according to their relationship to the predicates expressed in the sentence. Typical semantic roles can be divided into core arguments...","categories": [],
         "tags": ["NLP Tasks"],
         "url": "http://localhost:4000/SRL/"
       },{
         "title": "Semantic Parsing",
-        "excerpt":"Introduction In fact, “semantic parsing” is, ironically, a semantically ambiguous term, which could refer to: Semantic role labeling (also known as shallow semantic parsing, see previous post for more information). Finding generic relations in text. Transforming a natrual language sentence into its meaning representation.In this post, semantic parsing is the...","categories": [],
+        "excerpt":"Introduction In fact, “semantic parsing” is, ironically, a semantically ambiguous term, which could refer to: Semantic role labeling (also known as shallow semantic parsing, see previous post for more information). Finding generic relations in text. Transforming a natural language sentence into its meaning representation.In this post, semantic parsing is the...","categories": [],
         "tags": ["NLP Tasks"],
         "url": "http://localhost:4000/SP/"
       }]

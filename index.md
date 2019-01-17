@@ -7,8 +7,6 @@ search_omit: true
 
 I'm an undergraduate student in the [**Department of Chinese language and literature**](http://chinese.pku.edu.cn/) at [**Peking University**](http://pku.edu.cn). My academic interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding.
 
-I am applying for a PhD program for Fall 2019, please do not hesitate to contact me if you are interested!
-
 ## Education
 * The Department of Chinese Language and Literature, Peking University\\
 *Sept. 2015 - Present*\\

@@ -28,4 +28,9 @@ var store = [{
         "excerpt":"Introduction In fact, “semantic parsing” is, ironically, a semantically ambiguous term, which could refer to: Semantic role labeling (also known as shallow semantic parsing, see previous post for more information). Finding generic relations in text. Transforming a natural language sentence into its meaning representation.In this post, semantic parsing is the...","categories": [],
         "tags": ["NLP Tasks"],
         "url": "http://localhost:4000/SP/"
+      },{
+        "title": "Language Modeling",
+        "excerpt":"Introduction A statistical language model is a probability distribution over sequences of words or characters. A language model consists of a finite set \\( \\mathcal{V} \\), and a function \\( p(x_1, x_2, …, x_n) \\) such that: For any \\( \\langle x_1 … x_n \\rangle \\in \\mathcal{V}^{\\dagger}\\), \\( p(x_1, x_2,...","categories": [],
+        "tags": ["NLP Tasks"],
+        "url": "http://localhost:4000/LM/"
       }]

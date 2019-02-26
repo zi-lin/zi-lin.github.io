@@ -19,7 +19,7 @@ Selected two courses
 ## Experience
 * **Language Computing and Web Mining Group, Institute of Computer Science and Technology, Peking University**\\
 *Aug. 2017 - Present*\\
-Research Assistant, Advisor: [**Weiwei Sun**](http://www.icst.pku.edu.cn/lcwm/wsun/)
+Research Assistant, Advisor: [**Weiwei Sun**](https://wsun106.github.io/index.html)
 
 * **Key Laboratory of Computational Linguistics, Peking University**\\
 *Jul. 2016 - Present*\\

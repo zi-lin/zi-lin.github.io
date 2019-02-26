@@ -27,6 +27,7 @@ logo: /images/zilin.jpg # path of site logo, e.g. "/images/logo.png"
 date_format: "%B %-d, %Y"
 read_time: # reading time estimates, e.g. true
 words_per_minute: # 200
+markdown: kramdown
 mathjax: true # MathJax equations, e.g. true
 google_fonts:
   - name: "Source Sans Pro"
@@ -45,7 +46,6 @@ liquid:
 
 # Build settings
 permalink: /:categories/:title/
-markdown: kramdown
 feed:
   path: atom.xml
 

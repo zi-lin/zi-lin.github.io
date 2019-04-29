@@ -29,8 +29,8 @@ var store = [{
         "tags": ["NLP Tasks"],
         "url": "http://localhost:4000/SP/"
       },{
-        "title": "Language Modeling",
-        "excerpt":"Introduction A statistical language model is a probability distribution over sequences of words or characters. A language model consists of a finite set \\( \\mathcal{V} \\), and a function \\( p(x_1, x_2, …, x_n) \\) such that: For any \\( \\langle x_1 … x_n \\rangle \\in \\mathcal{V}^{\\dagger}\\), \\( p(x_1, x_2,...","categories": [],
+        "title": "Constituent-to-dependency Conversion",
+        "excerpt":"Introduction Since dependency structure is not constrained by word order, it is considered to be more domain or language independent than phrase structure. Most current state-of-the-art dependency parsers use a supervised learning approach, which usually requires a large amount of annotated data. For English, there are some manually annotated dependency...","categories": [],
         "tags": ["NLP Tasks"],
-        "url": "http://localhost:4000/LM/"
+        "url": "http://localhost:4000/Constituent-to-dependency-Conversion/"
       }]

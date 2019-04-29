@@ -168,7 +168,7 @@
   <header class="entry-header">
     <h3 class="entry-title p-name">
       
-        <a href="/LM/" rel="bookmark">Language Modeling
+        <a href="/Constituent-to-dependency-Conversion/" rel="bookmark">Constituent-to-dependency Conversion
 </a>
       
     </h3>
@@ -178,11 +178,93 @@
     <div class="entry-excerpt p-summary">
       
         <h1 id="introduction">Introduction</h1>
-<p>A statistical language model is a probability distribution over sequences of words or characters. A language model consists of a finite set \( \mathcal{V} \), and a function \( p(x_1, x_2, …, x_n) \) such that:</p>
 
+<p>Since dependency structure is not constrained by word order, it is considered to be more domain or language independent than phrase structure. Most current state-of-the-art dependency parsers use a supervised learning approach, which usually requires a large amount of annotated data. For English, there are some manually annotated dependency Treebanks available <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>. Nonetheless, constituent-based Treebanks such as Penn Treebank are more dominant. Therefore, it is quite natural to built the tools that convert phrase structure to dependency structure.</p>
+
+<h1 id="tools">Tools</h1>
+
+<p>There have been several tools that convert constituent structures to dependency structures. Let’s assume that the constituency tree is in the Penn Treebank style as:</p>
+
+<p align="center">
+<img src="../images/constituent.png" alt="drawing" width="600px" />
+</p>
+
+<ul>
+  <li><strong><a href="https://cl.lingfil.uu.se/~nivre/research/Penn2Malt.html">Penn2Malt</a></strong> <sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>: it adds semantic dependencies extracted from function tags in the Penn Treebank (e.g., <code class="highlighter-rouge">LOC</code>, <code class="highlighter-rouge">TMP</code>) and remaps dependencies related to empty categories, producing non-projective dependencies.</li>
+</ul>
+
+<p align="center">
+<img src="../images/malt.png" alt="drawing" width="600px" />
+</p>
+
+<ul>
+  <li><strong><a href="http://nlp.cs.lth.se/software/treebank_converter/">LTH</a></strong> <sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>: it makes use of the extended structure of the new version of the Penn Treebank to derive a more ‘‘semantically useful’’ representation.</li>
+</ul>
+
+<p align="center">
+<img src="../images/lth.png" alt="drawing" width="600px" />
+</p>
+
+<ul>
+  <li><strong><a href="https://github.com/clir/clearnlp-guidelines/blob/master/md/components/dependency_conversion.md">ClearNLP</a></strong> <sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>:it generates the Emory style dependency trees as output, where the dependency labels are similar to the <a href="https://nlp.stanford.edu/software/stanford-dependencies.shtml">Stanford dependency labels</a>, producing long-distance dependencies by remapping empty categories in constituent trees, and secondary dependencies caused by several linguistic phenomena. For more details about the conversion labels, see <a href="http://www.mathcs.emory.edu/~choi/doc/cu-2012-choi.pdf">the guideline</a> for reference.</li>
+</ul>
+
+<p align="center">
+<img src="../images/clear.png" alt="drawing" width="600px" />
+</p>
+
+<ul>
+  <li><strong><a href="https://nlp.stanford.edu/software/stanford-dependencies.shtml">Stanford Dependencies</a></strong> <sup id="fnref:6"><a href="#fn:6" class="footnote">6</a></sup>: The Stanford Dependency converter was first introduced in <em>de Marneffe et al. (2006)</em><sup id="fnref:7"><a href="#fn:7" class="footnote">7</a></sup> and then updated accorsing to the <a href="https://universaldependencies.org/en/index.html">English Universal Dependencies</a> guidelines. Since version 3.5.2 the Stanford Parser and Stanford CoreNLP output grammatical relations in the Universal Dependencies v1 representation by default. They also revisited and extended the dependency graph representations in light of the recent Universal Dependencies initiative and provide a detailed account of an <em>enhanced</em> and an <em>enhanced++</em> English UD representation.</li>
+</ul>
+
+<p align="center">
+<img src="../images/stanford.png" alt="drawing" width="600px" />
+</p>
+
+<h1 id="issues-when-converting-to-ud">Issues when converting to UD</h1>
+<p>Most of the relations in the Universal Dependencies can be added with syntactic rules. The purely syntactic approach introduced in <em>Schuster and Manning (2016)</em> tends to work well in practice but two phenomena require additional consideration, and thus raise some uncertainty during the conversion.</p>
+
+<ul>
+  <li>
+    <p><strong>Multi-word Expression</strong>: the UD representation defines several multi-word expressions with function words that behave like a single word such as <em>because of</em> or <em>in case</em>. Extracting the correct structure for these expressions is often challenging because many of these expressions are not a constituent according to the Penn Treebank annotation guidelines <sup id="fnref:8"><a href="#fn:8" class="footnote">8</a></sup>.</p>
+  </li>
+  <li>
+    <p><strong>wh-words</strong>: the procedure often attaches wh-words in questions in the wrong head. For example, for the question “What does Peter seem to have?”, the procedure would attach “what” to the head of the matrix clause, “seem”, instead of the head of the embedded clause, “have”. If we were only concerned with converting manually annotated treebanks, we could resolve these ambiguities by making use of the indexed empty nodes in the phrase structure trees. However, the output of most constituency
+parsers does not contain these empty nodes.</p>
+  </li>
+</ul>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Owen Rambow, Cassandre Creswell, Rachel Szekely, Harriet Taber, and Marilyn Walker. A dependency treebank for english. In Proceedings of LREC’02, 2002. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>M. Cmejrek, J. Curín, and J. Havelka. Prague czech-english dependency treebank: Any hopes for a common annotation scheme? In HLT-NAACL’04 workshop on Frontiers in Corpus Annotation, pages 47–54, 2004. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>Joakim Nivre, Johan Hall, and Jens Nilsson. 2006. MaltParser: A data-driven parser generator for dependency parsing. In Proceedings of LREC2006. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>Johansson, R., &amp; Nugues, P. 2007. Extended constituent-to-dependency conversion for English. In <em>Proceedings of the 16th Nordic Conference of Computational Linguistics (NODALIDA 2007)</em> (pp. 105-112). <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:5">
+      <p>Choi, J. D., &amp; Palmer, M. 2010. Robust constituent-to-dependency conversion for English. In <em>Proceedings of the 9th International Workshop on Treebanks and Linguistic Theories (TLT’9)</em> (pp. 55-66). <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>Schuster, S., &amp; Manning, C. D. 2016. Enhanced English Universal Dependencies: An Improved Representation for Natural Language Understanding Tasks. In LREC (pp. 23-28). <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:7">
+      <p>de Marneffe, M.-C., MacCartney, B., and Manning, C. D. 2006. Generating typed dependency parses from phrase structure parses. In Proceedings of the Fifth International Conference on Language Resources and Evaluation (LREC-2006). <a href="#fnref:7" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:8">
+      <p>Marcus, M. P., Santorini, B., and Marcinkiewicz, M. A. 1993. Building a large annotated corpus of English: The Penn treebank. Computational Linguistics, 19(2). <a href="#fnref:8" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
         <div class="more-link">
-          <a href="/LM/">Read more&hellip;</a>
+          <a href="/Constituent-to-dependency-Conversion/">Read more&hellip;</a>
         </div>
       
     </div>
@@ -190,7 +272,7 @@
   
     <footer class="entry-meta">
       
-      <time class="entry-date dt-published" datetime="2019-01-19T00:00:00+08:00">January 19, 2019
+      <time class="entry-date dt-published" datetime="2019-04-29T00:00:00+08:00">April 29, 2019
   </time>
     </footer>
   

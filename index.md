@@ -17,17 +17,21 @@ B.A. in **Computational and Applied Linguistics**
 Selected two courses
 
 ## Experience
+[//]:* **Knowledge Computing Group, Microsoft Research Asia**\\
+[//]:*Apr. 2019 - Present*\\
+[//]:Research Intern
+
 * **Language Computing and Web Mining Group, Institute of Computer Science and Technology, Peking University**\\
 *Aug. 2017 - Present*\\
 Research Assistant, Advisor: [**Weiwei Sun**](https://wsun106.github.io/index.html)
 
-* **Key Laboratory of Computational Linguistics, Peking University**\\
-*Jul. 2016 - Present*\\
-Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/EN/People/Faculty/Detail/?ID=6029)
-
 * **Chinese Language Processing Group, Computer Science Department, Brandeis University**\\
 *Jul. 2018 - Sept. 2018*\\
 Research Assistant, Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/)
+
+* **Key Laboratory of Computational Linguistics, Peking University**\\
+*Jul. 2016 - Feb. 2018*\\
+Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/EN/People/Faculty/Detail/?ID=6029)
 
 ## Publication
 * **Implanting Rational Knowledge into Distributed Representation at Morpheme Level**\\
@@ -45,10 +49,10 @@ Yuguang Duan, **Zi Lin**, Weiwei Sun\\
 *In Proceedings of the International Conference on Bilingual Learning and Teaching (ICBLT), 2018*\\
 \[[**Conference**](http://ouhk2018icblt.mozello.com/)\] \[[**PDF**](./pdf/icblt2018.pdf)\]
 
-* **Acoustic Analysis on the Monosyllable and Disyllable of Rui'an Dialect (In Chinese)**\\
-**Zi Lin**\\
-Science Press, 2018\\
-\[[**Manuscript**](./pdf/ruian-dialect.pdf)\]
+[//]:* **Acoustic Analysis on the Monosyllable and Disyllable of Rui'an Dialect (In Chinese)**\\
+[//]:**Zi Lin**\\
+[//]:Science Press, 2018\\
+[//]:\[[**Manuscript**](./pdf/ruian-dialect.pdf)\]
 
 * **Towards a Description of Chinese Morpheme Conceptions and Semantic Word Formation (In Chinese)**\\
 Yang Liu, **Zi Lin**, Sichen Kang\\

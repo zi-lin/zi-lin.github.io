@@ -39,7 +39,7 @@ There have been several tools that convert constituent structures to dependency 
 <img src="../images/clear.png" alt="drawing" width="600px"/>
 </p>
 
-- **[Stanford Dependencies](https://nlp.stanford.edu/software/stanford-dependencies.shtml)** [^6]: The Stanford Dependency converter was first introduced in *de Marneffe et al. (2006)*[^7] and then updated accorsing to the [English Universal Dependencies](https://universaldependencies.org/en/index.html) guidelines. Since version 3.5.2 the Stanford Parser and Stanford CoreNLP output grammatical relations in the Universal Dependencies v1 representation by default. They also revisited and extended the dependency graph representations in light of the recent Universal Dependencies initiative and provide a detailed account of an *enhanced* and an *enhanced++* English UD representation.
+- **[Stanford Dependencies](https://nlp.stanford.edu/software/stanford-dependencies.shtml)** [^6]: The Stanford Dependency converter was first introduced in *de Marneffe et al. (2006)*[^7] and then updated according to the [English Universal Dependencies](https://universaldependencies.org/en/index.html) guidelines. Since version 3.5.2 the Stanford Parser and Stanford CoreNLP output grammatical relations in the Universal Dependencies v1 representation by default. They also revisited and extended the dependency graph representations in light of the recent Universal Dependencies initiative and provide a detailed account of an *enhanced* and an *enhanced++* English UD representation.
 
 <p align="center">
 <img src="../images/stanford.png" alt="drawing" width="600px"/>

@@ -32,5 +32,10 @@ var store = [{
         "title": "Constituent-to-dependency Conversion",
         "excerpt":"Introduction Since dependency structure is not constrained by word order, it is considered to be more domain or language independent than phrase structure. Most current state-of-the-art dependency parsers use a supervised learning approach, which usually requires a large amount of annotated data. For English, there are some manually annotated dependency...","categories": [],
         "tags": ["NLP Tasks"],
-        "url": "http://localhost:4000/Constituent-to-dependency-Conversion/"
+        "url": "http://localhost:4000/constituent-to-dependency/"
+      },{
+        "title": "Domain Adaptation for Syntactic Analysis",
+        "excerpt":"Introduction Current NLP systems tend to perform well only on their training domain and nearby genres, while the performances often degrade on the data drawn from different domains. Recently, many endeavors have been made to explore and solve the problems of domain adaptation, ranging from creating challenging datasets to building...","categories": [],
+        "tags": ["NLP Tasks"],
+        "url": "http://localhost:4000/domain-adaptation/"
       }]

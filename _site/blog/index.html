@@ -91,7 +91,7 @@
   
     <li>
       <a href="#2019">
-        <strong>2019</strong> <span class="taxonomy-count">1</span>
+        <strong>2019</strong> <span class="taxonomy-count">2</span>
       </a>
     </li>
   
@@ -121,7 +121,7 @@
   <header class="entry-header">
     <h3 class="entry-title p-name">
       
-        <a href="/Constituent-to-dependency-Conversion/" rel="bookmark">Constituent-to-dependency Conversion
+        <a href="/domain-adaptation/" rel="bookmark">Domain Adaptation for Syntactic Analysis
 </a>
       
     </h3>
@@ -131,61 +131,42 @@
     <div class="entry-excerpt p-summary">
       
         <h1 id="introduction">Introduction</h1>
+<p>Current NLP systems tend to perform well only on their training domain and nearby genres, while the performances often degrade on the data drawn from different domains.</p>
 
+
+        <div class="more-link">
+          <a href="/domain-adaptation/">Read more&hellip;</a>
+        </div>
+      
+    </div>
+  
+  
+    <footer class="entry-meta">
+      
+      <time class="entry-date dt-published" datetime="2019-05-01T00:00:00+08:00">May 1, 2019
+  </time>
+    </footer>
+  
+</article>
+
+      
+        
+
+<article class="entry h-entry">
+  <header class="entry-header">
+    <h3 class="entry-title p-name">
+      
+        <a href="/constituent-to-dependency/" rel="bookmark">Constituent-to-dependency Conversion
+</a>
+      
+    </h3>
+    
+  </header>
+  
+    <div class="entry-excerpt p-summary">
+      
+        <h1 id="introduction">Introduction</h1>
 <p>Since dependency structure is not constrained by word order, it is considered to be more domain or language independent than phrase structure. Most current state-of-the-art dependency parsers use a supervised learning approach, which usually requires a large amount of annotated data. For English, there are some manually annotated dependency Treebanks available <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>. Nonetheless, constituent-based Treebanks such as Penn Treebank are more dominant. Therefore, it is quite natural to built the tools that convert phrase structure to dependency structure.</p>
-
-<h1 id="tools">Tools</h1>
-
-<p>There have been several tools that convert constituent structures to dependency structures. Let’s assume that the constituency tree is in the Penn Treebank style as:</p>
-
-<p align="center">
-<img src="../images/constituent.png" alt="drawing" width="600px" />
-</p>
-
-<ul>
-  <li><strong><a href="https://cl.lingfil.uu.se/~nivre/research/Penn2Malt.html">Penn2Malt</a></strong> <sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>: it adds semantic dependencies extracted from function tags in the Penn Treebank (e.g., <code class="highlighter-rouge">LOC</code>, <code class="highlighter-rouge">TMP</code>) and remaps dependencies related to empty categories, producing non-projective dependencies.</li>
-</ul>
-
-<p align="center">
-<img src="../images/malt.png" alt="drawing" width="600px" />
-</p>
-
-<ul>
-  <li><strong><a href="http://nlp.cs.lth.se/software/treebank_converter/">LTH</a></strong> <sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>: it makes use of the extended structure of the new version of the Penn Treebank to derive a more ‘‘semantically useful’’ representation.</li>
-</ul>
-
-<p align="center">
-<img src="../images/lth.png" alt="drawing" width="600px" />
-</p>
-
-<ul>
-  <li><strong><a href="https://github.com/clir/clearnlp-guidelines/blob/master/md/components/dependency_conversion.md">ClearNLP</a></strong> <sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>:it generates the Emory style dependency trees as output, where the dependency labels are similar to the <a href="https://nlp.stanford.edu/software/stanford-dependencies.shtml">Stanford dependency labels</a>, producing long-distance dependencies by remapping empty categories in constituent trees, and secondary dependencies caused by several linguistic phenomena. For more details about the conversion labels, see <a href="http://www.mathcs.emory.edu/~choi/doc/cu-2012-choi.pdf">the guideline</a> for reference.</li>
-</ul>
-
-<p align="center">
-<img src="../images/clear.png" alt="drawing" width="600px" />
-</p>
-
-<ul>
-  <li><strong><a href="https://nlp.stanford.edu/software/stanford-dependencies.shtml">Stanford Dependencies</a></strong> <sup id="fnref:6"><a href="#fn:6" class="footnote">6</a></sup>: The Stanford Dependency converter was first introduced in <em>de Marneffe et al. (2006)</em><sup id="fnref:7"><a href="#fn:7" class="footnote">7</a></sup> and then updated accorsing to the <a href="https://universaldependencies.org/en/index.html">English Universal Dependencies</a> guidelines. Since version 3.5.2 the Stanford Parser and Stanford CoreNLP output grammatical relations in the Universal Dependencies v1 representation by default. They also revisited and extended the dependency graph representations in light of the recent Universal Dependencies initiative and provide a detailed account of an <em>enhanced</em> and an <em>enhanced++</em> English UD representation.</li>
-</ul>
-
-<p align="center">
-<img src="../images/stanford.png" alt="drawing" width="600px" />
-</p>
-
-<h1 id="issues-when-converting-to-ud">Issues when converting to UD</h1>
-<p>Most of the relations in the Universal Dependencies can be added with syntactic rules. The purely syntactic approach introduced in <em>Schuster and Manning (2016)</em> tends to work well in practice but two phenomena require additional consideration, and thus raise some uncertainty during the conversion.</p>
-
-<ul>
-  <li>
-    <p><strong>Multi-word Expression</strong>: the UD representation defines several multi-word expressions with function words that behave like a single word such as <em>because of</em> or <em>in case</em>. Extracting the correct structure for these expressions is often challenging because many of these expressions are not a constituent according to the Penn Treebank annotation guidelines <sup id="fnref:8"><a href="#fn:8" class="footnote">8</a></sup>.</p>
-  </li>
-  <li>
-    <p><strong>wh-words</strong>: the procedure often attaches wh-words in questions in the wrong head. For example, for the question “What does Peter seem to have?”, the procedure would attach “what” to the head of the matrix clause, “seem”, instead of the head of the embedded clause, “have”. If we were only concerned with converting manually annotated treebanks, we could resolve these ambiguities by making use of the indexed empty nodes in the phrase structure trees. However, the output of most constituency
-parsers does not contain these empty nodes.</p>
-  </li>
-</ul>
 
 <div class="footnotes">
   <ol>
@@ -195,29 +176,11 @@ parsers does not contain these empty nodes.</p>
     <li id="fn:2">
       <p>M. Cmejrek, J. Curín, and J. Havelka. Prague czech-english dependency treebank: Any hopes for a common annotation scheme? In HLT-NAACL’04 workshop on Frontiers in Corpus Annotation, pages 47–54, 2004. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
     </li>
-    <li id="fn:3">
-      <p>Joakim Nivre, Johan Hall, and Jens Nilsson. 2006. MaltParser: A data-driven parser generator for dependency parsing. In Proceedings of LREC2006. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:4">
-      <p>Johansson, R., &amp; Nugues, P. 2007. Extended constituent-to-dependency conversion for English. In <em>Proceedings of the 16th Nordic Conference of Computational Linguistics (NODALIDA 2007)</em> (pp. 105-112). <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:5">
-      <p>Choi, J. D., &amp; Palmer, M. 2010. Robust constituent-to-dependency conversion for English. In <em>Proceedings of the 9th International Workshop on Treebanks and Linguistic Theories (TLT’9)</em> (pp. 55-66). <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:6">
-      <p>Schuster, S., &amp; Manning, C. D. 2016. Enhanced English Universal Dependencies: An Improved Representation for Natural Language Understanding Tasks. In LREC (pp. 23-28). <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:7">
-      <p>de Marneffe, M.-C., MacCartney, B., and Manning, C. D. 2006. Generating typed dependency parses from phrase structure parses. In Proceedings of the Fifth International Conference on Language Resources and Evaluation (LREC-2006). <a href="#fnref:7" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:8">
-      <p>Marcus, M. P., Santorini, B., and Marcinkiewicz, M. A. 1993. Building a large annotated corpus of English: The Penn treebank. Computational Linguistics, 19(2). <a href="#fnref:8" class="reversefootnote">&#8617;</a></p>
-    </li>
   </ol>
 </div>
 
         <div class="more-link">
-          <a href="/Constituent-to-dependency-Conversion/">Read more&hellip;</a>
+          <a href="/constituent-to-dependency/">Read more&hellip;</a>
         </div>
       
     </div>
@@ -291,242 +254,8 @@ parsers does not contain these empty nodes.</p>
     <div class="entry-excerpt p-summary">
       
         <h1 id="introduction">Introduction</h1>
-
 <p><strong>Semantic Role Labeling (SRL)</strong>, sometimes called <em>shallow semantic parsing</em>, is a process in natural language processing that assigns semantic roles to constituents or their head words in a sentence according to their relationship to the predicates expressed in the sentence. Typical semantic roles can be divided into core <strong>arguments</strong> and <strong>adjuncts</strong>. The core arguments include <em>Agent, Patient, Source, Goal</em>, etc, While the adjuncts include <em>Location, Time, Manner, Cause</em>, etc.</p>
 
-<p>For example, in the sentence <code class="highlighter-rouge">I ate breakfast quickly in the car this morning because I was in a hurry</code>, we can have the labeled sentence like this:</p>
-
-<blockquote>
-  <p>[I]<sub>agent</sub> [<strong>eat</strong>]<sub>predicate</sub> [breakfast]<sub>patient</sub> [quickly]<sub>manner</sub> [in the car]<sub>location</sub> [this morning]<sub>time</sub> [because I was in a hurry]<sub>cause</sub> .</p>
-</blockquote>
-
-<h1 id="source">Source</h1>
-<p>There are mainly three sources for SRL, namely, <a href="https://propbank.github.io/">PropBank</a>, <a href="https://framenet.icsi.berkeley.edu/fndrupal/">FrameNet</a> and <a href="https://verbs.colorado.edu/~mpalmer/projects/verbnet.html">VerbNet</a>.</p>
-
-<h2 id="propbank">PropBank</h2>
-<p>PropBank is a corpus in which the arguments of each predicate are annotated with their semantic roles in relation to the predicate <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. Currently, all the PropBank annotations are done on top of the phrase structure annotation of the <strong>Pen TreeBank</strong> <sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>. In addition to semantic role annotation, PropBank annotation requires the choice of a sense ID (also known as <em>frameset</em> or <em>roleset</em> ID) for each predicate. Thus, for each verb in every tree (representing the phrase structure of the corresponding sentence), PropBank has the instance that consists of the sense ID of the predicate (e.g. eat.01) and its arguments labeled with semantic roles.</p>
-
-<p>An important goal is to provide consistent argument labels across different syntactic realizations of the same verb, as in…</p>
-
-<blockquote>
-  <p>[I]<sub>ARG0</sub> [<strong>eat</strong>]<sub>predicate</sub> [breakfast]<sub>ARG1</sub> [quickly]<sub>ARGM-MNR</sub> [in the car]<sub>ARGM-LOC</sub> [this morning]<sub>ARGM-TMP</sub> [because I was in a hurry]<sub>ARGM-CAU</sub> .</p>
-</blockquote>
-
-<p>The argument structure of each predicate is outlined in the PropBank frame file for that predicate. The frame file denotes the correspondences between numbered arguments and semantic roles, as this is somewhat unique for each predicate.</p>
-
-<p>Numbered arguments reflect either the arguments that are required for the valency of a predicate (e.g., agent, patient, benefactive), or if not required, those that occur with high-frequency in actual usage. Although numbered arguments correspond to slightly different semantic roles given the usage of each predicate, in general numbered arguments correspond to the following semantic roles:</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td><strong>ARG0</strong></td>
-      <td>agent</td>
-      <td><strong>ARG3</strong></td>
-      <td>starting point, benefactive, attribute</td>
-    </tr>
-    <tr>
-      <td><strong>ARG1</strong></td>
-      <td>patient</td>
-      <td><strong>ARG4</strong></td>
-      <td>ending point</td>
-    </tr>
-    <tr>
-      <td><strong>ARG2</strong></td>
-      <td>instrument, benefactive, attribute</td>
-      <td><strong>ARGM</strong></td>
-      <td>modifier</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="framenet">FrameNet</h2>
-<p>The FrameNet project is to design a lexical database of English based on a linguistic theory called <strong>Frame Semantics</strong>. The meaning of most words can best be understood on the basis of a semantic frame, and the basic assumption on which the frames are built is that each word evokes a particular situation with particular participants<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>.</p>
-
-<p>For example, the concept of <em>eat</em> usually involves a person doing the eating (<code class="highlighter-rouge">Ingester</code>), the food that is to be eaten (<code class="highlighter-rouge">Ingestibles</code>). In FrameNet, this event is represented as a frame called <code class="highlighter-rouge">Ingestion</code>, while the <code class="highlighter-rouge">Ingester</code> and <code class="highlighter-rouge">Ingestibles</code> are all frame elements (FEs), and predicates <em>eat</em> evoking frames are called lexical unites (LUs). One frame can have multiple lexical unites, e.g., for the frame <code class="highlighter-rouge">Ingestion</code>, we can have <em>consume, devour, drink, eat, feed</em>, etc.</p>
-
-<blockquote>
-  <p>[I]<sub>Ingester</sub> [<strong>eat</strong>]<sub>LUs</sub> [breakfast]<sub>Ingestibles</sub> [quickly]<sub>Manner</sub> [in the car]<sub>Place</sub> [this morning]<sub>Time</sub> because I was in a hurry.</p>
-</blockquote>
-
-<h2 id="verbnet">VerbNet</h2>
-
-<blockquote>
-  <p>[I]<sub>Agent</sub> [<strong>eat</strong>]<sub>Verb</sub> [breakfast]<sub>Patient</sub> quickly in the car this morning because I was in a hurry.</p>
-</blockquote>
-
-<h1 id="data">Data</h1>
-
-<ul>
-  <li>
-    <p><strong><a href="http://www.lsi.upc.edu/~srlconll/conll05st-release.tar.gz">CoNLL-2005</a>:</strong> The CoNLL-2005 dataset takes section 2-21 of the Wall Street Journal (WSJ) corpus as training set, and section 24 as development set. The test set consist of section 23 of the <strong>WSJ</strong> corpus (in-domain test) as well as 3 section from the <strong>Brown</strong> corpus (out-of-domain test) <sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>.</p>
-  </li>
-  <li>
-    <p><strong><a href="http://conll.cemantix.org/2012/data.html">CoNLL-2012</a>:</strong> The CoNLL-2012 dataset is extracted from the OntoNotes v5.0 corpus <sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup>. The description and separation of training, development and test set can be found in <a href="http://www.aclweb.org/anthology/W13-3516">Pardhan et al. (2013)</a>.</p>
-  </li>
-</ul>
-
-<h1 id="experiments--results">Experiments &amp; Results</h1>
-
-<p>Note: All the statistics are obtained from the exact papers or papers citing the exact papers. Contact me if the statistics are not correct or you think your model should be listed as one of them.</p>
-
-<h2 id="with-gold-predicate">With Gold Predicate</h2>
-
-<p>Of course, for each model, we can have different versions, e.g., using the word embeddings from Glove or ELMo, and different versions can lead to different results. Here I just list the results for one of the versions, most of which are single models without using any tricks. I will specify if there are tricks leveraged, e.g., LISA+<strong>D&amp;M</strong>. You should look the original paper if you are interested in the model, and check whether there are some other versions of the model yielding better results. <strong>Please contact me (through email) if the statistics is incorrect.</strong></p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Paper</th>
-      <th style="text-align: center">Model</th>
-      <th style="text-align: center">WSJ</th>
-      <th style="text-align: center">Brown</th>
-      <th style="text-align: center">CoNLL-2012</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><a href="http://aclweb.org/anthology/D18-1548">EMNLP-18</a></td>
-      <td style="text-align: center">LISA+D&amp;M<br /><em>University of Massachusetts Amherst &amp; Google AI Language</em></td>
-      <td style="text-align: center"><strong>86.04</strong></td>
-      <td style="text-align: center"><strong>76.54</strong></td>
-      <td style="text-align: center">-</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><a href="http://aclweb.org/anthology/N18-1202">NAACL-18</a></td>
-      <td style="text-align: center">Peter et al.+ELMo<br /><em>Allen Institute for Artificial Intelligence &amp; University of Washington</em></td>
-      <td style="text-align: center">-</td>
-      <td style="text-align: center">-</td>
-      <td style="text-align: center"><strong>84.6</strong></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/download/16725/16025">AAAI-18</a></td>
-      <td style="text-align: center">Tan et al.<br /><em>Xiamen University &amp; Tencent Technology Co.</em></td>
-      <td style="text-align: center">84.8</td>
-      <td style="text-align: center">74.1</td>
-      <td style="text-align: center">82.7</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><a href="http://aclweb.org/anthology/P18-2058">ACL-18</a></td>
-      <td style="text-align: center">He et al.<br /><em>University of Washington</em></td>
-      <td style="text-align: center">83.9</td>
-      <td style="text-align: center">73.7</td>
-      <td style="text-align: center">82.1</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><a href="http://aclweb.org/anthology/P17-1044">ACL-17</a></td>
-      <td style="text-align: center">He et al.<br /><em>University of Washington, Facebook AI Research &amp; Allen Institute for Artificial Intelligence</em></td>
-      <td style="text-align: center">83.1</td>
-      <td style="text-align: center">72.1</td>
-      <td style="text-align: center">81.7</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><a href="http://aclweb.org/anthology/D17-1128">EMNLP-17</a></td>
-      <td style="text-align: center">Yang and Mitchell<br /><em>Carnegie Mellon University</em></td>
-      <td style="text-align: center">81.9</td>
-      <td style="text-align: center">72.0</td>
-      <td style="text-align: center">-</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><a href="http://www.aclweb.org/anthology/P15-1109">ACL-15</a></td>
-      <td style="text-align: center">Zhou and Xu<br /><em>Baidu Research</em></td>
-      <td style="text-align: center">82.8</td>
-      <td style="text-align: center">69.4</td>
-      <td style="text-align: center">81.1</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><a href="http://aclweb.org/anthology/D15-1112">EMNLP-15</a></td>
-      <td style="text-align: center">FitzGerald at al.<br /><em>University of Washington &amp; Google</em></td>
-      <td style="text-align: center">80.3</td>
-      <td style="text-align: center">72.2</td>
-      <td style="text-align: center">80.1</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><a href="http://aclweb.org/anthology/Q15-1003">TACL-15</a></td>
-      <td style="text-align: center">Tackstrom et al.<br /><em>Google</em></td>
-      <td style="text-align: center">79.9</td>
-      <td style="text-align: center">71.3</td>
-      <td style="text-align: center">79.4</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><a href="http://www.aclweb.org/anthology/W13-3516">CoNLL-13</a></td>
-      <td style="text-align: center">Pradhan et al.<br /><em>Boston Children’s Hospital and Harvard Medical School, University of Trento, QCRI, Brandeis University, National University of Singapore &amp; University of Stuttgart</em></td>
-      <td style="text-align: center">-</td>
-      <td style="text-align: center">-</td>
-      <td style="text-align: center">77.5</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><a href="https://www.aclweb.org/anthology/J/J08/J08-2002.pdf">CL-08</a></td>
-      <td style="text-align: center">Toutanova et al.<br /><em>Microsoft Research, University of California Berkeley &amp; Stanford University</em></td>
-      <td style="text-align: center">80.3</td>
-      <td style="text-align: center">68.8</td>
-      <td style="text-align: center">-</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><a href="https://www.mitpressjournals.org/doi/pdf/10.1162/coli.2008.34.2.257">CL-08</a></td>
-      <td style="text-align: center">Punyakanok et al.<br /><em>BBN Technologies, University of Illinois at Urbana-Champaign &amp; Microsoft Research</em></td>
-      <td style="text-align: center">79.4</td>
-      <td style="text-align: center">67.8</td>
-      <td style="text-align: center">-</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="without-gold-predicate">Without Gold Predicate</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Paper</th>
-      <th style="text-align: center">Model</th>
-      <th style="text-align: center">WSJ</th>
-      <th style="text-align: center">Brown</th>
-      <th style="text-align: center">CoNLL-2012</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><a href="http://aclweb.org/anthology/D18-1548">EMNLP-18</a></td>
-      <td style="text-align: center">LISA+ELMo+D&amp;M<br /><em>University of Massachusetts Amherst &amp; Google AI Language</em></td>
-      <td style="text-align: center"><strong>86.90</strong></td>
-      <td style="text-align: center"><strong>78.25</strong></td>
-      <td style="text-align: center"><strong>83.38</strong></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><a href="http://aclweb.org/anthology/P18-2058">ACL-18</a></td>
-      <td style="text-align: center">He et al.+ELMo<br /><em>University of Washington</em></td>
-      <td style="text-align: center">86.0</td>
-      <td style="text-align: center">76.1</td>
-      <td style="text-align: center">82.9</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><a href="http://aclweb.org/anthology/P17-1044">ACL-17</a></td>
-      <td style="text-align: center">He et al.+GloVe+PoE<br /><em>University of Washington, Facebook AI Research &amp; Allen Institute for Artificial Intelligence</em></td>
-      <td style="text-align: center">82.7</td>
-      <td style="text-align: center">70.1</td>
-      <td style="text-align: center">78.4</td>
-    </tr>
-  </tbody>
-</table>
-
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p>Martha Palmer, Daniel Gildea, and Paul Kingsbury. 2005. The proposition bank: An annotated corpus of semantic roles. Computational Linguistics, 31(1):71-106. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:2">
-      <p>Mitchell P. Marcus, Mary Ann Marcinkiewicz, and Beatrice Santorini. 1993. Building a large annotated corpus of English: the penn treebank. Computational Linguistics, 19(2):313-330. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:3">
-      <p>Charles J Fillmore. 1968. The Case for Case. Universals in Linguistic Theory. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:4">
-      <p>Xavier Carreras and Lluis Marquez. 2005. Introduction to the conll-2005 shared task: Semantic role labeling. In CoNLL. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:5">
-      <p>Sameer Pradhan, Alessandro Moschitti, Nianwen Xue, Hwee Tou Ng, Anders Bjorkelund, Olga Uryupina, Yuchen Zhang, and Zhi Zhong. 2013. Towards robust linguistic analysis using ontonotes. In CoNLL. <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
 
         <div class="more-link">
           <a href="/SRL/">Read more&hellip;</a>

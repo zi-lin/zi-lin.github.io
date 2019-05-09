@@ -7,10 +7,10 @@ author: Zi Lin
 date: 2019-04-29
 ---
 # Introduction
-Since dependency structure is not constrained by word order, it is considered to be more domain or language independent than phrase structure. Most current state-of-the-art dependency parsers use a supervised learning approach, which usually requires a large amount of annotated data. For English, there are some manually annotated dependency Treebanks available [^1][^2]. Nonetheless, constituent-based Treebanks such as Penn Treebank are more dominant. Therefore, it is quite natural to built the tools that convert phrase structure to dependency structure.
+Since dependency structure is not constrained by word order, it is considered to be more domain or language independent than phrase structure. Most current state-of-the-art dependency parsers use supervised learning approaches, which usually requires a large amount of annotated data. For English, there are some manually annotated dependency Treebanks available [^1][^2]. Nonetheless, constituent-based Treebanks such as Penn Treebank are more dominant. Therefore, it is quite natural to built the tools that convert phrase structures to dependency structures.
 
 # Tools
-There have been several tools that convert constituent structures to dependency structures. Let's assume that the constituency tree is in the Penn Treebank style as:
+There have been several tools that convert constituent structures to dependency structures. Let's assume that the constituency tree in the Penn Treebank style has the form:
 
 <p align="center">
 <img src="../images/constituent.png" alt="drawing" width="600px"/>

@@ -30,7 +30,7 @@ var store = [{
         "url": "http://localhost:4000/SP/"
       },{
         "title": "Constituent-to-dependency Conversion",
-        "excerpt":"Introduction Since dependency structure is not constrained by word order, it is considered to be more domain or language independent than phrase structure. Most current state-of-the-art dependency parsers use a supervised learning approach, which usually requires a large amount of annotated data. For English, there are some manually annotated dependency...","categories": [],
+        "excerpt":"Introduction Since dependency structure is not constrained by word order, it is considered to be more domain or language independent than phrase structure. Most current state-of-the-art dependency parsers use supervised learning approaches, which usually requires a large amount of annotated data. For English, there are some manually annotated dependency Treebanks...","categories": [],
         "tags": ["NLP Tasks"],
         "url": "http://localhost:4000/constituent-to-dependency/"
       },{

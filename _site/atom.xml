@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-01T20:05:31+08:00</updated><id>http://localhost:4000/</id><title type="html">Zi Lin</title><subtitle>[firstname].[lastname]@pku.edu.cn</subtitle><author><name>Zi Lin</name><email>linzi.pku@gmail.com</email></author><entry><title type="html">Domain Adaptation for Syntactic Analysis</title><link href="http://localhost:4000/domain-adaptation/" rel="alternate" type="text/html" title="Domain Adaptation for Syntactic Analysis" /><published>2019-05-01T00:00:00+08:00</published><updated>2019-05-01T00:00:00+08:00</updated><id>http://localhost:4000/domain-adaptation</id><content type="html" xml:base="http://localhost:4000/domain-adaptation/">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-09T16:17:19+08:00</updated><id>http://localhost:4000/</id><title type="html">Zi Lin</title><subtitle>[firstname].[lastname]@pku.edu.cn</subtitle><author><name>Zi Lin</name><email>linzi.pku@gmail.com</email></author><entry><title type="html">Domain Adaptation for Syntactic Analysis</title><link href="http://localhost:4000/domain-adaptation/" rel="alternate" type="text/html" title="Domain Adaptation for Syntactic Analysis" /><published>2019-05-01T00:00:00+08:00</published><updated>2019-05-09T00:00:00+08:00</updated><id>http://localhost:4000/domain-adaptation</id><content type="html" xml:base="http://localhost:4000/domain-adaptation/">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Current NLP systems tend to perform well only on their training domain and nearby genres, while the performances often degrade on the data drawn from different domains.&lt;/p&gt;
 
 &lt;p&gt;Recently, many endeavors have been made to explore and solve the problems of domain adaptation, ranging from creating challenging datasets to building algorithm that can avoid overfitting on the training data or transfer to the new domains. Here we will discuss several datasets build for the out-of-domain NLP task of syntactic analysis as well as some ideas on how to address the problem of domain adaptation. Note that in the literature, many definitions of the source domain and the target domain are proposed, here domain adaptation refers to the domains within the same NLP task and language (mainly English), but for other genres and domains such as emails, web forums and biomedical papers in terms of the dominant source domain of the Penn Treebank of Wall Street Journal (WSJ, financial news).&lt;/p&gt;
@@ -14,6 +14,9 @@
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/Oneplus/Tweebank&quot;&gt;Tweebank&lt;/a&gt;&lt;/strong&gt;: Tweebank v2 is a collection of English tweets annotated in &lt;strong&gt;Universal Dependencies&lt;/strong&gt; that can be exploited for the training of NLP systems to enhance their performance on social media texts. It is built on the original data of Tweebank v1 (840 unique tweets, 639/201 for training/test set), along with an additional 210 tweets sampled from the &lt;strong&gt;POS-tagged&lt;/strong&gt; dataset of Gimpel et al. (2011) &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; and 2,500 tweets sampled from the Twitter stream from Feb. 2016 to Jul. 2016. The latter data source consists of 147.4M English tweets. In the same way as Kong et al. (2011)&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, reference unit is always the tweet in its entirety – which may thus consist of multiple sentences – not the sentence alone.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.computing.dcu.ie/~jjudge/qtreebank/&quot;&gt;QuestionBank&lt;/a&gt;&lt;/strong&gt;: a corpus of 4000 &lt;strong&gt;parse-annotated&lt;/strong&gt; questions for use in training parsers employed in QA and evaluation of question parsing. In 2011, Chris Manning spent some time improving the parses in QuestionBank, and the results of that work appear &lt;a href=&quot;https://nlp.stanford.edu/data/QuestionBank-Stanford.shtml&quot;&gt;here&lt;/a&gt;. The corrected version was released as a script that maps the original to the corrected version.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://catalog.ldc.upenn.edu/LDC2012T02&quot;&gt;English Translation Treebank (ETT)&lt;/a&gt;&lt;/strong&gt;: English Translation Treebank consists of 599 distinct newswire stories from the Lebanese publication An Nahar translated from Arabic to English and annotated for &lt;strong&gt;part-of-speech&lt;/strong&gt; and &lt;strong&gt;syntactic structure&lt;/strong&gt;. This corpus is part of an effort at LDC to produce parallel Arabic and English treebanks.&lt;/p&gt;
@@ -79,6 +82,14 @@
       &lt;td style=&quot;text-align: right&quot;&gt;55,427&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
+      &lt;td&gt;QuestionBank&lt;/td&gt;
+      &lt;td&gt;PTB&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;✔&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;4,000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
       &lt;td&gt;ETT&lt;/td&gt;
       &lt;td&gt;PTB&lt;/td&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;✔&lt;/td&gt;
@@ -105,6 +116,42 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
+&lt;h1 id=&quot;tagging--parsing&quot;&gt;Tagging &amp;amp; Parsing&lt;/h1&gt;
+
+&lt;p&gt;Domain adaptation has been recognized as a major NLP problem for over a decade. In particular, bridging the performance gap between in-domain and out-of-domain for tasks such as POS-tagging and parsing has received considerable attention. Here we will investigate some techniques for out-of-domain parsing.&lt;/p&gt;
+
+&lt;h2 id=&quot;semi-supervised-parser-domain-adaptation-with-self-training&quot;&gt;Semi-supervised parser domain adaptation with self-training&lt;/h2&gt;
+
+&lt;p&gt;Because treebanks are expensive to create, while plain text in most domains is easily obtainable, semi-supervised approaches to parser domain adaptation are a particularly attractive solution to the domain portability problem. This usually involves a manually annotated training set (a treebank), and a larger set of unlabeled data (plain text).&lt;/p&gt;
+
+&lt;p&gt;Many work in unsupervised domain adaptation for state-of-the-art parsers has achieved accuracy levels on out-of-domain text that is comparable to that achieved with domain-specific training data. This is done in a self-training setting, where a parser trained on a treebank (in a seed domain) is used to parse a large amount of unlabeled data in the target domain (assigning only one parse per sentence). The automatically parsed corpus is then used as additional training data for the parser. Specifically, their highlights are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Reranking&lt;/strong&gt;: McClosky et al. (2006b)&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; presented the most successful semi-supervised approach to date for adaptation of a WSJ-trained parser to Brown data containing several genres of text. Their approach involves the use of a first-stage n-best parser and a reranker, which together produce parses for the unlabeled dataset. The automatically parsed in-domain corpus is then used as additional training material. In their previous work&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;, McClosky et al. (2006a) argue that the use of a reranker is an important factor in the success of their approach, which is a layered model: the baser layer is a generative statistical PCFG parser that creates a ranked list of k parses (say, 50), and the second layer is a reranker that reorders these parses using more detailed features.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Small seed&lt;/strong&gt;: Reichart and Rappoport (2007)&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt; used self-training to enhance the performance of a generative statistical PCFG parser for both the in-domain and the parser adaptation scenarios. The difference between their parser and McClosky et al.’s: [1] the 1-best list of a base parser can be used as a self-training material for the base parser itself; [2] the self-training can be done when the seed is small. They achieved this by identifying the self-training protocols: the self-training set contains several thousand sentences. A parser trained with a small seed set parses the self-training set, and then the &lt;em&gt;whole&lt;/em&gt; automatically annotated self-training set is combined with the manually annotated seed set to retrain the parser.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Confidence-based&lt;/strong&gt;: Sagae and Tsujii (2007)&lt;sup id=&quot;fnref:6&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt; improved the out-of-domain accuracy of a dependency parser trained on the entire WSJ training set (40k sentences) by using unlabeled data in the same domain as the out-of-domain test data (biomedical text). They use agreement between different parsers to estimate the quality of automatically generated training instances and selected only sentences with high estimated accuracy.&lt;/p&gt;
+
+    &lt;p&gt;Yu et al. (2015)&lt;sup id=&quot;fnref:9&quot;&gt;&lt;a href=&quot;#fn:9&quot; class=&quot;footnote&quot;&gt;7&lt;/a&gt;&lt;/sup&gt; used confidence-based methods to select additional training samples, where they compared two confidence-based methods: [1] using the parse score of the employed parser to measure the confidence into a parse tree; [2] calculating the score differences between the best tree and alternative trees.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Simple:&lt;/strong&gt; Sagae (2010)&lt;sup id=&quot;fnref:7&quot;&gt;&lt;a href=&quot;#fn:7&quot; class=&quot;footnote&quot;&gt;8&lt;/a&gt;&lt;/sup&gt; proposed a simple self-training framework for domain adaptation to avoid the settings as in previous work (without reranking, other means of training instance selection, or estimation of parse quality). The work investigated the contribution of the reranker for a constituency parser, and suggested that constituency parsers without a reranker can achieve significant improvements on the target domain but the results are still higher when a reranker is used.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Useful info from target domain&lt;/strong&gt;: Chen et al. (2008)&lt;sup id=&quot;fnref:8&quot;&gt;&lt;a href=&quot;#fn:8&quot; class=&quot;footnote&quot;&gt;9&lt;/a&gt;&lt;/sup&gt; proposed a model that learns reliable information on shorter dependencies from unlabeled target domain data to help parse longer distance words. The rationale for this procedure is the observation that short dependency edges show a higher accuracy than longer edges.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;co-training&quot;&gt;Co-training&lt;/h2&gt;
+
+&lt;h2 id=&quot;up-training&quot;&gt;Up-training&lt;/h2&gt;
+
+&lt;h2 id=&quot;learning-from-partial-annotation&quot;&gt;Learning from partial annotation&lt;/h2&gt;
+
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
@@ -113,12 +160,33 @@
     &lt;li id=&quot;fn:2&quot;&gt;
       &lt;p&gt;Lingpeng Kong, Nathan Schneider, Swabha Swayamdipta, Archna Bhatia, Chris Dyer, and Noah A. Smith. 2014. A Dependency Parser for Tweets. In Proc. of EMNLP. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;David McClosky, Eugene Charniak, and Mark Johnson. 2006b. Reranking and self-training for parser adaptation. In Proceedings of the 21st International Conference on Computational Linguistics and the 44th annual meeting of the Association for Computational Linguistics, pages 337–344. Association for Computational Linguistics. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;David McClosky, Eugene Charniak, and Mark Johnson. 2006b. Reranking and self-training for parser adaptation. In Proceedings of the 21st International Conference on Computational Linguistics and the 44th annual meeting of the Association for Computational Linguistics, pages 337–344. Association for Computational Linguistics. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;Roi Reichart and Ari Rappoport. 2007. Self-training for enhancement and domain adaptation of statistical parsers trained on small datasets. In Proceedings of the 45th Annual Meeting of the Association for Computational Linguistics (ACL). Pages 616-623. Prague, Czech Republic. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot;&gt;
+      &lt;p&gt;Kenji Sagae and Jun’ichi Tsujii. 2007. Multilingual dependency parsing and domain adaptation with data-driven LR models and parser ensembles. In Proceedings of the CoNLL 2007 shared task. Prague, Czech Republic. &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:9&quot;&gt;
+      &lt;p&gt;Juntao Yu, Mohab Elkaref, and Bernd Bohnet. 2015. Domain adaptation for dependency parsing via selftraining. In IWPT. &lt;a href=&quot;#fnref:9&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:7&quot;&gt;
+      &lt;p&gt;Kenji Sagae. 2010. Self-training without reranking for parser domain adaptation and its impact on semantic role labeling. In Proceedings of the 2010 Workshop on Domain Adaptation for Natural Language Processing, pages 37–44. Association for Computational Linguistics. &lt;a href=&quot;#fnref:7&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:8&quot;&gt;
+      &lt;p&gt;Wenliang Chen, Youzheng Wu, and Hitoshi Isahara. 2008. Learning reliable information for dependency parsing adaptation. In Proceedings of the 22nd International Conference on Computational Linguistics-Volume 1, pages 113–120. Association for Computational Linguistics. &lt;a href=&quot;#fnref:8&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;</content><author><name>Zi Lin</name></author><category term="NLP Tasks" /><summary type="html">Introduction Current NLP systems tend to perform well only on their training domain and nearby genres, while the performances often degrade on the data drawn from different domains.</summary></entry><entry><title type="html">Constituent-to-dependency Conversion</title><link href="http://localhost:4000/constituent-to-dependency/" rel="alternate" type="text/html" title="Constituent-to-dependency Conversion" /><published>2019-04-29T00:00:00+08:00</published><updated>2019-04-29T00:00:00+08:00</updated><id>http://localhost:4000/constituent-to-dependency</id><content type="html" xml:base="http://localhost:4000/constituent-to-dependency/">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Since dependency structure is not constrained by word order, it is considered to be more domain or language independent than phrase structure. Most current state-of-the-art dependency parsers use a supervised learning approach, which usually requires a large amount of annotated data. For English, there are some manually annotated dependency Treebanks available &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Nonetheless, constituent-based Treebanks such as Penn Treebank are more dominant. Therefore, it is quite natural to built the tools that convert phrase structure to dependency structure.&lt;/p&gt;
+&lt;p&gt;Since dependency structure is not constrained by word order, it is considered to be more domain or language independent than phrase structure. Most current state-of-the-art dependency parsers use supervised learning approaches, which usually requires a large amount of annotated data. For English, there are some manually annotated dependency Treebanks available &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. Nonetheless, constituent-based Treebanks such as Penn Treebank are more dominant. Therefore, it is quite natural to built the tools that convert phrase structures to dependency structures.&lt;/p&gt;
 
 &lt;h1 id=&quot;tools&quot;&gt;Tools&lt;/h1&gt;
-&lt;p&gt;There have been several tools that convert constituent structures to dependency structures. Let’s assume that the constituency tree is in the Penn Treebank style as:&lt;/p&gt;
+&lt;p&gt;There have been several tools that convert constituent structures to dependency structures. Let’s assume that the constituency tree in the Penn Treebank style has the form:&lt;/p&gt;
 
 &lt;p align=&quot;center&quot;&gt;
 &lt;img src=&quot;../images/constituent.png&quot; alt=&quot;drawing&quot; width=&quot;600px&quot; /&gt;
@@ -196,7 +264,7 @@ parsers does not contain these empty nodes.&lt;/p&gt;
       &lt;p&gt;Marcus, M. P., Santorini, B., and Marcinkiewicz, M. A. 1993. Building a large annotated corpus of English: The Penn treebank. Computational Linguistics, 19(2). &lt;a href=&quot;#fnref:8&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Zi Lin</name></author><category term="NLP Tasks" /><summary type="html">Introduction Since dependency structure is not constrained by word order, it is considered to be more domain or language independent than phrase structure. Most current state-of-the-art dependency parsers use a supervised learning approach, which usually requires a large amount of annotated data. For English, there are some manually annotated dependency Treebanks available 12. Nonetheless, constituent-based Treebanks such as Penn Treebank are more dominant. Therefore, it is quite natural to built the tools that convert phrase structure to dependency structure. Owen Rambow, Cassandre Creswell, Rachel Szekely, Harriet Taber, and Marilyn Walker. A dependency treebank for english. In Proceedings of LREC’02, 2002. &amp;#8617; M. Cmejrek, J. Curín, and J. Havelka. Prague czech-english dependency treebank: Any hopes for a common annotation scheme? In HLT-NAACL’04 workshop on Frontiers in Corpus Annotation, pages 47–54, 2004. &amp;#8617;</summary></entry><entry><title type="html">Semantic Parsing</title><link href="http://localhost:4000/SP/" rel="alternate" type="text/html" title="Semantic Parsing" /><published>2018-11-11T00:00:00+08:00</published><updated>2018-11-26T00:00:00+08:00</updated><id>http://localhost:4000/SP</id><content type="html" xml:base="http://localhost:4000/SP/">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;/div&gt;</content><author><name>Zi Lin</name></author><category term="NLP Tasks" /><summary type="html">Introduction Since dependency structure is not constrained by word order, it is considered to be more domain or language independent than phrase structure. Most current state-of-the-art dependency parsers use supervised learning approaches, which usually requires a large amount of annotated data. For English, there are some manually annotated dependency Treebanks available 12. Nonetheless, constituent-based Treebanks such as Penn Treebank are more dominant. Therefore, it is quite natural to built the tools that convert phrase structures to dependency structures. Owen Rambow, Cassandre Creswell, Rachel Szekely, Harriet Taber, and Marilyn Walker. A dependency treebank for english. In Proceedings of LREC’02, 2002. &amp;#8617; M. Cmejrek, J. Curín, and J. Havelka. Prague czech-english dependency treebank: Any hopes for a common annotation scheme? In HLT-NAACL’04 workshop on Frontiers in Corpus Annotation, pages 47–54, 2004. &amp;#8617;</summary></entry><entry><title type="html">Semantic Parsing</title><link href="http://localhost:4000/SP/" rel="alternate" type="text/html" title="Semantic Parsing" /><published>2018-11-11T00:00:00+08:00</published><updated>2018-11-26T00:00:00+08:00</updated><id>http://localhost:4000/SP</id><content type="html" xml:base="http://localhost:4000/SP/">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;In fact, “semantic parsing” is, ironically, a semantically ambiguous term, which could refer to:&lt;/p&gt;
 
 &lt;ul&gt;

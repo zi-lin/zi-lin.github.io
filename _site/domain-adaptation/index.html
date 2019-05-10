@@ -230,9 +230,9 @@
 
 <h1 id="tagging--parsing">Tagging &amp; Parsing</h1>
 
-<p>Domain adaptation has been recognized as a major NLP problem for over a decade. In particular, bridging the performance gap between in-domain and out-of-domain for tasks such as POS-tagging and parsing has received considerable attention. Here we will investigate some techniques for out-of-domain parsing.</p>
+<p>Domain adaptation has been recognized as a major NLP problem for over a decade. In particular, bridging the performance gap between in-domain and out-of-domain for tasks such as POS-tagging and parsing has received considerable attention. Here we will investigate some techniques for out-of-domain parsing, mainly the semi-supervised approaches that do not require to manually annotate new data, as well as some other approaches.</p>
 
-<h2 id="semi-supervised-parser-domain-adaptation-with-self-training">Semi-supervised parser domain adaptation with self-training</h2>
+<h2 id="self-training">Self-training</h2>
 
 <p>Because treebanks are expensive to create, while plain text in most domains is easily obtainable, semi-supervised approaches to parser domain adaptation are a particularly attractive solution to the domain portability problem. This usually involves a manually annotated training set (a treebank), and a larger set of unlabeled data (plain text).</p>
 
@@ -246,23 +246,48 @@
     <p><strong>Small seed</strong>: Reichart and Rappoport (2007)<sup id="fnref:4"><a href="#fn:4" class="footnote">5</a></sup> used self-training to enhance the performance of a generative statistical PCFG parser for both the in-domain and the parser adaptation scenarios. The difference between their parser and McClosky et al.’s: [1] the 1-best list of a base parser can be used as a self-training material for the base parser itself; [2] the self-training can be done when the seed is small. They achieved this by identifying the self-training protocols: the self-training set contains several thousand sentences. A parser trained with a small seed set parses the self-training set, and then the <em>whole</em> automatically annotated self-training set is combined with the manually annotated seed set to retrain the parser.</p>
   </li>
   <li>
-    <p><strong>Confidence-based</strong>: Sagae and Tsujii (2007)<sup id="fnref:6"><a href="#fn:6" class="footnote">6</a></sup> improved the out-of-domain accuracy of a dependency parser trained on the entire WSJ training set (40k sentences) by using unlabeled data in the same domain as the out-of-domain test data (biomedical text). They use agreement between different parsers to estimate the quality of automatically generated training instances and selected only sentences with high estimated accuracy.</p>
-
-    <p>Yu et al. (2015)<sup id="fnref:9"><a href="#fn:9" class="footnote">7</a></sup> used confidence-based methods to select additional training samples, where they compared two confidence-based methods: [1] using the parse score of the employed parser to measure the confidence into a parse tree; [2] calculating the score differences between the best tree and alternative trees.</p>
+    <p><strong>Confidence-based</strong>: Yu et al. (2015)<sup id="fnref:9"><a href="#fn:9" class="footnote">6</a></sup> used confidence-based methods to select additional training samples, where they compared two confidence-based methods: [1] using the parse score of the employed parser to measure the confidence into a parse tree; [2] calculating the score differences between the best tree and alternative trees.</p>
   </li>
   <li>
-    <p><strong>Simple:</strong> Sagae (2010)<sup id="fnref:7"><a href="#fn:7" class="footnote">8</a></sup> proposed a simple self-training framework for domain adaptation to avoid the settings as in previous work (without reranking, other means of training instance selection, or estimation of parse quality). The work investigated the contribution of the reranker for a constituency parser, and suggested that constituency parsers without a reranker can achieve significant improvements on the target domain but the results are still higher when a reranker is used.</p>
+    <p><strong>Simple:</strong> Sagae (2010)<sup id="fnref:7"><a href="#fn:7" class="footnote">7</a></sup> proposed a simple self-training framework for domain adaptation to avoid the settings as in previous work (without reranking, other means of training instance selection, or estimation of parse quality). The work investigated the contribution of the reranker for a constituency parser, and suggested that constituency parsers without a reranker can achieve significant improvements on the target domain but the results are still higher when a reranker is used.</p>
   </li>
   <li>
-    <p><strong>Useful info from target domain</strong>: Chen et al. (2008)<sup id="fnref:8"><a href="#fn:8" class="footnote">9</a></sup> proposed a model that learns reliable information on shorter dependencies from unlabeled target domain data to help parse longer distance words. The rationale for this procedure is the observation that short dependency edges show a higher accuracy than longer edges.</p>
+    <p><strong>Useful info from target domain</strong>: Chen et al. (2008)<sup id="fnref:8"><a href="#fn:8" class="footnote">8</a></sup> proposed a model that learns reliable information on shorter dependencies from unlabeled target domain data to help parse longer distance words. The rationale for this procedure is the observation that short dependency edges show a higher accuracy than longer edges.</p>
   </li>
 </ul>
 
 <h2 id="co-training">Co-training</h2>
 
-<h2 id="up-training">Up-training</h2>
+<p>Co-training is a technique that has been frequently used by domain adaptation for parsers, and it is very similar to self-training except that it involves more than one learner. The early version of co-training used two different ‘view’ of the classifier, each of which has a distinct feature set. They are used to annotate unlabeled set after trained on the same training set. Then both classifiers are retrained on the newly annotated data and the initial training set.<sup id="fnref:13"><a href="#fn:13" class="footnote">9</a></sup></p>
 
-<h2 id="learning-from-partial-annotation">Learning from partial annotation</h2>
+<p>Sagae and Tsujii (2007)<sup id="fnref:6"><a href="#fn:6" class="footnote">10</a></sup> improved the out-of-domain accuracy of a dependency parser trained on the entire WSJ training set (40k sentences) by using unlabeled data in the same domain as the out-of-domain test data (biomedical text). Specifically, they co-trained two dependency parsers by adding automatically parsed sentences for which the parsers agree to the training data. They use agreement between different parsers to estimate the quality of automatically generated training instances and selected only sentences with high estimated accuracy.</p>
+
+<p>Weiss et al. (2015)<sup id="fnref:14"><a href="#fn:14" class="footnote">11</a></sup> used normal agreement based co-training and tri-training in their evaluation of a state-of-the-art neural network parser. In their work, the annotations agreed by a conventional transition-based parser (zPar) and the Berkeley constituency parser have been used as additional training data. They retained their neural network parser and the zPar parser on the extended training data.</p>
+
+<h2 id="other-approaches">Other approaches</h2>
+
+<ul>
+  <li>
+    <p><strong>Up-training</strong>: Petrov et al. (2010) <sup id="fnref:19"><a href="#fn:19" class="footnote">12</a></sup> proposed an up-training procedure in which a deterministic parser is trained on the output of a more accurate, but slower, latent variable constituency parser (converted to dependencies). In practice, they parsed a large amount of unlabeled data from the target domain with the constituency parser of Petrov et al. (2006)<sup id="fnref:20"><a href="#fn:20" class="footnote">13</a></sup> and then trained a deterministic dependency parser on this noisy, automatically parsed data.</p>
+
+    <p>The goal of up-training is different from self-training or co-training, which are to further improve the performance of the very best model, instead, it aims to train a computationally cheaper model (a linear time dependency parser) to match the performance of the best model, resulting in a computationally efficient, yet highly accurate model.</p>
+  </li>
+  <li>
+    <p><strong>Using external lexicon</strong>:  Lack of the knowledge of the unknown words is one of the key problems of domain adaptation tasks. One way to address this problem is to use the external lexicon resources, which provide additional information for tokens, such as word lemma, part-of-speech tags, morphological information and so on. This information can be used by parsers directly to help making the decision. In previous work, lexicons have been used by Szolovits (2003)<sup id="fnref:10"><a href="#fn:10" class="footnote">14</a></sup> and Pyysalo et al. (2006)<sup id="fnref:11"><a href="#fn:11" class="footnote">15</a></sup> to improve the link grammar parser on the medical domain. Both approaches showed large improvements on parsing accuracy. Pekar et al. (2014)<sup id="fnref:12"><a href="#fn:12" class="footnote">16</a></sup> extracted a lexicon from a crowd-sourced online dictionary (Wikitionary) and applied it to a strong dependency parser. However, the dictionary achieved a moderate improvement only.</p>
+  </li>
+  <li>
+    <p><strong>Leveraging pre-trained embeddings</strong>: By using pre-trained word embeddings the neural network-based parsers can usually achieve a higher accuracy compared with those who used randomly initialized embeddings. <sup id="fnref:14:1"><a href="#fn:14" class="footnote">11</a></sup> <sup id="fnref:15"><a href="#fn:15" class="footnote">17</a></sup> <sup id="fnref:16"><a href="#fn:16" class="footnote">18</a></sup> Furthermore, Joshi et al. (2018)<sup id="fnref:18"><a href="#fn:18" class="footnote">19</a></sup> showed that recent advances in word representations greatly diminish the need for domain adaptation when the target domain is syntactically similar to the source domain.</p>
+  </li>
+  <li>
+    <p><strong>Word clustering</strong>: Word clustering is an unsupervised algorithm that is able to group the similar words into the same classes by analyzing the co-occurence of the words in a large unlabeled corpus. Koo et al. (2008)<sup id="fnref:21"><a href="#fn:21" class="footnote">20</a></sup> first employed a set of features based on brown clusters to a second-order graph-based dependency parser. The similar features have been adapted to a transition-based parser of Bohnet and Nivre (2012)<sup id="fnref:22"><a href="#fn:22" class="footnote">21</a></sup>.</p>
+  </li>
+  <li>
+    <p><strong>Learning from partial annotation</strong>: In Joshi et al. (2018)’s work<sup id="fnref:18:1"><a href="#fn:18" class="footnote">19</a></sup>, they revisited domain adaptation for parsers in the neural era and provided a simple way to adapt a parser using only dozens of partial annotations. Specifically, they create some partial annotations to teach the parser how to fix the errors, then retrains the parser, repeating the process until they are satisfied.</p>
+  </li>
+  <li>
+    <p><strong>Integrating with features learned from unlabeled data</strong>: Chen et al. (2012)<sup id="fnref:17"><a href="#fn:17" class="footnote">22</a></sup> applied high-order DLMs to a second-order graph-based parser. The DLMs allow the new parser to explore high-order features without increasing the time complexity. The DLMs are extracted from a 43 million words English corpus and a 311 million words corpus of Chinese parsed by the baseline parser. Features based on the DLMs are used in the parser.</p>
+  </li>
+</ul>
 
 <div class="footnotes">
   <ol>
@@ -281,9 +306,6 @@
     <li id="fn:4">
       <p>Roi Reichart and Ari Rappoport. 2007. Self-training for enhancement and domain adaptation of statistical parsers trained on small datasets. In Proceedings of the 45th Annual Meeting of the Association for Computational Linguistics (ACL). Pages 616-623. Prague, Czech Republic. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
     </li>
-    <li id="fn:6">
-      <p>Kenji Sagae and Jun’ichi Tsujii. 2007. Multilingual dependency parsing and domain adaptation with data-driven LR models and parser ensembles. In Proceedings of the CoNLL 2007 shared task. Prague, Czech Republic. <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
-    </li>
     <li id="fn:9">
       <p>Juntao Yu, Mohab Elkaref, and Bernd Bohnet. 2015. Domain adaptation for dependency parsing via selftraining. In IWPT. <a href="#fnref:9" class="reversefootnote">&#8617;</a></p>
     </li>
@@ -292,6 +314,48 @@
     </li>
     <li id="fn:8">
       <p>Wenliang Chen, Youzheng Wu, and Hitoshi Isahara. 2008. Learning reliable information for dependency parsing adaptation. In Proceedings of the 22nd International Conference on Computational Linguistics-Volume 1, pages 113–120. Association for Computational Linguistics. <a href="#fnref:8" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:13">
+      <p>Avrim Blum and Tom Mitchell. 1998. Combining labeled and unlabeled data with co-training. In Proceedings of the Eleventh Annual Conference on Computational Learning Theory, pages 92–100, Madison, Wisconsin, USA. Association for Computing Machinery. <a href="#fnref:13" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:6">
+      <p>Kenji Sagae and Jun’ichi Tsujii. 2007. Multilingual dependency parsing and domain adaptation with data-driven LR models and parser ensembles. In Proceedings of the CoNLL 2007 shared task. Prague, Czech Republic. <a href="#fnref:6" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:14">
+      <p>David Weiss, Chris Alberti, Michael Collins, and Slav Petrov. 2015. Structured training for neural network transition-based parsing. In Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing, pages 323–333, Beijing, China. Association for Computational Linguistics. <a href="#fnref:14" class="reversefootnote">&#8617;</a> <a href="#fnref:14:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:19">
+      <p>Petrov, S., Chang, P. C., Ringgaard, M., &amp; Alshawi, H. 2010, October. Uptraining for accurate deterministic question parsing. In <em>Proceedings of the 2010 Conference on Empirical Methods in Natural Language Processing</em> (pp. 705-713). Association for Computational Linguistics. <a href="#fnref:19" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:20">
+      <p>Petrov, S., Barrett, L., Thibaux, R., &amp; Klein, D. (2006, July). Learning accurate, compact, and interpretable tree annotation. In <em>Proceedings of the 21st International Conference on Computational Linguistics and the 44th annual meeting of the Association for Computational Linguistics</em> (pp. 433-440). Association for Computational Linguistics. <a href="#fnref:20" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:10">
+      <p>Peter Szolovits. 2003. Adding a medical lexicon to an English parser. AMIA Annual Symposium Proceedings, pages 639–643. <a href="#fnref:10" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:11">
+      <p>Sampo Pyysalo, Tapio Salakoski, Sophie Aubin, and Adeline Nazarenko. 2006. Lexical adaptation of link grammar to the biomedical sublanguage: A comparative evaluation of three approaches. BMC Bioinformatics, 7 (Suppl 3). <a href="#fnref:11" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:12">
+      <p>Viktor Pekar, Juntao Yu, Mohab Elkaref, and Bernd Bohnet. 2014. Exploring options for fast domain adaptation of dependency parsers. In Proceedings of the First Joint Workshop on Statistical Parsing of Morphologically Rich Languages and Syntactic Analysis of Non-Canonical Languages, pages 54–65, Dublin, Ireland. Dublin City University. <a href="#fnref:12" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:15">
+      <p>Danqi Chen and Christopher Manning. 2014. A fast and accurate dependency parser using neural networks. In Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing, pages 740–750, Doha, Qatar. Association for Computational Linguistics. <a href="#fnref:15" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:16">
+      <p>Timothy Dozat and Christopher Manning. 2017. Deep biaffine attention for neural dependency parsing. In Proceedings of the 5th International Conference on Learning Representations, Toulon, France. <a href="#fnref:16" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:18">
+      <p>Joshi, V., Peters, M., &amp; Hopkins, M. 2018, July. Extending a Parser to Distant Domains Using a Few Dozen Partially Annotated Examples. In <em>Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)</em> (pp. 1190-1199). <a href="#fnref:18" class="reversefootnote">&#8617;</a> <a href="#fnref:18:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:21">
+      <p>Terry Koo, Xavier Carreras, and Michael Collins. 2008. Simple semisupervised dependency parsing. In Proceedings of the 46th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies, pages 595–603, Columbus, Ohio, USA. Association for Computational Linguistics. <a href="#fnref:21" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:22">
+      <p>Bernd Bohnet and Joakim Nivre. 2012. A transition-based system for joint part-of-speech tagging and labeled non-projective dependency parsing. In Proceedings of the 2012 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning, pages 1455–1465, Jeju Island, Korea. Association for Computational Linguistics. <a href="#fnref:22" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:17">
+      <p>Wenliang Chen, Min Zhang, and Haizhou Li. 2012. Utilizing dependency language models for graph-based dependency parsing models. In Proceedings of the 50th Annual Meeting of the Association for Computational Linguistics, pages 213–222, Jeju Island, Korea. Association for Computational Linguistics. <a href="#fnref:17" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>

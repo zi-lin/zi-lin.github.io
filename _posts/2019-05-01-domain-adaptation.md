@@ -1,7 +1,7 @@
 ---
 title: "Domain Adaptation for Syntactic Analysis"
 hidden: true
-last_modified_at: 2019-05-09
+last_modified_at: 2019-05-11
 tag: NLP Tasks
 author: Zi Lin
 date: 2019-05-01
@@ -83,7 +83,15 @@ Weiss et al. (2015)[^14] used normal agreement based co-training and tri-trainin
 
 - **Learning from partial annotation**: In Joshi et al. (2018)'s work[^18], they revisited domain adaptation for parsers in the neural era and provided a simple way to adapt a parser using only dozens of partial annotations. Specifically, they create some partial annotations to teach the parser how to fix the errors, then retrains the parser, repeating the process until they are satisfied.
 
+- **Learning domain differences**: Yu et al.[^23] addressed the relation between domain differences and domain adaptation for dependency parsing. They first showed that it is the inconsistent behavior of same features cross-domain, rather than word or feature coverage, that is the major cause of performances decrease of out-of-domain model, and the set of ambiguous features is small and has concentric distributions. Based on the analyses, they proposed a DA model that can automatically learn which features are ambiguous cross domain according to errors made by out-domain model on in-domain training data.
+
 - **Integrating with features learned from unlabeled data**: Chen et al. (2012)[^17] applied high-order DLMs to a second-order graph-based parser. The DLMs allow the new parser to explore high-order features without increasing the time complexity. The DLMs are extracted from a 43 million words English corpus and a 311 million words corpus of Chinese parsed by the baseline parser. Features based on the DLMs are used in the parser.
+
+# Useful resource
+Apart from the reference, this post is mainly based on:
+- Yu, Juntao, 2018. [Semi-supervised methods for out-of-domain dependency parsing](https://arxiv.org/pdf/1810.02100.pdf). arXiv preprint arXiv:1810.02100.
+
+Many thanks to their work and valuable thinkings to this direction.
 
 [^1]: Kevin Gimpel, Nathan Schneider, Brendan O’Connor, Dipanjan Das, Daniel Mills, Jacob Eisenstein, Michael Heilman, Dani Yogatama, Jeffrey Flanigan, and Noah A. Smith. 2011. Part-of-speech tagging for twitter: Annotation, features, and experiments. In Proc. of ACL.
 [^2]:  Lingpeng Kong, Nathan Schneider, Swabha Swayamdipta, Archna Bhatia, Chris Dyer, and Noah A. Smith. 2014. A Dependency Parser for Tweets. In Proc. of EMNLP.
@@ -107,3 +115,4 @@ Weiss et al. (2015)[^14] used normal agreement based co-training and tri-trainin
 [^20]: Petrov, S., Barrett, L., Thibaux, R., & Klein, D. (2006, July). Learning accurate, compact, and interpretable tree annotation. In *Proceedings of the 21st International Conference on Computational Linguistics and the 44th annual meeting of the Association for Computational Linguistics* (pp. 433-440). Association for Computational Linguistics.
 [^21]: Terry Koo, Xavier Carreras, and Michael Collins. 2008. Simple semisupervised dependency parsing. In Proceedings of the 46th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies, pages 595–603, Columbus, Ohio, USA. Association for Computational Linguistics.
 [^22]: Bernd Bohnet and Joakim Nivre. 2012. A transition-based system for joint part-of-speech tagging and labeled non-projective dependency parsing. In Proceedings of the 2012 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning, pages 1455–1465, Jeju Island, Korea. Association for Computational Linguistics.
+[^23]: Yu, M., Zhao, T. and Bai, Y., 2013, June. Learning domain differences automatically for dependency parsing adaptation. In Twenty-Third International Joint Conference on Artificial Intelligence.

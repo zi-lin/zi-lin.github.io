@@ -7,14 +7,18 @@ author: Zi Lin
 date: 2019-05-01
 ---
 # Introduction
-Current NLP systems tend to perform well only on their training domain and nearby genres, while the performances often degrade on the data drawn from different domains.
+Current NLP systems tend to perform well only on their training domain and nearby genres, while the performances often degrade on the data drawn from different domains. For instance, the performance of a statistical parser trained on the Penn Treebank Wall Street Journal (WSJ; newspaper text) significantly drops when evaluated on text from other domains, as shown in the following table (results are from McClosky, 2010; for the details of those domains, cf. the next section):
+
+| Train | WSJ | Brown | GENIA | SWBD |
+| ----- | --- | ------| ----- | ---- |
+|  WSJ  | 89.7|  84.1 |  76.2 | 76.7 | 
 
 Recently, many endeavors have been made to explore and solve the problems of domain adaptation, ranging from creating challenging datasets to building algorithm that can avoid overfitting on the training data or transfer to the new domains. Here we will discuss several datasets build for the out-of-domain NLP task of syntactic analysis as well as some ideas on how to address the problem of domain adaptation. Note that in the literature, many definitions of the source domain and the target domain are proposed, here domain adaptation refers to the domains within the same NLP task and language (mainly English), but for other genres and domains such as emails, web forums and biomedical papers in terms of the dominant source domain of the Penn Treebank of Wall Street Journal (WSJ, financial news).
 
 
 # Datasets
 
-- **[Brown, ATIS & Switchboard of Treebank-3](<https://catalog.ldc.upenn.edu/LDC2009T26>)**: The Treebank-3 released by LDC also contains different domains other than WSJ: (1) the Brown Corpus (domain of literature), which has been completely retagged using the Penn Treebank tag set; (2) ATIS, the data from Department of Energy abstracts; (3) Switchboard, a collection of spontaneous telephone conversations between previously unacquainted speakers of American English on a variety of topics chosen from a pre-determined list.
+- **[Brown, ATIS & Switchboard (SWBD) of Treebank-3](<https://catalog.ldc.upenn.edu/LDC2009T26>)**: The Treebank-3 released by LDC also contains different domains other than WSJ: (1) the Brown Corpus (domain of literature), which has been completely retagged using the Penn Treebank tag set; (2) ATIS, the data from Department of Energy abstracts; (3) Switchboard, a collection of spontaneous telephone conversations between previously unacquainted speakers of American English on a variety of topics chosen from a pre-determined list.
 
 - **[English Web Treebank (EWT)](<https://catalog.ldc.upenn.edu/LDC2012T13>)**: English Web Treebank was developed by the Linguistic Data Consortium (LDC) with funding from Google Inc. It contains 254,830 word-level tokens and 16,624 sentence-level tokens of webtext in 1174 files annotated for sentence- and word-level **tokenization,** **part-of-speech**, and **syntactic structure**. The data is roughly evenly divided across five genres: weblogs, newsgroups, email, reviews, and question-answers. The files were manually annotated following the sentence-level tokenization guidelines for web text and the word-level tokenization guidelines developed for English treebanks.
 
@@ -28,6 +32,7 @@ Recently, many endeavors have been made to explore and solve the problems of dom
 
 - **[GENIA corpus](<http://www.geniaproject.org/genia-corpus>)**: The corpus contains 1,999 Medline abstracts, selected using a [PubMed](http://pubmed.com/) query for the three MeSH terms "human", "blood cells", and "transcription factors". The corpus has been annotated with various levels of linguistic and semantic information, including: **part-of-speech annotation**, **constituency syntactic annotation**, term annotation, event annotation, relation annotation, and **coreference annotation**.
 
+Here are some statistics and examples of English data from various source:
 
 | Dataset      | Style | POS  | NER  | Coref |  #Token |
 | ------------ | ----- | :--: | :--: | :---: | ------: |
@@ -41,11 +46,87 @@ Recently, many endeavors have been made to explore and solve the problems of dom
 | PennBio      | PTB   |  ✔   |  ✔   |       | 327,000 |
 | GENIA        | PTB   |  ✔   |      |   ✔   | 468,793 |
 
-# Tagging & Parsing
+```
+# Newspaper text (WSJ):
+- Rolls - Royce Motor Cars Inc. said it expects its U.S. sales to remain steady at
+about 1,200 cars in 1990 .
+- The luxury auto maker last year sold 1,214 cars in the U.S.
+- Bell , based in Los Angeles , makes and distributes electronic , computer and
+building products .
+- Investors are appealing to the Securities and Exchange Commission not to limit
+their access to information about stock purchases and sales by corporate
+insiders .
+```
+```
+# Literature (Brown):
+- With the end of the trial Diane disappeared from New York .
+Several years ago she married a Houston business man , Robert Graham .
+- She later divorced Graham , who is believed to have moved to Bolivia .
+- The next time the police saw her she was dead .
+- It was September 20 , 1960 , in a lavishly decorated apartment littered with
+liquor bottles .
+- When the police arrived , they found McClellan and the two lawyers sitting and
+staring silently .
+- An autopsy disclosed a large amount of morphine in Diane ’s body .
+- ‘‘ I think that maybe she wanted it this way ’’ , a vice squad cop said .
+```
+```
+# Social Media Data (Twitter):
+- new unique backpack ! combines vintage with modern ! URL1283 via @USER415
+- RT @USER767 : It 's been 3 years since the release of the music video of 
+Burning Desire . URL637
+- RT @USER526 : empathy 4 Kesha .... the worst . smh smh .. 💔
+- RT @USER1218 : @UER265 Blessed Sunday 😊
+- ; idk why ... but ifeel like talkin dirty O_o
+```
+```
+# Questions (QuestionBank):
+- Who is the author of the book, `` The Iron Lady : A Biography of Margaret 
+Thatcher '' ?
+- What was the monetary value of the Nobel Prize in 1989 ?
+- How much did Mercury spend on advertising in 1993 ?
+- Why did David Koresh ask the FBI for a word processor ?
+- Name the designer of the shoe that spawned millions of plastic imitations , 
+known as `` jellies '' .
+```
+```
+# Biomedical abstract (GENIA):
+- Glucocorticoid resistance in the squirrel monkey is associated with
+overexpression of the immunophilin FKBP51 .
+- The low binding affinity of squirrel monkey GR does not result from
+substitutions in the receptor , because squirrel monkey GR expressed in vitro
+exhibits high affinity .
+- Rather , squirrel monkeys express a soluble factor that , in mixing studies of
+cytosol from squirrel monkey lymphocytes ( SML ) and mouse L929 cells , reduced
+GR binding affinity by 11-fold .
+```
 
-Domain adaptation has been recognized as a major NLP problem for over a decade. In particular, bridging the performance gap between in-domain and out-of-domain for tasks such as POS-tagging and parsing has received considerable attention. Here we will investigate some techniques for out-of-domain parsing, mainly the semi-supervised approaches that do not require to manually annotate new data, as well as some other approaches.
+# Domain Adaptation for Tagging & Parsing
 
-## Self-training
+Domain adaptation has been recognized as a major NLP problem for over a decade. In particular, bridging the performance gap between in-domain and out-of-domain for tasks such as POS-tagging and parsing has received considerable attention. 
+
+Similar to the general trichotomy of machine learning algorithms, according to the data available for the new target domain, there are three main approaches to domain adaptation that have been identified in the literature:
+
+- Supervised domain adaptation (e.g., Hera et al., 2005; Daumé III, 2007)
+- Unsupervised domain adaptation (e.g. Blitzer, McDonald & Pereira, 2006; McClosky et al, 2006[^3])
+- Semi-supervised domain adaptation (e.g. Daumé III, Kumar & Saha, 2010; Chang, Connor & Roth, 2010)
+
+Here we will investigate some techniques for out-of-domain parsing, mainly the semi-supervised approaches that do not require to manually annotate new data, as well as some other approaches. Note that what was previously called semi-supervised is nowadays often called unsupervised domain adaptation, although the new "convention" still needs to be established.
+
+## Supervised Domain Adaptation
+- **Incorporate prior knowledge**: the original, out-of-domain, source domain model is exploited as a prior when estimating a model on the target domain for which only limited resources are available. Roark and Bacchiani (2003) examined this idea to adapt a PCFG parser. Hara et al. (2005) try to adapt the probabilistic disambiguation component of a grammar-driven parser (based on a HPSG) trained on newspaper text (WSJ) to the biomedical domain (GENIA corpus). The disambiguation component of their parser, Enju, is a maximum entropy model on a packed forest structure. Their approach consisted in integrating the original model estimated on the larger, out-of-domain data (newspaper text) as a reference distribution when learning a model on the target domain.
+
+- **Altering the feature space**: A basic assumption is that there are three underlying distributions: an in-domain distribution, an out-of-domain distribution and a general distribution. Thus, it is assumed that the out-of-domain distribution is drawn from a mixture of the out-of-domain and the general distribution.
+
+	Daumé III (2007) introduces an algorithm called *easy 	adapt*, whose idea is to transform the domain adaptation learning problem into a standard supervised learning problem to which “any standard algorithm may be applied (e.g. SVM, MaxEnt)”. He proposes a simple pre-processing step in which the feature space is altered and the resulting data is used as input to a standard learning algorithm. In more detail, easy adapt basically triples the feature space: it takes each feature in the original feature space and makes three versions of it, a general version, a source-specific and a target-specific version. By transforming the feature space, the supervised learning algorithm is supposed to ‘learn’ which features transfer better to the new domain.
+
+	Finkel and Manning (2009) extend *easy adapt* by adding explicit hyperparameters to the model. That is, each domain has its own set of domain-specific parameters, but they are linked by introducing an additional layer that acts as general parameter set. This parametrization encourages the features to have similar weights across domains, unless there is evidence in the domains to the contrary.
+
+- **Changing the instance distribution**: Jiang and Zhai (2007) propose to weigh source training instances by their similarity to the target distribution. They have shown the effectiveness of this approach on three NLP tasks (POS tagging, named entity classification and spam filtering).
+
+## Unsupervised Domain Adaptation
+
+### Self-training
 
 Because treebanks are expensive to create, while plain text in most domains is easily obtainable, semi-supervised approaches to parser domain adaptation are a particularly attractive solution to the domain portability problem. This usually involves a manually annotated training set (a treebank), and a larger set of unlabeled data (plain text).
 
@@ -61,7 +142,7 @@ Many work in unsupervised domain adaptation for state-of-the-art parsers has ach
 
 - **Useful info from target domain**: Chen et al. (2008)[^8] proposed a model that learns reliable information on shorter dependencies from unlabeled target domain data to help parse longer distance words. The rationale for this procedure is the observation that short dependency edges show a higher accuracy than longer edges.
 
-## Co-training
+### Co-training
 
 Co-training is a technique that has been frequently used by domain adaptation for parsers, and it is very similar to self-training except that it involves more than one learner. The early version of co-training used two different 'view' of the classifier, each of which has a distinct feature set. They are used to annotate unlabeled set after trained on the same training set. Then both classifiers are retrained on the newly annotated data and the initial training set.[^9] 
 
@@ -69,7 +150,7 @@ Sagae and Tsujii (2007)[^10] improved the out-of-domain accuracy of a dependency
 
 Weiss et al. (2015)[^11] used normal agreement based co-training and tri-training in their evaluation of a state-of-the-art neural network parser. In their work, the annotations agreed by a conventional transition-based parser (zPar) and the Berkeley constituency parser have been used as additional training data. They retained their neural network parser and the zPar parser on the extended training data.
 
-## Other approaches
+### Other approaches
 
 - **Up-training**: Petrov et al. (2010) [^12] proposed an up-training procedure in which a deterministic parser is trained on the output of a more accurate, but slower, latent variable constituency parser (converted to dependencies). In practice, they parsed a large amount of unlabeled data from the target domain with the constituency parser of Petrov et al. (2006)[^13] and then trained a deterministic dependency parser on this noisy, automatically parsed data. 
 
@@ -88,10 +169,11 @@ Weiss et al. (2015)[^11] used normal agreement based co-training and tri-trainin
 - **Integrating with features learned from unlabeled data**: Chen et al. (2012)[^20] applied high-order DLMs to a second-order graph-based parser. The DLMs allow the new parser to explore high-order features without increasing the time complexity. The DLMs are extracted from a 43 million words English corpus and a 311 million words corpus of Chinese parsed by the baseline parser. Features based on the DLMs are used in the parser.
 
 # Useful resource
-Apart from the reference, this post is mainly based on:
+Apart from the reference, this post is also inspired a lot from:
 - Yu, Juntao, 2018. [Semi-supervised methods for out-of-domain dependency parsing](https://arxiv.org/pdf/1810.02100.pdf). arXiv preprint arXiv:1810.02100.
+- Barbara Plank, 2011. [Domain Adaptation for Parsing](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.721.5989&rep=rep1&type=pdf). Ph.D. thesis, University of Groningen.
 
-Many thanks to their work and valuable thinkings to this direction.
+Many thanks to their work, surveys on previous work and valuable thinkings to this direction. The literature review is necessarily incomplete as the literature on domain adaptation is huge (even though I only focus on parsing and tagging). I will appreciate it if you could give some feedbacks and suggestions after reading this post :)
 
 [^1]: Kevin Gimpel, Nathan Schneider, Brendan O’Connor, Dipanjan Das, Daniel Mills, Jacob Eisenstein, Michael Heilman, Dani Yogatama, Jeffrey Flanigan, and Noah A. Smith. 2011. Part-of-speech tagging for twitter: Annotation, features, and experiments. In Proc. of ACL.
 [^2]:  Lingpeng Kong, Nathan Schneider, Swabha Swayamdipta, Archna Bhatia, Chris Dyer, and Noah A. Smith. 2014. A Dependency Parser for Tweets. In Proc. of EMNLP.

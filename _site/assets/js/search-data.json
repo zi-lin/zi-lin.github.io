@@ -34,8 +34,8 @@ var store = [{
         "tags": ["NLP Tasks"],
         "url": "http://localhost:4000/constituent-to-dependency/"
       },{
-        "title": "Domain Adaptation for Syntactic Analysis",
-        "excerpt":"Introduction Current NLP systems tend to perform well only on their training domain and nearby genres, while the performances often degrade on the data drawn from different domains. For instance, the performance of a statistical parser trained on the Penn Treebank Wall Street Journal (WSJ; newspaper text) significantly drops when...","categories": [],
-        "tags": ["NLP Tasks"],
+        "title": "Domain Adaptation",
+        "excerpt":"title: “Domain Adaptation for Syntactic Analysis”hidden: truelast_modified_at: 2019-05-11tag: NLP Tasksauthor: Zi Lindate: 2019-05-01— Introduction Current NLP systems tend to perform well only on their training domain and nearby genres, while the performances often degrade on the data drawn from different domains. For instance, the performance of a statistical parser trained...","categories": [],
+        "tags": [],
         "url": "http://localhost:4000/domain-adaptation/"
       }]

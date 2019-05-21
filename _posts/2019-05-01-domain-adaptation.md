@@ -1,4 +1,3 @@
-
 ---
 title: "Domain Adaptation for Syntactic Analysis"
 hidden: true

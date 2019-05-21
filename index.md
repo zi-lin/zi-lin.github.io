@@ -17,9 +17,9 @@ B.A. in **Computational and Applied Linguistics**
 Selected two courses
 
 ## Experience
-[//]:* **Knowledge Computing Group, Microsoft Research Asia**\\
-[//]:*Apr. 2019 - Present*\\
-[//]:Research Intern
+* **Knowledge Computing Group, Microsoft Research Asia**\\
+*Apr. 2019 - Present*\\
+Research Intern
 
 * **Language Computing and Web Mining Group, Institute of Computer Science and Technology, Peking University**\\
 *Aug. 2017 - Present*\\
@@ -47,7 +47,7 @@ Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/EN/People/Fac
 * **Is Argument Structure of Learner Chinese Understandable: A Corpus-Based Analysis**\\
 Yuguang Duan, **Zi Lin**, Weiwei Sun\\
 *In Proceedings of the International Conference on Bilingual Learning and Teaching (ICBLT), 2018*\\
-\[[**Conference**](http://ouhk2018icblt.mozello.com/)\] \[[**PDF**](./pdf/icblt2018.pdf)\]
+\[[**Conference**](http://ouhk2018icblt.mozello.com/)\] \[[**PDF**](http://ouhk2018icblt.mozello.com/e-proceedings/)\]
 
 [//]:* **Acoustic Analysis on the Monosyllable and Disyllable of Rui'an Dialect (In Chinese)**\\
 [//]:**Zi Lin**\\

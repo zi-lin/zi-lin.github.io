@@ -143,6 +143,9 @@
     <p><strong><a href="https://catalog.ldc.upenn.edu/LDC2009T26">Brown, ATIS &amp; Switchboard (SWBD) of Treebank-3</a></strong>: The Treebank-3 released by LDC also contains different domains other than WSJ: (1) the Brown Corpus (domain of literature), which has been completely retagged using the Penn Treebank tag set; (2) ATIS, the data from Department of Energy abstracts; (3) Switchboard, a collection of spontaneous telephone conversations between previously unacquainted speakers of American English on a variety of topics chosen from a pre-determined list.</p>
   </li>
   <li>
+    <p><strong><a href="https://www.computing.dcu.ie/~jfoster/resources/bnc1000.html">British National Corpus (BNC)</a></strong>: Gold Standard <strong>Parse Trees</strong> for 1,000 sentences from the British National Corpus – annotated according to Penn Treebank bracketing guidelines and checked using Markus Dickinson’s treebank annotation error detection software.</p>
+  </li>
+  <li>
     <p><strong><a href="https://catalog.ldc.upenn.edu/LDC2012T13">English Web Treebank (EWT)</a></strong>: English Web Treebank was developed by the Linguistic Data Consortium (LDC) with funding from Google Inc. It contains 254,830 word-level tokens and 16,624 sentence-level tokens of webtext in 1174 files annotated for sentence- and word-level <strong>tokenization,</strong> <strong>part-of-speech</strong>, and <strong>syntactic structure</strong>. The data is roughly evenly divided across five genres: weblogs, newsgroups, email, reviews, and question-answers. The files were manually annotated following the sentence-level tokenization guidelines for web text and the word-level tokenization guidelines developed for English treebanks.</p>
   </li>
   <li>
@@ -185,7 +188,7 @@
       <td style="text-align: center">✔</td>
       <td style="text-align: center"> </td>
       <td style="text-align: center"> </td>
-      <td style="text-align: right">486,140</td>
+      <td style="text-align: right">130,417</td>
     </tr>
     <tr>
       <td>ATIS</td>
@@ -196,12 +199,20 @@
       <td style="text-align: right">-</td>
     </tr>
     <tr>
-      <td>Switchboard</td>
+      <td>SWBD</td>
       <td>PTB</td>
       <td style="text-align: center">✔</td>
       <td style="text-align: center"> </td>
       <td style="text-align: center"> </td>
       <td style="text-align: right">1,095,089</td>
+    </tr>
+    <tr>
+      <td>BNC</td>
+      <td>PTB</td>
+      <td style="text-align: center">✔</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right">28,311</td>
     </tr>
     <tr>
       <td>EWT</td>
@@ -233,7 +244,7 @@
       <td style="text-align: center">✔</td>
       <td style="text-align: center"> </td>
       <td style="text-align: center"> </td>
-      <td style="text-align: right">15,400</td>
+      <td style="text-align: right">15,613</td>
     </tr>
     <tr>
       <td>QuestionBank</td>
@@ -403,10 +414,10 @@ GR binding affinity by 11-fold .
     <p><strong>Word clustering</strong>: Word clustering is an unsupervised algorithm that is able to group the similar words into the same classes by analyzing the co-occurence of the words in a large unlabeled corpus. Koo et al. (2008)<sup id="fnref:29"><a href="#fn:29" class="footnote">29</a></sup> first employed a set of features based on brown clusters to a second-order graph-based dependency parser. The similar features have been adapted to a transition-based parser of Bohnet and Nivre (2012)<sup id="fnref:30"><a href="#fn:30" class="footnote">30</a></sup>.</p>
   </li>
   <li>
-    <p><strong>Learning from partial annotation</strong>: In Joshi et al. (2018)’s work<sup id="fnref:31"><a href="#fn:31" class="footnote">31</a></sup>, they revisited domain adaptation for parsers in the neural era and provided a simple way to adapt a parser using only dozens of partial annotations. Specifically, they create some partial annotations to teach the parser how to fix the errors, then retrains the parser, repeating the process until they are satisfied.</p>
+    <p><strong>Learning from partial annotation</strong>: In Joshi et al. (2018)’s work<sup id="fnref:28:1"><a href="#fn:28" class="footnote">28</a></sup>, they revisited domain adaptation for parsers in the neural era and provided a simple way to adapt a parser using only dozens of partial annotations. Specifically, they create some partial annotations to teach the parser how to fix the errors, then retrains the parser, repeating the process until they are satisfied.</p>
   </li>
   <li>
-    <p><strong>Learning domain differences</strong>: Yu et al.<sup id="fnref:31:1"><a href="#fn:31" class="footnote">31</a></sup> addressed the relation between domain differences and domain adaptation for dependency parsing. They first showed that it is the inconsistent behavior of same features cross-domain, rather than word or feature coverage, that is the major cause of performances decrease of out-of-domain model, and the set of ambiguous features is small and has concentric distributions. Based on the analyses, they proposed a DA model that can automatically learn which features are ambiguous cross domain according to errors made by out-domain model on in-domain training data.</p>
+    <p><strong>Learning domain differences</strong>: Yu et al.<sup id="fnref:31"><a href="#fn:31" class="footnote">31</a></sup> addressed the relation between domain differences and domain adaptation for dependency parsing. They first showed that it is the inconsistent behavior of same features cross-domain, rather than word or feature coverage, that is the major cause of performances decrease of out-of-domain model, and the set of ambiguous features is small and has concentric distributions. Based on the analyses, they proposed a DA model that can automatically learn which features are ambiguous cross domain according to errors made by out-domain model on in-domain training data.</p>
   </li>
   <li>
     <p><strong>Integrating with features learned from unlabeled data</strong>: Chen et al. (2012)<sup id="fnref:32"><a href="#fn:32" class="footnote">32</a></sup> applied high-order DLMs to a second-order graph-based parser. The DLMs allow the new parser to explore high-order features without increasing the time complexity. The DLMs are extracted from a 43 million words English corpus and a 311 million words corpus of Chinese parsed by the baseline parser. Features based on the DLMs are used in the parser.</p>
@@ -415,6 +426,99 @@ GR binding affinity by 11-fold .
     <p><strong>Normalization</strong>: A theoretical exploration of the effect of normalization on forum data is done by Kaljahi et al. (2015)<sup id="fnref:33"><a href="#fn:33" class="footnote">33</a></sup>, where they show that parsing manually normalize sentences results in a 2% increase of F1 score. Baldwin and Li (2015)<sup id="fnref:34"><a href="#fn:34" class="footnote">34</a></sup> evaluate the effects of different normalization actions on dependency parsing performance for the social media domain. They conclude that a variety of different normalization actions is useful for parsing. Zhang et al. (2013) <sup id="fnref:35"><a href="#fn:35" class="footnote">35</a></sup> test the effect of automatic normalization on dependency parsing by using automatically derived parse trees of the normalized sentences as reference. van der Goot and van Noord (2017) <sup id="fnref:36"><a href="#fn:36" class="footnote">36</a></sup> show that integrating the normalization model into the parsing algorithm is beneficial. This way multiple normalization candidates can be leveraged, improving parsing performance on social media.</p>
   </li>
 </ul>
+
+<h1 id="constituency-parsing-performance-across-different-domains">Constituency parsing performance across different domains</h1>
+
+<p>There have been many constituency parsers developed based on different methodologies, and much progress has been made in recent years. A question is that whether those <em>so-called</em> state-of-the-art parsers could work robustly on other domains, here I list some of the constituency parsers as well as their performance on different domains.</p>
+
+<p>The performance of Stanford, Stanford-RNN, Berkeley, Charniak, BLLIP and BLLIP* are reported from Choe et al.<sup id="fnref:37"><a href="#fn:37" class="footnote">37</a></sup>, where all the parsers are trained on the WSJ training set (section 2-21) and the test data splits follow the standard as introduced in Foster and van Genabith (2008), Kim et al. (2003), Godfrey et al. (1992), Judge et al. (2006), Francis and Kučera (1989) and Marcus et al. (1993). BLLIP* (self-trained) BLLIP is self-trained using two million sentences from Gigaword and Stanford-RNN uses word embeddings trained from larger corpora. For more details, cf. Choe et al.<sup id="fnref:37:1"><a href="#fn:37" class="footnote">37</a></sup>. The results of Berkeley* (Berkeley self-attentive parser) are based on my own experiments.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parser</th>
+      <th style="text-align: center">BNC</th>
+      <th style="text-align: center">GENIA</th>
+      <th style="text-align: center">SWBD</th>
+      <th style="text-align: center">QuestionBank*</th>
+      <th style="text-align: center">Brown</th>
+      <th style="text-align: center">WSJ</th>
+      <th style="text-align: center">Foreebank</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Berkeley*</td>
+      <td style="text-align: center">92.8</td>
+      <td style="text-align: center">84.2</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">91.5</td>
+      <td style="text-align: center">89.2</td>
+      <td style="text-align: center">95.1</td>
+      <td style="text-align: center">77.9</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">BLLIP*</td>
+      <td style="text-align: center">85.2</td>
+      <td style="text-align: center">77.8</td>
+      <td style="text-align: center">80.9</td>
+      <td style="text-align: center">89.5</td>
+      <td style="text-align: center">87.4</td>
+      <td style="text-align: center">92.2</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">BLLIP</td>
+      <td style="text-align: center">84.1</td>
+      <td style="text-align: center">76.7</td>
+      <td style="text-align: center">79.2</td>
+      <td style="text-align: center">88.1</td>
+      <td style="text-align: center">85.8</td>
+      <td style="text-align: center">91.5</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Charniak</td>
+      <td style="text-align: center">82.5</td>
+      <td style="text-align: center">74.8</td>
+      <td style="text-align: center">76.8</td>
+      <td style="text-align: center">85.6</td>
+      <td style="text-align: center">83.9</td>
+      <td style="text-align: center">89.7</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Berkeley</td>
+      <td style="text-align: center">82.3</td>
+      <td style="text-align: center">76.4</td>
+      <td style="text-align: center">74.5</td>
+      <td style="text-align: center">86.5</td>
+      <td style="text-align: center">84.6</td>
+      <td style="text-align: center">90.0</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Stanford-RNN</td>
+      <td style="text-align: center">82.0</td>
+      <td style="text-align: center">84.0</td>
+      <td style="text-align: center">70.7</td>
+      <td style="text-align: center">82.9</td>
+      <td style="text-align: center">84.0</td>
+      <td style="text-align: center">89.6</td>
+      <td style="text-align: center">-</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Stanford</td>
+      <td style="text-align: center">78.4</td>
+      <td style="text-align: center">73.1</td>
+      <td style="text-align: center">67.0</td>
+      <td style="text-align: center">78.6</td>
+      <td style="text-align: center">80.7</td>
+      <td style="text-align: center">85.4</td>
+      <td style="text-align: center">-</td>
+    </tr>
+  </tbody>
+</table>
 
 <h1 id="useful-resource">Useful resource</h1>
 <p>Apart from the reference, this post is also inspired a lot from:</p>
@@ -509,7 +613,7 @@ GR binding affinity by 11-fold .
       <p>Timothy Dozat and Christopher Manning. 2017. Deep biaffine attention for neural dependency parsing. In Proceedings of the 5th International Conference on Learning Representations, Toulon, France. <a href="#fnref:27" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:28">
-      <p>Joshi, V., Peters, M., &amp; Hopkins, M. 2018, July. Extending a Parser to Distant Domains Using a Few Dozen Partially Annotated Examples. In <em>Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)</em> (pp. 1190-1199). <a href="#fnref:28" class="reversefootnote">&#8617;</a></p>
+      <p>Joshi, V., Peters, M., &amp; Hopkins, M. 2018, July. Extending a Parser to Distant Domains Using a Few Dozen Partially Annotated Examples. In <em>Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)</em> (pp. 1190-1199). <a href="#fnref:28" class="reversefootnote">&#8617;</a> <a href="#fnref:28:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
     </li>
     <li id="fn:29">
       <p>Terry Koo, Xavier Carreras, and Michael Collins. 2008. Simple semisupervised dependency parsing. In Proceedings of the 46th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies, pages 595–603, Columbus, Ohio, USA. Association for Computational Linguistics. <a href="#fnref:29" class="reversefootnote">&#8617;</a></p>
@@ -518,7 +622,7 @@ GR binding affinity by 11-fold .
       <p>Bernd Bohnet and Joakim Nivre. 2012. A transition-based system for joint part-of-speech tagging and labeled non-projective dependency parsing. In Proceedings of the 2012 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning, pages 1455–1465, Jeju Island, Korea. Association for Computational Linguistics. <a href="#fnref:30" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:31">
-      <p>Yu, M., Zhao, T. and Bai, Y., 2013, June. Learning domain differences automatically for dependency parsing adaptation. In Twenty-Third International Joint Conference on Artificial Intelligence. <a href="#fnref:31" class="reversefootnote">&#8617;</a> <a href="#fnref:31:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+      <p>Yu, M., Zhao, T. and Bai, Y., 2013, June. Learning domain differences automatically for dependency parsing adaptation. In Twenty-Third International Joint Conference on Artificial Intelligence. <a href="#fnref:31" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:32">
       <p>Wenliang Chen, Min Zhang, and Haizhou Li. 2012. Utilizing dependency language models for graph-based dependency parsing models. In Proceedings of the 50th Annual Meeting of the Association for Computational Linguistics, pages 213–222, Jeju Island, Korea. Association for Computational Linguistics. <a href="#fnref:32" class="reversefootnote">&#8617;</a></p>
@@ -534,6 +638,9 @@ GR binding affinity by 11-fold .
     </li>
     <li id="fn:36">
       <p>Rob van der Goot and Gertjan van Noord. 2017. Parser adaptation for social media by integrating normalization. In Proceedings of ACL. <a href="#fnref:36" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:37">
+      <p>Do Kook Choe, David McClosky, and Eugene Charniak. 2015. Syntactic parse fusion. In Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing. <a href="#fnref:37" class="reversefootnote">&#8617;</a> <a href="#fnref:37:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
     </li>
   </ol>
 </div>

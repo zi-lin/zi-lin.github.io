@@ -34,19 +34,24 @@ Research Assistant, Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/
 Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/EN/People/Faculty/Detail/?ID=6029)
 
 ## Publication
+* **Parsing Meaning Representations: is Easier Always Better?**\\
+**Zi Lin**, Nianwen Xue\\
+In *Proceedings of the ACL workshop on Designing Meaning Representation (DMR), 2019*\\
+\[[**Conference**](https://www.cs.brandeis.edu/~clp/dmr/)\]
+
 * **Implanting Rational Knowledge into Distributed Representation at Morpheme Level**\\
 **Zi Lin**, Yang Liu\\
-*In Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2019*\\
+In *Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2019*\\
 \[[**Conference**](https://aaai.org/Conferences/AAAI-19/)\] \[[**Arxiv**](https://arxiv.org/abs/1811.10188)\] \[[**Data**](https://github.com/zi-lin/MC)\]
 
 * **Semantic Role Labeling for Learner Chinese: the Importance of Syntactic Parsing and L2-L1 Parallel Data**\\
 **Zi Lin**, Yuguang Duan, Yuanyuan Zhao, Weiwei Sun, Xiaojun Wan\\
-*In Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP), 2018*\\
+In *Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP), 2018*\\
 \[[**Conference**](http://emnlp2018.org/)\] \[[**PDF**](http://aclweb.org/anthology/D18-1414)\] \[[**Arxiv**](https://arxiv.org/abs/1808.09409)\] \[[**Data**](https://github.com/pkucoli/srl4il)\] \[[**Slides**](./pdf/srl4il_slides.pdf)\] \[[**Video**](https://vimeo.com/306119942)\]
 
 * **Is Argument Structure of Learner Chinese Understandable: A Corpus-Based Analysis**\\
 Yuguang Duan, **Zi Lin**, Weiwei Sun\\
-*In Proceedings of the International Conference on Bilingual Learning and Teaching (ICBLT), 2018*\\
+In *Proceedings of the International Conference on Bilingual Learning and Teaching (ICBLT), 2018*\\
 \[[**Conference**](http://ouhk2018icblt.mozello.com/)\] \[[**PDF**](http://ouhk2018icblt.mozello.com/e-proceedings/)\]
 
 [//]:* **Acoustic Analysis on the Monosyllable and Disyllable of Rui'an Dialect (In Chinese)**\\

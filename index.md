@@ -52,7 +52,7 @@ In *Proceedings of the Conference on Empirical Methods in Natural Language Proce
 * **Is Argument Structure of Learner Chinese Understandable: A Corpus-Based Analysis**\\
 Yuguang Duan, **Zi Lin**, Weiwei Sun\\
 In *Proceedings of the International Conference on Bilingual Learning and Teaching (ICBLT), 2018*\\
-\[[**Conference**](http://ouhk2018icblt.mozello.com/)\] \[[**PDF**](http://ouhk2018icblt.mozello.com/e-proceedings/)\]
+\[[**Conference**](http://ouhk2018icblt.mozello.com/)\] \[[**PDF**](https://drive.google.com/open?id=1w7G3ctk7utUvQIZlMFtAbPL2r8WA6rJf)\]
 
 [//]:* **Acoustic Analysis on the Monosyllable and Disyllable of Rui'an Dialect (In Chinese)**\\
 [//]:**Zi Lin**\\

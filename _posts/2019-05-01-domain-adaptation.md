@@ -10,7 +10,7 @@ date: 2019-05-01
 Current NLP systems tend to perform well only on their training domain and nearby genres, while the performances often degrade on the data drawn from different domains. For instance, the performance of a statistical parser trained on the Penn Treebank Wall Street Journal (WSJ; newspaper text) significantly drops when evaluated on text from other domains, as shown in the following table (results are from McClosky, 2010; for the details of those domains, cf. the next section):
 
 | Train | WSJ | Brown | GENIA | SWBD |
-| ----- | --- | ------| ----- | ---- |
+| :---: | :-: | :---: | :---: | :--: |
 |  WSJ  | 89.7|  84.1 |  76.2 | 76.7 |
 
 Recently, many endeavors have been made to explore and solve the problems of domain adaptation, ranging from creating challenging datasets to building algorithm that can avoid overfitting on the training data or transfer to the new domains. Here we will discuss several datasets build for the out-of-domain NLP task of syntactic analysis as well as some ideas on how to address the problem of domain adaptation. Note that in the literature, many definitions of the source domain and the target domain are proposed, here domain adaptation refers to the domains within the same NLP task and language (mainly English), but for other genres and domains such as emails, web forums and biomedical papers in terms of the dominant source domain of the Penn Treebank of Wall Street Journal (WSJ, financial news).
@@ -28,7 +28,7 @@ Recently, many endeavors have been made to explore and solve the problems of dom
 
 - **[Foreebank](http://nclt.computing.dcu.ie/mt/confidentmt.html)**: the Foreebank treebank contains 1,000 English sentences and 1,000 French sentences. The English sentences come from the Symantec Norton technical support user forum. Half of the French sentences come from the French Norton forum and the other half are human translations of sentences from the English forum. The English annotation are guided by **the Penn Treebank bracketing** guidelines and a Foreebank-adapted version of the English Web Treebank bracketing guidelines. The French annotators used the French treebank (FTB) guidelines, following the SPMRL strategy for multiword expressions. They also contains the annotation for **grammatical errors**.
 
-- **[QuestionBank](https://www.computing.dcu.ie/~jjudge/qtreebank/)**: a corpus of 4000 **parse-annotated** questions for use in training parsers employed in QA and evaluation of question parsing. In 2011, Chris Manning spent some time improving the parses in QuestionBank, and the results of that work appear [here](<https://nlp.stanford.edu/data/QuestionBank-Stanford.shtml>). The corrected version was released as a script that maps the original to the corrected version.
+- **[QuestionBank(QB)](https://www.computing.dcu.ie/~jjudge/qtreebank/)**: a corpus of 4000 **parse-annotated** questions for use in training parsers employed in QA and evaluation of question parsing. In 2011, Chris Manning spent some time improving the parses in QuestionBank, and the results of that work appear [here](<https://nlp.stanford.edu/data/QuestionBank-Stanford.shtml>). The corrected version was released as a script that maps the original to the corrected version.
 
 - **[English Translation Treebank (ETT)](https://catalog.ldc.upenn.edu/LDC2012T02)**: English Translation Treebank consists of 599 distinct newswire stories from the Lebanese publication An Nahar translated from Arabic to English and annotated for **part-of-speech** and **syntactic structure**. This corpus is part of an effort at LDC to produce parallel Arabic and English treebanks.
 
@@ -41,14 +41,14 @@ Here are some statistics and examples of English data from various source:
 | Dataset      | Style | POS  | NER  | Coref |  #Token   |
 | ------------ | ----- | :--: | :--: | :---: | --------: |
 | Brown        | PTB   |  ✔   |      |       |   130,417 |
-| ATIS         | PTB   |  ✔   |      |       |         - |
+| ATIS         | PTB   |  ✔   |      |       |     4,350 |
 | SWBD         | PTB   |  ✔   |      |       | 1,095,089 |
 | BNC          | PTB   |  ✔   |      |       |    28,311 |
 | EWT          | PTB   |  ✔   |      |       |   272,779 |
 | EWT_UD       | UD    |  ✔   |      |       |   254,830 |
 | Tweebank     | UD    |  ✔   |      |       |    55,427 |
 | Foreebank    | PTB*  |  ✔   |      |       |    15,613 |
-| QuestionBank | PTB   |  ✔   |      |       |     4,000 |
+| QB           | PTB   |  ✔   |      |       |         - |
 | ETT          | PTB   |  ✔   |      |       |   461,489 |
 | PennBio      | PTB   |  ✔   |  ✔   |       |   327,000 |
 | GENIA        | PTB   |  ✔   |      |   ✔   |   468,793 |
@@ -183,15 +183,15 @@ There have been many constituency parsers developed based on different methodolo
 
 The performance of Stanford, Stanford-RNN, Berkeley, Charniak, BLLIP and BLLIP* are reported from Choe et al.[^37], where all the parsers are trained on the WSJ training set (section 2-21) and the test data splits follow the standard as introduced in Foster and van Genabith (2008), Kim et al. (2003), Godfrey et al. (1992), Judge et al. (2006), Francis and Kučera (1989) and Marcus et al. (1993). BLLIP* (self-trained) BLLIP is self-trained using two million sentences from Gigaword and Stanford-RNN uses word embeddings trained from larger corpora. For more details, cf. Choe et al.[^37]. The results of Berkeley* (Berkeley self-attentive parser) are based on my own experiments.
 
-| Parser          |  BNC  |  GENIA |  SWBD  | QuestionBank* |   Brown  |  WSJ  | Foreebank |
-| :-------------- | :---: | :----: | :----: | :----------:  | :------: | :---: |  :------: |
-| Berkeley*       | 92.8  |  84.2  |   -    |   91.5        |  89.2    |  95.1 |   77.9    |
-| BLLIP*          | 85.2  |  77.8  |  80.9  |   89.5        |  87.4    |  92.2 |     -     |
-| BLLIP           | 84.1  |  76.7  |  79.2  |   88.1        |  85.8    |  91.5 |     -     |
-| Charniak        | 82.5  |  74.8  |  76.8  |   85.6        |  83.9    |  89.7 |     -     |
-| Berkeley        | 82.3  |  76.4  |  74.5  |   86.5        |  84.6    |  90.0 |     -     |
-| Stanford-RNN    | 82.0  |  84.0  |  70.7  |   82.9        |  84.0    |  89.6 |     -     |
-| Stanford        | 78.4  |  73.1  |  67.0  |   78.6        |  80.7    |  85.4 |     -     |
+| Parser          |  BNC  |  GENIA |  SWBD  |   QB*  |   Brown  |  WSJ  | Foreebank |
+| :-------------- | :---: | :----: | :----: | :----: | :------: | :---: |  :------: |
+| Berkeley*       | 92.8  |  84.2  |  81.8  |  91.5  |  89.2    |  95.1 |   77.9    |
+| BLLIP*          | 85.2  |  77.8  |  80.9  |  89.5  |  87.4    |  92.2 |     -     |
+| BLLIP           | 84.1  |  76.7  |  79.2  |  88.1  |  85.8    |  91.5 |     -     |
+| Charniak        | 82.5  |  74.8  |  76.8  |  85.6  |  83.9    |  89.7 |     -     |
+| Berkeley        | 82.3  |  76.4  |  74.5  |  86.5  |  84.6    |  90.0 |     -     |
+| Stanford-RNN    | 82.0  |  84.0  |  70.7  |  82.9  |  84.0    |  89.6 |     -     |
+| Stanford        | 78.4  |  73.1  |  67.0  |  78.6  |  80.7    |  85.4 |     -     |
 
 # Useful resource
 Apart from the reference, this post is also inspired a lot from:

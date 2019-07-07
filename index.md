@@ -5,11 +5,13 @@ excerpt: "Zi Lin's homepage"
 search_omit: true
 ---
 
-I'm an undergraduate student in the [**Department of Chinese language and literature**](http://chinese.pku.edu.cn/) at [**Peking University**](http://pku.edu.cn). My academic interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding.
+I'm received my undergraduate degree from the [**Department of Chinese language and literature**](http://chinese.pku.edu.cn/) at [**Peking University**](http://pku.edu.cn). My academic interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding.
+
+I will join [Google AI](https://ai.google/) this October as an [AI resident](https://ai.google/research/join-us/ai-residency/). See you in Mountain View :)
 
 ## Education
 * The Department of Chinese Language and Literature, Peking University\\
-*Sept. 2015 - Present*\\
+*Sept. 2015 - Jul. 2019*\\
 B.A. in **Computational and Applied Linguistics**
 
 * Summer Session, University of California at Berkeley\\
@@ -18,11 +20,11 @@ Selected two courses
 
 ## Experience
 * **Knowledge Computing Group, Microsoft Research Asia**\\
-*Apr. 2019 - Present*\\
-Research Intern
+*Apr. 2019 - Jul. 2019*\\
+Research Intern, Mentor: [**Jin-Ge Yao**](https://aclweb.org/anthology/people/jin-ge-yao)
 
 * **Language Computing and Web Mining Group, Institute of Computer Science and Technology, Peking University**\\
-*Aug. 2017 - Present*\\
+*Aug. 2017 - Apr. 2019*\\
 Research Assistant, Advisor: [**Weiwei Sun**](https://wsun106.github.io/index.html)
 
 * **Chinese Language Processing Group, Computer Science Department, Brandeis University**\\
@@ -34,6 +36,11 @@ Research Assistant, Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/
 Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/EN/People/Faculty/Detail/?ID=6029)
 
 ## Publication
+* **A Comparative Analysis of Knowledge-Intensive and Data-Intensive Semantic Parsers**\\
+Junjie Cao, **Zi Lin**, Weiwei Sun, Xiaojun Wan\\
+Preprint (Arxiv 1907.02298)\\
+\[[**Arxiv**](https://arxiv.org/abs/1907.02298)\]
+
 * **Parsing Meaning Representations: is Easier Always Better?**\\
 **Zi Lin**, Nianwen Xue\\
 In *Proceedings of the ACL workshop on Designing Meaning Representation (DMR), 2019*\\
@@ -66,6 +73,7 @@ Yang Liu, **Zi Lin**, Sichen Kang\\
 \*: this paper also appears in *the 16th China National Conference on Computational Linguistics (CCL), 2017*
 
 ## Honor & Award
+* 2019 **Outstanding Graduate**, Peking University
 * 2018 **Merit Student Pacesetter** (Top 1%), Peking University
 * 2018 **China National Scholarship**, Ministry of Education of the P.R.China
 * 2017 **Award for Academic Excellents**, Peking University

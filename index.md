@@ -44,7 +44,7 @@ Preprint (Arxiv 1907.02298)\\
 * **Parsing Meaning Representations: is Easier Always Better?**\\
 **Zi Lin**, Nianwen Xue\\
 In *Proceedings of the ACL workshop on Designing Meaning Representation (DMR), 2019*\\
-\[[**Conference**](https://www.cs.brandeis.edu/~clp/dmr/)\]
+\[[**Workshop**](https://www.cs.brandeis.edu/~clp/dmr/)\] \[[**PDF**](https://www.aclweb.org/anthology/W19-3304)\]
 
 * **Implanting Rational Knowledge into Distributed Representation at Morpheme Level**\\
 **Zi Lin**, Yang Liu\\

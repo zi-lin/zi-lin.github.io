@@ -43,22 +43,22 @@ Preprint (Arxiv 1907.02298)\\
 
 * **Parsing Meaning Representations: is Easier Always Better?**\\
 **Zi Lin**, Nianwen Xue\\
-In *Proceedings of the ACL workshop on Designing Meaning Representation (DMR), 2019*\\
-\[[**Workshop**](https://www.cs.brandeis.edu/~clp/dmr/)\] \[[**PDF**](https://www.aclweb.org/anthology/W19-3304)\]
+In *Proceedings of the First International Workshop on Designing Meaning Representations (DMR)*, 2019\\
+\[[**Workshop**](https://www.cs.brandeis.edu/~clp/dmr/)\] \[[**PDF**](https://www.aclweb.org/anthology/W19-3304)\] \[[**Slides**](./pdf/dmr_slides.pdf)\]
 
 * **Implanting Rational Knowledge into Distributed Representation at Morpheme Level**\\
 **Zi Lin**, Yang Liu\\
-In *Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2019*\\
-\[[**Conference**](https://aaai.org/Conferences/AAAI-19/)\] \[[**Arxiv**](https://arxiv.org/abs/1811.10188)\] \[[**Data**](https://github.com/zi-lin/MC)\]
+In *Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)*, 2019\\
+\[[**Conference**](https://aaai.org/Conferences/AAAI-19/)\] \[[**PDF**](https://www.aaai.org/ojs/index.php/AAAI/article/view/4151)\] \[[**Arxiv**](https://arxiv.org/abs/1811.10188)\] \[[**Data**](https://github.com/zi-lin/MC)\]
 
 * **Semantic Role Labeling for Learner Chinese: the Importance of Syntactic Parsing and L2-L1 Parallel Data**\\
 **Zi Lin**, Yuguang Duan, Yuanyuan Zhao, Weiwei Sun, Xiaojun Wan\\
-In *Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP), 2018*\\
+In *Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)*, 2018\\
 \[[**Conference**](http://emnlp2018.org/)\] \[[**PDF**](http://aclweb.org/anthology/D18-1414)\] \[[**Arxiv**](https://arxiv.org/abs/1808.09409)\] \[[**Data**](https://github.com/pkucoli/srl4il)\] \[[**Slides**](./pdf/srl4il_slides.pdf)\] \[[**Video**](https://vimeo.com/306119942)\]
 
 * **Is Argument Structure of Learner Chinese Understandable: A Corpus-Based Analysis**\\
 Yuguang Duan, **Zi Lin**, Weiwei Sun\\
-In *Proceedings of the International Conference on Bilingual Learning and Teaching (ICBLT), 2018*\\
+In *Proceedings of the International Conference on Bilingual Learning and Teaching (ICBLT)*, 2018\\
 \[[**Conference**](http://ouhk2018icblt.mozello.com/)\] \[[**PDF**](https://drive.google.com/open?id=1w7G3ctk7utUvQIZlMFtAbPL2r8WA6rJf)\]
 
 [//]:* **Acoustic Analysis on the Monosyllable and Disyllable of Rui'an Dialect (In Chinese)**\\
@@ -68,7 +68,7 @@ In *Proceedings of the International Conference on Bilingual Learning and Teachi
 
 * **Towards a Description of Chinese Morpheme Conceptions and Semantic Word Formation (In Chinese)**\\
 Yang Liu, **Zi Lin**, Sichen Kang\\
-*Journal of Chinese Information Processing (Vol. 32, Issue(2): 12-21), 2018*\\
+*Journal of Chinese Information Processing (Vol. 32, Issue(2): 12-21)*, 2018\\
 \[[**Conference**](http://www.cips-cl.org/static/CCL2017/en/callfor.html)\] \[[**PDF**](http://jcip.cipsc.org.cn/CN/article/downloadArticleFile.do?attachType=PDF&id=2510)\]\\
 \*: this paper also appears in *the 16th China National Conference on Computational Linguistics (CCL), 2017*
 

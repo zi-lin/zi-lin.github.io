@@ -33,7 +33,7 @@ Research Assistant, Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/
 
 * **Key Laboratory of Computational Linguistics, Peking University**\\
 *Jul. 2016 - Feb. 2018*\\
-Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/EN/People/Faculty/Detail/?ID=6029)
+Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/6753.htm)
 
 ## Publication
 * **A Comparative Analysis of Knowledge-Intensive and Data-Intensive Semantic Parsers**\\

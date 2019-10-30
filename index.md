@@ -5,9 +5,7 @@ excerpt: "Zi Lin's homepage"
 search_omit: true
 ---
 
-I received my B.A. in Computational and Applied Linguistics from Peking University. My academic interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding.
-
-I will join [Google AI](https://ai.google/) this October as an [AI resident](https://ai.google/research/join-us/ai-residency/). See you in Mountain View :)
+I am now a resident at **Google AI**, working with the Natural Language Understanding (NLU) team. I received my B.A. in **Computational and Applied Linguistics** from **Peking University**. My academic interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding.
 
 ## Education
 * The Department of Chinese Language and Literature, Peking University  
@@ -15,10 +13,13 @@ I will join [Google AI](https://ai.google/) this October as an [AI resident](htt
 B.A. in **Computational and Applied Linguistics**
 
 * Summer Session, University of California at Berkeley  
-*Summer 2017*  
-Selected two courses
+*Summer 2017*
 
 ## Experience
+* **Natural Language Understanding Team, Google MTV**  
+*Oct. 2019 - Present*  
+AI resident
+
 * **Knowledge Computing Group, Microsoft Research Asia**  
 *Apr. 2019 - Jul. 2019*  
 Research Intern, Mentor: [**Jin-Ge Yao**](https://aclweb.org/anthology/people/jin-ge-yao)
@@ -38,15 +39,15 @@ Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/675
 ## Publication
 \[[**Google Scholar**](https://scholar.google.com/citations?user=kgZYttUAAAAJ&hl=en)\]
 
-[//]:* **Structured Decoding for Fast Machine Translation**  
-[//]:Zhiqing Sun, Zhuohan Li, Haoqing Wang, Di He, **Zi Lin**, Zhihong Deng  
-[//]:In *Proceedings of the Thirty-third Conference on Neural Information Processing Systems (NeurIPS)*, 2019  
-[//]:\[[**Conference**](https://nips.cc/Conferences/2019)\]
-
 * **Hint-Based Training for Non-Autoregressive Machine Translation**  
 Zhuohan Li, **Zi Lin**, Di He, Fei Tian, Tao Qin, Liwei Wang, Tie-Yan Liu  
 In *Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)*, 2019  
 \[[**Conference**](https://www.emnlp-ijcnlp2019.org)\] \[[**Arxiv**](https://arxiv.org/abs/1909.06708)\]
+
+* **Fast Structured Decoding for Sequence Models**  
+Zhiqing Sun, Zhuohan Li, Haoqing Wang, Di He, **Zi Lin**, Zhihong Deng  
+In *Proceedings of the Thirty-third Conference on Neural Information Processing Systems (NeurIPS)*, 2019  
+\[[**Conference**](https://nips.cc/Conferences/2019)\] \[[**Arxiv**](https://arxiv.org/abs/1910.11555)\]
 
 * **A Comparative Analysis of Knowledge-Intensive and Data-Intensive Semantic Parsers**  
 Junjie Cao, **Zi Lin**, Weiwei Sun, Xiaojun Wan  
@@ -93,3 +94,6 @@ Yang Liu, **Zi Lin**, Sichen Kang
 * 2017 **EAP Scholarship**, Peking University
 * 2016 **Merit Student**, Peking University
 * 2016 **Kwang-Hua Scholarship**, Peking University
+
+## Miscellany
+* I learned western painting for nearly ten years and I still enjoy painting as an amateur, including sketching, acrylic painting and digital painting.

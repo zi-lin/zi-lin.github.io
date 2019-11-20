@@ -42,12 +42,12 @@ Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/675
 * **Hint-Based Training for Non-Autoregressive Machine Translation**  
 Zhuohan Li, **Zi Lin**, Di He, Fei Tian, Tao Qin, Liwei Wang, Tie-Yan Liu  
 In *Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)*, 2019  
-\[[**Conference**](https://www.emnlp-ijcnlp2019.org)\] \[[**Arxiv**](https://arxiv.org/abs/1909.06708)\]
+\[[**Conference**](https://www.emnlp-ijcnlp2019.org)\] \[[**PDF**](https://www.aclweb.org/anthology/D19-1573.pdf)\] \[[**Arxiv**](https://arxiv.org/abs/1909.06708)\]
 
 * **Fast Structured Decoding for Sequence Models**  
 Zhiqing Sun, Zhuohan Li, Haoqing Wang, Di He, **Zi Lin**, Zhihong Deng  
 In *Proceedings of the Thirty-third Conference on Neural Information Processing Systems (NeurIPS)*, 2019  
-\[[**Conference**](https://nips.cc/Conferences/2019)\] \[[**Arxiv**](https://arxiv.org/abs/1910.11555)\]
+\[[**Conference**](https://nips.cc/Conferences/2019)\] \[[**PDF**](http://papers.nips.cc/paper/8566-fast-structured-decoding-for-sequence-models.pdf)\] \[[**Arxiv**](https://arxiv.org/abs/1910.11555)\]
 
 * **A Comparative Analysis of Knowledge-Intensive and Data-Intensive Semantic Parsers**  
 Junjie Cao, **Zi Lin**, Weiwei Sun, Xiaojun Wan  

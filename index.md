@@ -47,7 +47,7 @@ In *Proceedings of the Conference on Empirical Methods in Natural Language Proce
 * **Fast Structured Decoding for Sequence Models**  
 Zhiqing Sun, Zhuohan Li, Haoqing Wang, Di He, **Zi Lin**, Zhihong Deng  
 In *Proceedings of the Thirty-third Conference on Neural Information Processing Systems (NeurIPS)*, 2019  
-\[[**Conference**](https://nips.cc/Conferences/2019)\] \[[**PDF**](http://papers.nips.cc/paper/8566-fast-structured-decoding-for-sequence-models.pdf)\] \[[**Arxiv**](https://arxiv.org/abs/1910.11555)\]
+\[[**Conference**](https://nips.cc/Conferences/2019)\] \[[**PDF**](http://papers.nips.cc/paper/8566-fast-structured-decoding-for-sequence-models.pdf)\] \[[**Arxiv**](https://arxiv.org/abs/1910.11555)\] \[[**Code**](https://github.com/pytorch/fairseq/tree/master/examples/nonautoregressive_translation)\]
 
 * **A Comparative Analysis of Knowledge-Intensive and Data-Intensive Semantic Parsers**  
 Junjie Cao, **Zi Lin**, Weiwei Sun, Xiaojun Wan  

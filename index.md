@@ -42,7 +42,7 @@ Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/675
 * **Hint-Based Training for Non-Autoregressive Machine Translation**  
 Zhuohan Li, **Zi Lin**, Di He, Fei Tian, Tao Qin, Liwei Wang, Tie-Yan Liu  
 In *Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)*, 2019  
-\[[**Conference**](https://www.emnlp-ijcnlp2019.org)\] \[[**PDF**](https://www.aclweb.org/anthology/D19-1573.pdf)\] \[[**Arxiv**](https://arxiv.org/abs/1909.06708)\]
+\[[**Conference**](https://www.emnlp-ijcnlp2019.org)\] \[[**PDF**](https://www.aclweb.org/anthology/D19-1573.pdf)\] \[[**Arxiv**](https://arxiv.org/abs/1909.06708)\] \[[**Code**](https://github.com/zhuohan123/hint-nart)\]
 
 * **Fast Structured Decoding for Sequence Models**  
 Zhiqing Sun, Zhuohan Li, Haoqing Wang, Di He, **Zi Lin**, Zhihong Deng  

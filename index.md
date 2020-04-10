@@ -42,7 +42,7 @@ Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/675
 * **Hint-Based Training for Non-Autoregressive Machine Translation**  
 Zhuohan Li, **Zi Lin**, Di He, Fei Tian, Tao Qin, Liwei Wang, Tie-Yan Liu  
 In *Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)*, 2019  
-\[[**Conference**](https://www.emnlp-ijcnlp2019.org)\] \[[**PDF**](https://www.aclweb.org/anthology/D19-1573.pdf)\] \[[**Arxiv**](https://arxiv.org/abs/1909.06708)\] \[[**Code**](https://github.com/zhuohan123/hint-nart)\]
+\[[**Conference**](https://www.emnlp-ijcnlp2019.org)\] \[[**PDF**](https://www.aclweb.org/anthology/D19-1573.pdf)\] \[[**Arxiv**](https://arxiv.org/abs/1909.06708)\] \[[**Code**](https://github.com/zhuohan123/hint-nart)\] \[[**Slides**](./pdf/hint-nart-slides.pdf)\] \[[**Video**](https://vimeo.com/396299266)\]
 
 * **Fast Structured Decoding for Sequence Models**  
 Zhiqing Sun, Zhuohan Li, Haoqing Wang, Di He, **Zi Lin**, Zhihong Deng  
@@ -51,7 +51,7 @@ In *Proceedings of the Thirty-third Conference on Neural Information Processing 
 
 * **A Comparative Analysis of Knowledge-Intensive and Data-Intensive Semantic Parsers**  
 Junjie Cao, **Zi Lin**, Weiwei Sun, Xiaojun Wan  
-Preprint (Arxiv 1907.02298)  
+To appear in *Computational Linguistics*, 2020  
 \[[**Arxiv**](https://arxiv.org/abs/1907.02298)\]
 
 * **Parsing Meaning Representations: is Easier Always Better?**  

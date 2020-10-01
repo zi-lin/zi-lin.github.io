@@ -38,6 +38,10 @@ Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/675
 
 ## Publication
 \[[**Google Scholar**](https://scholar.google.com/citations?user=kgZYttUAAAAJ&hl=en)\]
+* **Simple and Principled Uncertainty Estimation with Deterministic Deep Learning via Distance Awareness**  
+Jeremiah Zhe Liu, **Zi Lin**, Shreyas Padhy, Dustin Tran, Tania Bedrax-Weiss, Balaji Lakshminarayanan  
+In *Proceedings of the Thirty-fourth Conference on Neural Information Processing Systems (NeurIPS)*, 2020   
+\[[**Conference**](https://nips.cc/Conferences/2020)\] \[[**Arxiv**](https://arxiv.org/abs/2006.10108)\] \[[**Code**](https://github.com/google/uncertainty-baselines)\]
 
 * **Hint-Based Training for Non-Autoregressive Machine Translation**  
 Zhuohan Li, **Zi Lin**, Di He, Fei Tian, Tao Qin, Liwei Wang, Tie-Yan Liu  

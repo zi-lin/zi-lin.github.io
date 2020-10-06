@@ -18,7 +18,7 @@ B.A. in **Computational and Applied Linguistics**
 ## Experience
 * **Natural Language Understanding Team, Google MTV**  
 *Oct. 2019 - Present*  
-AI resident
+AI resident, Collaborator: [**Dan Roth**](https://www.cis.upenn.edu/~danroth/), [**Jeremiah Liu**](http://jereliu.info/), [**Zi Yang**](https://www.aclweb.org/anthology/people/z/zi-yang/), Nan Hua
 
 * **Knowledge Computing Group, Microsoft Research Asia**  
 *Apr. 2019 - Jul. 2019*  
@@ -43,6 +43,16 @@ Jeremiah Zhe Liu, **Zi Lin**, Shreyas Padhy, Dustin Tran, Tania Bedrax-Weiss, Ba
 In *Proceedings of the Thirty-fourth Conference on Neural Information Processing Systems (NeurIPS)*, 2020   
 \[[**Conference**](https://nips.cc/Conferences/2020)\] \[[**Arxiv**](https://arxiv.org/abs/2006.10108)\] \[[**Code**](https://github.com/google/uncertainty-baselines)\]
 
+* **Pruning Redundant Mappings in Transformer Models via Spectral-Normalized Identity Prior**  
+**Zi Lin**, Jeremiah Zhe Liu, Zi Yang, Nan Hua, Dan Roth  
+In *Findings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)*, 2020   
+\[[**Conference**](https://2020.emnlp.org/)\] \[[**Arxiv**](https://arxiv.org/abs/2010.01791v1)\]
+
+* **A Comparative Analysis of Knowledge-Intensive and Data-Intensive Semantic Parsers**  
+Junjie Cao\*, **Zi Lin\***, Weiwei Sun, Xiaojun Wan (\*:equal contribution)  
+To appear in *Computational Linguistics*, 2020  
+\[[**Arxiv**](https://arxiv.org/abs/1907.02298)\]
+
 * **Hint-Based Training for Non-Autoregressive Machine Translation**  
 Zhuohan Li, **Zi Lin**, Di He, Fei Tian, Tao Qin, Liwei Wang, Tie-Yan Liu  
 In *Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)*, 2019  
@@ -52,11 +62,6 @@ In *Proceedings of the Conference on Empirical Methods in Natural Language Proce
 Zhiqing Sun, Zhuohan Li, Haoqing Wang, Di He, **Zi Lin**, Zhihong Deng  
 In *Proceedings of the Thirty-third Conference on Neural Information Processing Systems (NeurIPS)*, 2019  
 \[[**Conference**](https://nips.cc/Conferences/2019)\] \[[**PDF**](http://papers.nips.cc/paper/8566-fast-structured-decoding-for-sequence-models.pdf)\] \[[**Arxiv**](https://arxiv.org/abs/1910.11555)\] \[[**Code**](https://github.com/pytorch/fairseq/tree/master/examples/nonautoregressive_translation)\]
-
-* **A Comparative Analysis of Knowledge-Intensive and Data-Intensive Semantic Parsers**  
-Junjie Cao, **Zi Lin**, Weiwei Sun, Xiaojun Wan  
-To appear in *Computational Linguistics*, 2020  
-\[[**Arxiv**](https://arxiv.org/abs/1907.02298)\]
 
 * **Parsing Meaning Representations: is Easier Always Better?**  
 **Zi Lin**, Nianwen Xue  
@@ -89,7 +94,7 @@ Yang Liu, **Zi Lin**, Sichen Kang
 \[[**Conference**](http://www.cips-cl.org/static/CCL2017/en/callfor.html)\] \[[**PDF**](http://jcip.cipsc.org.cn/CN/article/downloadArticleFile.do?attachType=PDF&id=2510)\]  
 \*: this paper also appeared in *the 16th China National Conference on Computational Linguistics (CCL), 2017*
 
-## Honor & Award
+<!-- ## Honor & Award
 * 2019 **Outstanding Graduate of Beijing**, Beijing Municipal Education Commission
 * 2019 **Outstanding Graduate**, Peking University
 * 2018 **Merit Student Pacesetter** (Top 1%), Peking University
@@ -97,7 +102,7 @@ Yang Liu, **Zi Lin**, Sichen Kang
 * 2017 **Award for Academic Excellents**, Peking University
 * 2017 **EAP Scholarship**, Peking University
 * 2016 **Merit Student**, Peking University
-* 2016 **Kwang-Hua Scholarship**, Peking University
+* 2016 **Kwang-Hua Scholarship**, Peking University -->
 
 ## Miscellany
 * I learned western painting for nearly ten years and I still enjoy painting as an amateur, including sketching, acrylic painting and digital painting.

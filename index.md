@@ -37,7 +37,7 @@ Research Assistant, Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/
 Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/6753.htm)
 
 ## Publication
-\[[**Google Scholar**](https://scholar.google.com/citations?user=kgZYttUAAAAJ&hl=en)\]
+(Full publication list can be found at [**Google Scholar**](https://scholar.google.com/citations?user=kgZYttUAAAAJ&hl=en))
 * **Simple and Principled Uncertainty Estimation with Deterministic Deep Learning via Distance Awareness**  
 Jeremiah Zhe Liu, **Zi Lin**, Shreyas Padhy, Dustin Tran, Tania Bedrax-Weiss, Balaji Lakshminarayanan  
 In *Proceedings of the Thirty-fourth Conference on Neural Information Processing Systems (NeurIPS)*, 2020   
@@ -45,8 +45,8 @@ In *Proceedings of the Thirty-fourth Conference on Neural Information Processing
 
 * **Pruning Redundant Mappings in Transformer Models via Spectral-Normalized Identity Prior**  
 **Zi Lin**, Jeremiah Zhe Liu, Zi Yang, Nan Hua, Dan Roth  
-In *Findings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)*, 2020   
-\[[**Conference**](https://2020.emnlp.org/)\] \[[**Arxiv**](https://arxiv.org/abs/2010.01791v1)\]
+In *Findings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)*, 2020 (also to appear in [SustaiNLP](https://sites.google.com/view/sustainlp2020/home?authuser=0)@EMNLP)  
+\[[**Conference**](https://2020.emnlp.org/)\] \[[**Arxiv**](https://arxiv.org/abs/2010.01791v1)\]  
 
 * **A Comparative Analysis of Knowledge-Intensive and Data-Intensive Semantic Parsers**  
 Junjie Cao\*, **Zi Lin\***, Weiwei Sun, Xiaojun Wan (\*:equal contribution)  
@@ -78,21 +78,16 @@ In *Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)*, 2019
 In *Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)*, 2018  
 \[[**Conference**](http://emnlp2018.org/)\] \[[**PDF**](http://aclweb.org/anthology/D18-1414)\] \[[**Arxiv**](https://arxiv.org/abs/1808.09409)\] \[[**Data**](https://github.com/pkucoli/srl4il)\] \[[**Slides**](./pdf/srl4il_slides.pdf)\] \[[**Video**](https://vimeo.com/306119942)\]
 
-* **Is Argument Structure of Learner Chinese Understandable: A Corpus-Based Analysis**  
+<!-- * **Is Argument Structure of Learner Chinese Understandable: A Corpus-Based Analysis**  
 Yuguang Duan, **Zi Lin**, Weiwei Sun  
 In *Proceedings of the International Conference on Bilingual Learning and Teaching (ICBLT)*, 2018  
 \[[**Conference**](http://ouhk2018icblt.mozello.com/)\] \[[**PDF**](https://drive.google.com/open?id=1w7G3ctk7utUvQIZlMFtAbPL2r8WA6rJf)\]
-
-[//]:* **Acoustic Analysis on the Monosyllable and Disyllable of Rui'an Dialect (In Chinese)**  
-[//]:**Zi Lin**  
-[//]:Science Press, 2018  
-[//]:\[[**Manuscript**](./pdf/ruian-dialect.pdf)\]
 
 * **Towards a Description of Chinese Morpheme Conceptions and Semantic Word Formation (In Chinese)**  
 Yang Liu, **Zi Lin**, Sichen Kang  
 *Journal of Chinese Information Processing (Vol. 32, Issue(2): 12-21)*, 2018  
 \[[**Conference**](http://www.cips-cl.org/static/CCL2017/en/callfor.html)\] \[[**PDF**](http://jcip.cipsc.org.cn/CN/article/downloadArticleFile.do?attachType=PDF&id=2510)\]  
-\*: this paper also appeared in *the 16th China National Conference on Computational Linguistics (CCL), 2017*
+\*: this paper also appeared in *the 16th China National Conference on Computational Linguistics (CCL), 2017* -->
 
 <!-- ## Honor & Award
 * 2019 **Outstanding Graduate of Beijing**, Beijing Municipal Education Commission

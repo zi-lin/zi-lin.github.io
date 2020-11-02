@@ -59,31 +59,31 @@ To appear in *Computational Linguistics*, 2020
 * **Hint-Based Training for Non-Autoregressive Machine Translation**  
 Zhuohan Li, **Zi Lin**, Di He, Fei Tian, Tao Qin, Liwei Wang, Tie-Yan Liu  
 In *Proceedings of the Conference on Empirical Methods in Natural Language Processing ([EMNLP](https://www.emnlp-ijcnlp2019.org))*, 2019  
-[<span class="fa fa-file-alt about-icon fa-lg"></span>](https://www.aclweb.org/anthology/D19-1573.pdf) | [<span class="ai ai-arxiv-square fa-lg" href=""></span>](https://arxiv.org/abs/1909.06708) | [<span class="fab fa-github-square fa-lg" href=""></span>](https://github.com/zhuohan123/hint-nart) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span>](./pdf/hint-nart-slides.pdf) | [<span class="fas fa-video fa-lg" href=""></span>](https://vimeo.com/396299266)
+[<span class="fas fa-file-pdf fa-lg"></span>](https://www.aclweb.org/anthology/D19-1573.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span>](./pdf/hint-nart-slides.pdf) | [<span class="fas fa-file-video fa-lg" href=""></span>](https://vimeo.com/396299266) | [<span class="ai ai-arxiv-square fa-lg" href=""></span>](https://arxiv.org/abs/1909.06708) | [<span class="fab fa-github-square fa-lg" href=""></span>](https://github.com/zhuohan123/hint-nart)
 
 
 * **Fast Structured Decoding for Sequence Models**  
 Zhiqing Sun, Zhuohan Li, Haoqing Wang, Di He, **Zi Lin**, Zhihong Deng  
 In *Proceedings of the Thirty-third Conference on Neural Information Processing Systems ([NeurIPS](https://nips.cc/Conferences/2019))*, 2019  
-[<span class="fa fa-file-alt about-icon fa-lg"></span>](http://papers.nips.cc/paper/8566-fast-structured-decoding-for-sequence-models.pdf) | [<span class="ai ai-arxiv-square fa-lg" href=""></span>](https://arxiv.org/abs/1910.11555) | [<span class="fab fa-github-square fa-lg" href=""></span>](https://github.com/pytorch/fairseq/tree/master/examples/nonautoregressive_translation)
+[<span class="fas fa-file-pdf fa-lg"></span>](http://papers.nips.cc/paper/8566-fast-structured-decoding-for-sequence-models.pdf) | [<span class="ai ai-arxiv-square fa-lg" href=""></span>](https://arxiv.org/abs/1910.11555) | [<span class="fab fa-github-square fa-lg" href=""></span>](https://github.com/pytorch/fairseq/tree/master/examples/nonautoregressive_translation)
 
 
 * **Parsing Meaning Representations: is Easier Always Better?**  
 **Zi Lin**, Nianwen Xue  
 In *Proceedings of the First International Workshop on Designing Meaning Representations ([DMR](https://www.cs.brandeis.edu/~clp/dmr/))*, 2019  
-[<span class="fa fa-file-alt about-icon fa-lg"></span>](https://www.aclweb.org/anthology/W19-3304) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span>](./pdf/dmr_slides.pdf)
+[<span class="fas fa-file-pdf fa-lg"></span>](https://www.aclweb.org/anthology/W19-3304) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span>](./pdf/dmr_slides.pdf)
 
 
 * **Implanting Rational Knowledge into Distributed Representation at Morpheme Level**  
 **Zi Lin**, Yang Liu  
 In *Proceedings of the AAAI Conference on Artificial Intelligence ([AAAI](https://aaai.org/Conferences/AAAI-19/))*, 2019  
-[<span class="fa fa-file-alt about-icon fa-lg"></span>](https://www.aaai.org/ojs/index.php/AAAI/article/view/4151) | [<span class="ai ai-arxiv-square fa-lg" href=""></span>](https://arxiv.org/abs/1811.10188) | [<span class="fab fa-github-square fa-lg" href=""></span>](https://github.com/zi-lin/MC) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span>](./pdf/aaai-poster.pdf)
+[<span class="fas fa-file-pdf fa-lg"></span>](https://www.aaai.org/ojs/index.php/AAAI/article/view/4151) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span>](./pdf/aaai-poster.pdf) | [<span class="ai ai-arxiv-square fa-lg" href=""></span>](https://arxiv.org/abs/1811.10188) | [<span class="fab fa-github-square fa-lg" href=""></span>](https://github.com/zi-lin/MC)
 
 
-* **Semantic Role Labeling for Learner Chinese: the Importance of Syntactic Parsing and L2-L1 Parallel Data** 
+* **Semantic Role Labeling for Learner Chinese: the Importance of Syntactic Parsing and L2-L1 Parallel Data**  
 **Zi Lin**, Yuguang Duan, Yuanyuan Zhao, Weiwei Sun, Xiaojun Wan  
 In *Proceedings of the Conference on Empirical Methods in Natural Language Processing ([EMNLP](http://emnlp2018.org/))*, 2018  
- [<span class="fa fa-file-alt about-icon fa-lg"></span>](http://aclweb.org/anthology/D18-1414) | [<span class="ai ai-arxiv-square fa-lg" href=""></span>](https://arxiv.org/abs/1808.09409) | [<span class="fab fa-github-square fa-lg" href=""></span>](https://github.com/pkucoli/srl4il) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span>](./pdf/srl4il_slides.pdf) | [<span class="fas fa-video fa-lg" href=""></span>](https://vimeo.com/306119942) 
+ [<span class="fas fa-file-pdf fa-lg"></span>](http://aclweb.org/anthology/D18-1414) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span>](./pdf/srl4il_slides.pdf) | [<span class="fas fa-file-video fa-lg" href=""></span>](https://vimeo.com/306119942) | [<span class="ai ai-arxiv-square fa-lg" href=""></span>](https://arxiv.org/abs/1808.09409) | [<span class="fab fa-github-square fa-lg" href=""></span>](https://github.com/pkucoli/srl4il) 
 
 <!-- * **Is Argument Structure of Learner Chinese Understandable: A Corpus-Based Analysis**  
 Yuguang Duan, **Zi Lin**, Weiwei Sun  

@@ -36,47 +36,46 @@ Research Assistant, Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/
 *Jul. 2016 - Feb. 2018*  
 Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/6753.htm)
 
-## Publication
-(Full publication list can be found at [**Google Scholar**](https://scholar.google.com/citations?user=kgZYttUAAAAJ&hl=en))
-* **Simple and Principled Uncertainty Estimation with Deterministic Deep Learning via Distance Awareness**  
+## Publication [<span class="ai ai-google-scholar-square fa-1x" href=""></span>](https://scholar.google.com/citations?user=kgZYttUAAAAJ&hl=en)
+
+* **Simple and Principled Uncertainty Estimation with Deterministic Deep Learning via Distance Awareness** [<span class="ai ai-arxiv-square fa-lg" href=""></span>](https://arxiv.org/abs/2006.10108) [<span class="fab fa-github-square fa-lg" href=""></span>](https://github.com/google/uncertainty-baselines)   
 Jeremiah Zhe Liu, **Zi Lin**, Shreyas Padhy, Dustin Tran, Tania Bedrax-Weiss, Balaji Lakshminarayanan  
-In *Proceedings of the Thirty-fourth Conference on Neural Information Processing Systems (NeurIPS)*, 2020   
-\[[**Conference**](https://nips.cc/Conferences/2020)\] \[[**Arxiv**](https://arxiv.org/abs/2006.10108)\] \[[**Code**](https://github.com/google/uncertainty-baselines)\]
+In *Proceedings of the Thirty-fourth Conference on Neural Information Processing Systems ([NeurIPS]((https://nips.cc/Conferences/2020)))*, 2020    
 
-* **Pruning Redundant Mappings in Transformer Models via Spectral-Normalized Identity Prior**  
+
+* **Pruning Redundant Mappings in Transformer Models via Spectral-Normalized Identity Prior** [<span class="ai ai-arxiv-square fa-lg" href=""></span>](https://arxiv.org/abs/2010.01791v1)  
 **Zi Lin**, Jeremiah Zhe Liu, Zi Yang, Nan Hua, Dan Roth  
-In *Findings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)*, 2020 (also to appear in [SustaiNLP](https://sites.google.com/view/sustainlp2020/home?authuser=0)@EMNLP)  
-\[[**Conference**](https://2020.emnlp.org/)\] \[[**Arxiv**](https://arxiv.org/abs/2010.01791v1)\]  
+In *Proceedings of the Conference on Empirical Methods in Natural Language Processing ([EMNLP](https://2020.emnlp.org/) Findings)*, 2020 (also to appear in [SustaiNLP](https://sites.google.com/view/sustainlp2020/home?authuser=0)@EMNLP)  
 
-* **A Comparative Analysis of Knowledge-Intensive and Data-Intensive Semantic Parsers**  
+
+* **A Comparative Analysis of Knowledge-Intensive and Data-Intensive Semantic Parsers** [<span class="ai ai-arxiv-square fa-lg" href=""></span>](https://arxiv.org/abs/1907.02298)  
 Junjie Cao\*, **Zi Lin\***, Weiwei Sun, Xiaojun Wan (\*:equal contribution)  
 To appear in *Computational Linguistics*, 2020  
-\[[**Arxiv**](https://arxiv.org/abs/1907.02298)\]
 
-* **Hint-Based Training for Non-Autoregressive Machine Translation**  
+
+* **Hint-Based Training for Non-Autoregressive Machine Translation** [<span class="fa fa-file-alt about-icon fa-lg"></span>](https://www.aclweb.org/anthology/D19-1573.pdf) [<span class="ai ai-arxiv-square fa-lg" href=""></span>](https://arxiv.org/abs/1909.06708) [<span class="fab fa-github-square fa-lg" href=""></span>](https://github.com/zhuohan123/hint-nart) [<span class="fas fa-file-powerpoint fa-lg" href=""></span>](./pdf/hint-nart-slides.pdf) [<span class="fas fa-video fa-lg" href=""></span>](https://vimeo.com/396299266)  
 Zhuohan Li, **Zi Lin**, Di He, Fei Tian, Tao Qin, Liwei Wang, Tie-Yan Liu  
-In *Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)*, 2019  
-\[[**Conference**](https://www.emnlp-ijcnlp2019.org)\] \[[**PDF**](https://www.aclweb.org/anthology/D19-1573.pdf)\] \[[**Arxiv**](https://arxiv.org/abs/1909.06708)\] \[[**Code**](https://github.com/zhuohan123/hint-nart)\] \[[**Slides**](./pdf/hint-nart-slides.pdf)\] \[[**Video**](https://vimeo.com/396299266)\]
+In *Proceedings of the Conference on Empirical Methods in Natural Language Processing ([EMNLP](https://www.emnlp-ijcnlp2019.org))*, 2019  
 
-* **Fast Structured Decoding for Sequence Models**  
+
+* **Fast Structured Decoding for Sequence Models** [<span class="fa fa-file-alt about-icon fa-lg"></span>](http://papers.nips.cc/paper/8566-fast-structured-decoding-for-sequence-models.pdf) [<span class="ai ai-arxiv-square fa-lg" href=""></span>](https://arxiv.org/abs/1910.11555) [<span class="fab fa-github-square fa-lg" href=""></span>](https://github.com/pytorch/fairseq/tree/master/examples/nonautoregressive_translation)  
 Zhiqing Sun, Zhuohan Li, Haoqing Wang, Di He, **Zi Lin**, Zhihong Deng  
-In *Proceedings of the Thirty-third Conference on Neural Information Processing Systems (NeurIPS)*, 2019  
-\[[**Conference**](https://nips.cc/Conferences/2019)\] \[[**PDF**](http://papers.nips.cc/paper/8566-fast-structured-decoding-for-sequence-models.pdf)\] \[[**Arxiv**](https://arxiv.org/abs/1910.11555)\] \[[**Code**](https://github.com/pytorch/fairseq/tree/master/examples/nonautoregressive_translation)\]
+In *Proceedings of the Thirty-third Conference on Neural Information Processing Systems ([NeurIPS](https://nips.cc/Conferences/2019))*, 2019  
 
-* **Parsing Meaning Representations: is Easier Always Better?**  
+
+* **Parsing Meaning Representations: is Easier Always Better?** [<span class="fa fa-file-alt about-icon fa-lg"></span>](https://www.aclweb.org/anthology/W19-3304) [<span class="fas fa-file-powerpoint fa-lg" href=""></span>](./pdf/dmr_slides.pdf)  
 **Zi Lin**, Nianwen Xue  
-In *Proceedings of the First International Workshop on Designing Meaning Representations (DMR)*, 2019  
-\[[**Workshop**](https://www.cs.brandeis.edu/~clp/dmr/)\] \[[**PDF**](https://www.aclweb.org/anthology/W19-3304)\] \[[**Slides**](./pdf/dmr_slides.pdf)\]
+In *Proceedings of the First International Workshop on Designing Meaning Representations ([DMR](https://www.cs.brandeis.edu/~clp/dmr/))*, 2019  
 
-* **Implanting Rational Knowledge into Distributed Representation at Morpheme Level**  
+
+* **Implanting Rational Knowledge into Distributed Representation at Morpheme Level** [<span class="fa fa-file-alt about-icon fa-lg"></span>](https://www.aaai.org/ojs/index.php/AAAI/article/view/4151) [<span class="ai ai-arxiv-square fa-lg" href=""></span>](https://arxiv.org/abs/1811.10188) [<span class="fab fa-github-square fa-lg" href=""></span>](https://github.com/zi-lin/MC) [<span class="fas fa-file-powerpoint fa-lg" href=""></span>](./pdf/aaai-poster.pdf)  
 **Zi Lin**, Yang Liu  
-In *Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)*, 2019  
-\[[**Conference**](https://aaai.org/Conferences/AAAI-19/)\] \[[**PDF**](https://www.aaai.org/ojs/index.php/AAAI/article/view/4151)\] \[[**Arxiv**](https://arxiv.org/abs/1811.10188)\] \[[**Data**](https://github.com/zi-lin/MC)\] \[[**Poster**](./pdf/aaai-poster.pdf)\]
+In *Proceedings of the AAAI Conference on Artificial Intelligence ([AAAI](https://aaai.org/Conferences/AAAI-19/))*, 2019  
 
-* **Semantic Role Labeling for Learner Chinese: the Importance of Syntactic Parsing and L2-L1 Parallel Data**  
+
+* **Semantic Role Labeling for Learner Chinese: the Importance of Syntactic Parsing and L2-L1 Parallel Data** [<span class="fa fa-file-alt about-icon fa-lg"></span>](http://aclweb.org/anthology/D18-1414) [<span class="ai ai-arxiv-square fa-lg" href=""></span>](https://arxiv.org/abs/1808.09409) [<span class="fab fa-github-square fa-lg" href=""></span>](https://github.com/pkucoli/srl4il) [<span class="fas fa-file-powerpoint fa-lg" href=""></span>](./pdf/srl4il_slides.pdf) [<span class="fas fa-video fa-lg" href=""></span>](https://vimeo.com/306119942)  
 **Zi Lin**, Yuguang Duan, Yuanyuan Zhao, Weiwei Sun, Xiaojun Wan  
-In *Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP)*, 2018  
-\[[**Conference**](http://emnlp2018.org/)\] \[[**PDF**](http://aclweb.org/anthology/D18-1414)\] \[[**Arxiv**](https://arxiv.org/abs/1808.09409)\] \[[**Data**](https://github.com/pkucoli/srl4il)\] \[[**Slides**](./pdf/srl4il_slides.pdf)\] \[[**Video**](https://vimeo.com/306119942)\]
+In *Proceedings of the Conference on Empirical Methods in Natural Language Processing ([EMNLP](http://emnlp2018.org/))*, 2018  
 
 <!-- * **Is Argument Structure of Learner Chinese Understandable: A Corpus-Based Analysis**  
 Yuguang Duan, **Zi Lin**, Weiwei Sun  

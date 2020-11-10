@@ -47,7 +47,7 @@ In *Proceedings of the Thirty-fourth Conference on Neural Information Processing
 * **Pruning Redundant Mappings in Transformer Models via Spectral-Normalized Identity Prior**  
 **Zi Lin**, Jeremiah Zhe Liu, Zi Yang, Nan Hua, Dan Roth  
 In *Proceedings of the Conference on Empirical Methods in Natural Language Processing ([EMNLP](https://2020.emnlp.org/) Findings)*, 2020 (also to appear in *[SustaiNLP](https://sites.google.com/view/sustainlp2020/home?authuser=0)@EMNLP*)  
-[<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2010.01791v1) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1yeGVqZ_-VcoBwiXibXmcsPILOE96ZngT/view?usp=sharing)  
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://www.aclweb.org/anthology/2020.findings-emnlp.64.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1yeGVqZ_-VcoBwiXibXmcsPILOE96ZngT/view?usp=sharing) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2010.01791v1)  
 
 
 * **A Comparative Analysis of Knowledge-Intensive and Data-Intensive Semantic Parsers**  
@@ -83,7 +83,7 @@ In *Proceedings of the AAAI Conference on Artificial Intelligence ([AAAI](https:
 * **Semantic Role Labeling for Learner Chinese: the Importance of Syntactic Parsing and L2-L1 Parallel Data**  
 **Zi Lin**, Yuguang Duan, Yuanyuan Zhao, Weiwei Sun, Xiaojun Wan  
 In *Proceedings of the Conference on Empirical Methods in Natural Language Processing ([EMNLP](http://emnlp2018.org/))*, 2018  
- [<span class="fas fa-file-pdf fa-lg"></span> Paper](http://aclweb.org/anthology/D18-1414) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](./pdf/srl4il_slides.pdf) | [<span class="fas fa-file-video fa-lg" href=""></span> Video](https://vimeo.com/306119942) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/1808.09409) | [<span class="fas fa-list-alt fa-lg" href=""></span> Data](https://github.com/pkucoli/srl4il) 
+ [<span class="fas fa-file-pdf fa-lg"></span> Paper](https://www.aclweb.org/anthology/D18-1414.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](./pdf/srl4il_slides.pdf) | [<span class="fas fa-file-video fa-lg" href=""></span> Video](https://vimeo.com/306119942) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/1808.09409) | [<span class="fas fa-list-alt fa-lg" href=""></span> Data](https://github.com/pkucoli/srl4il) 
 
 <!-- * **Is Argument Structure of Learner Chinese Understandable: A Corpus-Based Analysis**  
 Yuguang Duan, **Zi Lin**, Weiwei Sun  

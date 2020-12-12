@@ -12,13 +12,13 @@ I am now a resident at **Google AI**, working with the Natural Language Understa
 *Sept. 2015 - Jul. 2019*  
 B.A. in **Computational and Applied Linguistics**
 
-* Summer Session, University of California at Berkeley  
-*Summer 2017*
+<!-- * Summer Session, University of California at Berkeley  
+*Summer 2017* -->
 
 ## Experience
 * **Natural Language Understanding Team, Google MTV**  
 *Oct. 2019 - Present*  
-AI resident, Collaborator: [**Dan Roth**](https://www.cis.upenn.edu/~danroth/), [**Jeremiah Liu**](http://jereliu.info/), [**Zi Yang**](https://www.aclweb.org/anthology/people/z/zi-yang/), Nan Hua
+AI resident, Collaborator: [**Dan Roth**](https://www.cis.upenn.edu/~danroth/), [**Jeremiah Liu**](http://jereliu.info/), [**Zi Yang**](https://www.aclweb.org/anthology/people/z/zi-yang/), Nan Hua, [**Ian Kivlichan**](https://scholar.google.com/citations?user=FRBObOwAAAAJ&hl=en)
 
 * **Knowledge Computing Group, Microsoft Research Asia**  
 *Apr. 2019 - Jul. 2019*  
@@ -36,12 +36,12 @@ Research Assistant, Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/
 *Jul. 2016 - Feb. 2018*  
 Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/6753.htm)
 
-## Publication [<span class="ai ai-google-scholar-square fa-1x" href=""></span>](https://scholar.google.com/citations?user=kgZYttUAAAAJ&hl=en)
+## Selected Publication [<span class="ai ai-google-scholar-square fa-1x" href=""></span>](https://scholar.google.com/citations?user=kgZYttUAAAAJ&hl=en)
 
 * **Simple and Principled Uncertainty Estimation with Deterministic Deep Learning via Distance Awareness**   
 Jeremiah Zhe Liu, **Zi Lin**, Shreyas Padhy, Dustin Tran, Tania Bedrax-Weiss, Balaji Lakshminarayanan  
 *Conference on Neural Information Processing Systems ([NeurIPS]((https://nips.cc/Conferences/2020)))*, 2020  
-[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://proceedings.neurips.cc/paper/2020/file/543e83748234f7cbab21aa0ade66565f-Paper.pdf) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2006.10108) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines)    
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://proceedings.neurips.cc/paper/2020/file/543e83748234f7cbab21aa0ade66565f-Paper.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Poster](https://drive.google.com/file/d/1ov8FUogW2ofGK1_GAmxDB9SlTRYCnSMQ/view?usp=sharing) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2006.10108) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines)    
 
 
 * **Pruning Redundant Mappings in Transformer Models via Spectral-Normalized Identity Prior**  
@@ -52,7 +52,7 @@ Jeremiah Zhe Liu, **Zi Lin**, Shreyas Padhy, Dustin Tran, Tania Bedrax-Weiss, Ba
 
 * **A Comparative Analysis of Knowledge-Intensive and Data-Intensive Semantic Parsers**  
 Junjie Cao\*, **Zi Lin\***, Weiwei Sun, Xiaojun Wan (\*:equal contribution)  
-*Computational Linguistics* (conditional accept)  
+*Computational Linguistics* (accepted for publication: 18 November 2020)  
 [<span class="ai ai-arxiv-square fa-lg"></span> Arxiv](https://arxiv.org/abs/1907.02298)
 
 

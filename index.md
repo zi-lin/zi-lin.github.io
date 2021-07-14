@@ -37,6 +37,11 @@ Research Assistant, Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/
 Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/6753.htm)
 
 ## Selected Publication [<span class="ai ai-google-scholar-square fa-1x" href=""></span>](https://scholar.google.com/citations?user=kgZYttUAAAAJ&hl=en)
+* **Measuring and Improving Model-Moderator Collaboration using Uncertainty Estimation**   
+Ian D. Kivlichan\*, **Zi Lin\***, Jeremiah Liu\*, Lucy Vasserman (\*:equal contribution)    
+*ACL workshop on Online Abuse and Harms ([WOAH](https://www.workshopononlineabuse.com/)))*, 2021  
+[<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1HKkl-zzZje9OtnjodA2oVUSxm--ysjDr/view?usp=sharing) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2107.04212) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/tree/main/baselines/toxic_comments) 
+
 
 * **Simple and Principled Uncertainty Estimation with Deterministic Deep Learning via Distance Awareness**   
 Jeremiah Zhe Liu, **Zi Lin**, Shreyas Padhy, Dustin Tran, Tania Bedrax-Weiss, Balaji Lakshminarayanan  
@@ -53,7 +58,7 @@ Jeremiah Zhe Liu, **Zi Lin**, Shreyas Padhy, Dustin Tran, Tania Bedrax-Weiss, Ba
 * **A Comparative Analysis of Knowledge-Intensive and Data-Intensive Semantic Parsers**  
 Junjie Cao\*, **Zi Lin\***, Weiwei Sun, Xiaojun Wan (\*:equal contribution)  
 *Computational Linguistics* (accepted for publication: 18 November 2020)  
-[<span class="ai ai-arxiv-square fa-lg"></span> Arxiv](https://arxiv.org/abs/1907.02298)
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://direct.mit.edu/coli/article/47/1/43/97332/Comparing-Knowledge-Intensive-and-Data-Intensive) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1sGUoFKnY-YQfqopBgvNbch0NtqNRXsGz/view?usp=sharing) | [<span class="ai ai-arxiv-square fa-lg"></span> Arxiv](https://arxiv.org/abs/1907.02298)
 
 
 * **Hint-Based Training for Non-Autoregressive Machine Translation**  

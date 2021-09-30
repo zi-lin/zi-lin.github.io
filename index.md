@@ -5,9 +5,13 @@ excerpt: "Zi Lin's homepage"
 search_omit: true
 ---
 
-I am now a resident at **Google AI**, working with the Natural Language Understanding (NLU) team. I received my B.A. in **Computational and Applied Linguistics** from **Peking University**. My academic interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding.
+I am a Ph.D. student in Computer Science at UCSD advised by [Jingbo Shang](https://shangjingbo1226.github.io/). Previously, I was a resident at **Google AI**, working with the Natural Language Understanding (NLU) team. I received my B.A. in **Computational and Applied Linguistics** from **Peking University**. My academic interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding.
 
 ## Education
+* University of California, San Diego  
+*Sep. 2021 - Present*  
+Ph.D. in **Computer Science**
+
 * The Department of Chinese Language and Literature, Peking University  
 *Sept. 2015 - Jul. 2019*  
 B.A. in **Computational and Applied Linguistics**
@@ -17,7 +21,7 @@ B.A. in **Computational and Applied Linguistics**
 
 ## Experience
 * **Natural Language Understanding Team, Google MTV**  
-*Oct. 2019 - Present*  
+*Oct. 2019 - Sep. 2021*  
 AI resident, Collaborator: [**Dan Roth**](https://www.cis.upenn.edu/~danroth/), [**Jeremiah Liu**](http://jereliu.info/), [**Zi Yang**](https://www.aclweb.org/anthology/people/z/zi-yang/), Nan Hua, [**Ian Kivlichan**](https://scholar.google.com/citations?user=FRBObOwAAAAJ&hl=en)
 
 * **Knowledge Computing Group, Microsoft Research Asia**  
@@ -40,7 +44,7 @@ Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/675
 * **Measuring and Improving Model-Moderator Collaboration using Uncertainty Estimation**   
 Ian D. Kivlichan\*, **Zi Lin\***, Jeremiah Liu\*, Lucy Vasserman (\*:equal contribution)    
 *ACL workshop on Online Abuse and Harms ([WOAH](https://www.workshopononlineabuse.com/)))*, 2021  
-[<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1HKkl-zzZje9OtnjodA2oVUSxm--ysjDr/view?usp=sharing) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2107.04212) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/tree/main/baselines/toxic_comments) 
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://aclanthology.org/2021.woah-1.5.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1HKkl-zzZje9OtnjodA2oVUSxm--ysjDr/view?usp=sharing) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2107.04212) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/tree/main/baselines/toxic_comments) 
 
 
 * **Simple and Principled Uncertainty Estimation with Deterministic Deep Learning via Distance Awareness**   
@@ -51,14 +55,14 @@ Jeremiah Zhe Liu, **Zi Lin**, Shreyas Padhy, Dustin Tran, Tania Bedrax-Weiss, Ba
 
 * **Pruning Redundant Mappings in Transformer Models via Spectral-Normalized Identity Prior**  
 **Zi Lin**, Jeremiah Zhe Liu, Zi Yang, Nan Hua, Dan Roth  
-*Conference on Empirical Methods in Natural Language Processing ([EMNLP](https://2020.emnlp.org/) Findings)*, 2020 (also to appear in *[SustaiNLP](https://sites.google.com/view/sustainlp2020/home?authuser=0)@EMNLP*)  
-[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://www.aclweb.org/anthology/2020.findings-emnlp.64.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1yeGVqZ_-VcoBwiXibXmcsPILOE96ZngT/view?usp=sharing) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2010.01791v1)  
+*Conference on Empirical Methods in Natural Language Processing ([EMNLP](https://2020.emnlp.org/) Findings)*, 2020 (also presented in *[SustaiNLP](https://sites.google.com/view/sustainlp2020/home?authuser=0)@EMNLP 2020*)  
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://www.aclweb.org/anthology/2020.findings-emnlp.64.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1yeGVqZ_-VcoBwiXibXmcsPILOE96ZngT/view?usp=sharing) | [<span class="fas fa-file-video fa-lg" href=""></span> Video](https://slideslive.com/38940112/pruning-redundant-mappings-in-transformer-models-via-spectralnormalized-identity-prior) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2010.01791v1)  
 
 
 * **A Comparative Analysis of Knowledge-Intensive and Data-Intensive Semantic Parsers**  
 Junjie Cao\*, **Zi Lin\***, Weiwei Sun, Xiaojun Wan (\*:equal contribution)  
-*Computational Linguistics* (accepted for publication: 18 November 2020)  
-[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://direct.mit.edu/coli/article/47/1/43/97332/Comparing-Knowledge-Intensive-and-Data-Intensive) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1sGUoFKnY-YQfqopBgvNbch0NtqNRXsGz/view?usp=sharing) | [<span class="ai ai-arxiv-square fa-lg"></span> Arxiv](https://arxiv.org/abs/1907.02298)
+*Computational Linguistics* 47 (1), 43-68 (also presented in [EACL 2021](https://2021.eacl.org/))  
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://direct.mit.edu/coli/article/47/1/43/97332/Comparing-Knowledge-Intensive-and-Data-Intensive) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1sGUoFKnY-YQfqopBgvNbch0NtqNRXsGz/view?usp=sharing) | [<span class="fas fa-file-video fa-lg" href=""></span> Video](https://slideslive.com/38954694/comparing-knowledgeintensive-and-dataintensive-models-for-english-resource-semantic-parsing) | [<span class="ai ai-arxiv-square fa-lg"></span> Arxiv](https://arxiv.org/abs/1907.02298)
 
 
 * **Hint-Based Training for Non-Autoregressive Machine Translation**  

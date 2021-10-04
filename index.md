@@ -43,7 +43,7 @@ Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/675
 ## Selected Publication [<span class="ai ai-google-scholar-square fa-1x" href=""></span>](https://scholar.google.com/citations?user=kgZYttUAAAAJ&hl=en)
 * **Measuring and Improving Model-Moderator Collaboration using Uncertainty Estimation**   
 Ian D. Kivlichan\*, **Zi Lin\***, Jeremiah Liu\*, Lucy Vasserman (\*:equal contribution)    
-*ACL workshop on Online Abuse and Harms ([WOAH](https://www.workshopononlineabuse.com/)))*, 2021  
+*ACL workshop on Online Abuse and Harms ([WOAH](https://www.workshopononlineabuse.com/))*, 2021  
 [<span class="fas fa-file-pdf fa-lg"></span> Paper](https://aclanthology.org/2021.woah-1.5.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1HKkl-zzZje9OtnjodA2oVUSxm--ysjDr/view?usp=sharing) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2107.04212) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/tree/main/baselines/toxic_comments) 
 
 

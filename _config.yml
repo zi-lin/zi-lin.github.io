@@ -19,7 +19,7 @@ locale: en-US
 title: Zi Lin
 my_site_title: Zi Lin
 #name: Zi Lin
-description: "lzi[at]google.com"
+description: "lzi[at]ucsd.edu"
 baseurl: #/blog # the subpath of your site, e.g. "/blog"
 #url: http://127.0.0.1:4000
 url: https://zi-lin.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"

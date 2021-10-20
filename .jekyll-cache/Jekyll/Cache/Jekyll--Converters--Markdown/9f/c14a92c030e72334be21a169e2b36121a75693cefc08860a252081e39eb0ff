@@ -1,0 +1,3 @@
+I"R<h1 id="introduction">Introduction</h1>
+<p><strong>Semantic Role Labeling (SRL)</strong>, sometimes called <em>shallow semantic parsing</em>, is a process in natural language processing that assigns semantic roles to constituents or their head words in a sentence according to their relationship to the predicates expressed in the sentence. Typical semantic roles can be divided into core <strong>arguments</strong> and <strong>adjuncts</strong>. The core arguments include <em>Agent, Patient, Source, Goal</em>, etc, While the adjuncts include <em>Location, Time, Manner, Cause</em>, etc.</p>
+:ET

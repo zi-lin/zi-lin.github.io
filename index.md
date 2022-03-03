@@ -59,10 +59,10 @@ Jeremiah Zhe Liu, **Zi Lin**, Shreyas Padhy, Dustin Tran, Tania Bedrax-Weiss, Ba
 [<span class="fas fa-file-pdf fa-lg"></span> Paper](https://www.aclweb.org/anthology/2020.findings-emnlp.64.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1yeGVqZ_-VcoBwiXibXmcsPILOE96ZngT/view?usp=sharing) | [<span class="fas fa-file-video fa-lg" href=""></span> Video](https://slideslive.com/38940112/pruning-redundant-mappings-in-transformer-models-via-spectralnormalized-identity-prior) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2010.01791v1)  
 
 
-* **A Comparative Analysis of Knowledge-Intensive and Data-Intensive Semantic Parsers**  
+* **Comparing Knowledge-Intensive and Data-Intensive Models for English Resource Semantic Parsing**  
 Junjie Cao\*, **Zi Lin\***, Weiwei Sun, Xiaojun Wan (\*:equal contribution)  
 *Computational Linguistics* 47 (1), 43-68 (also presented in [EACL 2021](https://2021.eacl.org/))  
-[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://direct.mit.edu/coli/article/47/1/43/97332/Comparing-Knowledge-Intensive-and-Data-Intensive) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1sGUoFKnY-YQfqopBgvNbch0NtqNRXsGz/view?usp=sharing) | [<span class="fas fa-file-video fa-lg" href=""></span> Video](https://slideslive.com/38954694/comparing-knowledgeintensive-and-dataintensive-models-for-english-resource-semantic-parsing) | [<span class="ai ai-arxiv-square fa-lg"></span> Arxiv](https://arxiv.org/abs/1907.02298)
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://aclanthology.org/2021.cl-1.3.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1sGUoFKnY-YQfqopBgvNbch0NtqNRXsGz/view?usp=sharing) | [<span class="fas fa-file-video fa-lg" href=""></span> Video](https://slideslive.com/38954694/comparing-knowledgeintensive-and-dataintensive-models-for-english-resource-semantic-parsing) | [<span class="ai ai-arxiv-square fa-lg"></span> Arxiv](https://arxiv.org/abs/1907.02298)
 
 
 * **Hint-Based Training for Non-Autoregressive Machine Translation**  

@@ -21,6 +21,10 @@ B.A. in **Computational and Applied Linguistics**
 
 ## Experience
 * **Natural Language Understanding Team, Google MTV**  
+*Jun. 2022 - Sep. 2022*  
+Student Researcher
+
+* **Natural Language Understanding Team, Google MTV**  
 *Oct. 2019 - Sep. 2021*  
 AI resident, Collaborator: [**Dan Roth**](https://www.cis.upenn.edu/~danroth/), [**Jeremiah Liu**](http://jereliu.info/), [**Zi Yang**](https://www.aclweb.org/anthology/people/z/zi-yang/), Nan Hua, [**Ian Kivlichan**](https://scholar.google.com/citations?user=FRBObOwAAAAJ&hl=en)
 
@@ -41,6 +45,12 @@ Research Assistant, Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/
 Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/6753.htm)
 
 ## Selected Publication [<span class="ai ai-google-scholar-square fa-1x" href=""></span>](https://scholar.google.com/citations?user=kgZYttUAAAAJ&hl=en)
+* **Towards Collaborative Neural-Symbolic Graph Semantic Parsing via Uncertainty**   
+**Zi Lin**, Jeremiah Liu, Jingbo Shang    
+*The 60th Annual Meeting of the Association for Computational Linguistics ([ACL](https://www.2022.aclweb.org/) Findings)*, 2022  
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://aclanthology.org/2022.findings-acl.328.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1nYaY9xux2EtWn2Mz_STWFbhIBfouZUQq/view?usp=sharing)
+
+
 * **Measuring and Improving Model-Moderator Collaboration using Uncertainty Estimation**   
 Ian D. Kivlichan\*, **Zi Lin\***, Jeremiah Liu\*, Lucy Vasserman (\*:equal contribution)    
 *ACL workshop on Online Abuse and Harms ([WOAH](https://www.workshopononlineabuse.com/))*, 2021  

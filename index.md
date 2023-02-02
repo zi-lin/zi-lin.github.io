@@ -45,6 +45,18 @@ Research Assistant, Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/
 Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/6753.htm)
 
 ## Selected Publication [<span class="ai ai-google-scholar-square fa-1x" href=""></span>](https://scholar.google.com/citations?user=kgZYttUAAAAJ&hl=en)
+* **On Compositional Uncertainty Quantification for Seq2seq Graph Parsing**   
+**Zi Lin**, Jeremiah Liu, Du Phan, Panupong Pasupat, Jingbo Shang    
+*ICLR 2023*  
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://openreview.net/pdf?id=rJcLocAJpA6) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/tree/main/baselines/t5/data/deepbank) 
+
+
+* **Neural-Symbolic Inference for Robust Autoregressive Graph Parsing via Compositional Uncertainty Quantification**   
+**Zi Lin**, Jeremiah Liu, Jingbo Shang    
+*EMNLP 2022*  
+[<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2107.04212) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/tree/main/baselines/t5/data/deepbank) 
+
+
 * **Towards Collaborative Neural-Symbolic Graph Semantic Parsing via Uncertainty**   
 **Zi Lin**, Jeremiah Liu, Jingbo Shang    
 *ACL Findings 2022*  
@@ -75,16 +87,16 @@ Junjie Cao\*, **Zi Lin\***, Weiwei Sun, Xiaojun Wan (\*:equal contribution)
 [<span class="fas fa-file-pdf fa-lg"></span> Paper](https://aclanthology.org/2021.cl-1.3.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1sGUoFKnY-YQfqopBgvNbch0NtqNRXsGz/view?usp=sharing) | [<span class="fas fa-file-video fa-lg" href=""></span> Video](https://slideslive.com/38954694/comparing-knowledgeintensive-and-dataintensive-models-for-english-resource-semantic-parsing) | [<span class="ai ai-arxiv-square fa-lg"></span> Arxiv](https://arxiv.org/abs/1907.02298)
 
 
-* **Hint-Based Training for Non-Autoregressive Machine Translation**  
+<!-- * **Hint-Based Training for Non-Autoregressive Machine Translation**  
 Zhuohan Li, **Zi Lin**, Di He, Fei Tian, Tao Qin, Liwei Wang, Tie-Yan Liu  
 *EMNLP 2019*  
-[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://www.aclweb.org/anthology/D19-1573.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](./pdf/hint-nart-slides.pdf) | [<span class="fas fa-file-video fa-lg" href=""></span> Video](https://vimeo.com/396299266) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/1909.06708) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/zhuohan123/hint-nart)
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://www.aclweb.org/anthology/D19-1573.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](./pdf/hint-nart-slides.pdf) | [<span class="fas fa-file-video fa-lg" href=""></span> Video](https://vimeo.com/396299266) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/1909.06708) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/zhuohan123/hint-nart) -->
 
 
-* **Fast Structured Decoding for Sequence Models**  
+<!-- * **Fast Structured Decoding for Sequence Models**  
 Zhiqing Sun, Zhuohan Li, Haoqing Wang, Di He, **Zi Lin**, Zhihong Deng  
 *Neruips 2019*  
-[<span class="fas fa-file-pdf fa-lg"></span> Paper](http://papers.nips.cc/paper/8566-fast-structured-decoding-for-sequence-models.pdf) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/1910.11555) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/pytorch/fairseq/tree/master/examples/nonautoregressive_translation)
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](http://papers.nips.cc/paper/8566-fast-structured-decoding-for-sequence-models.pdf) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/1910.11555) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/pytorch/fairseq/tree/master/examples/nonautoregressive_translation) -->
 
 
 * **Parsing Meaning Representations: is Easier Always Better?**  

@@ -46,7 +46,7 @@ Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/675
 
 ## Selected Publication [<span class="ai ai-google-scholar-square fa-1x" href=""></span>](https://scholar.google.com/citations?user=kgZYttUAAAAJ&hl=en)
 * **On Compositional Uncertainty Quantification for Seq2seq Graph Parsing**   
-**Zi Lin**, Jeremiah Liu, Du Phan, Panupong Pasupat, Jingbo Shang    
+**Zi Lin**, Du Phan, Panupong Pasupat, Jeremiah Liu, Jingbo Shang    
 *ICLR 2023*  
 [<span class="fas fa-file-pdf fa-lg"></span> Paper](https://openreview.net/pdf?id=rJcLocAJpA6) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/tree/main/baselines/t5/data/deepbank) 
 

@@ -1,4 +1,4 @@
-I"£2<p>I am a Ph.D. student in Computer Science at UCSD advised by <a href="https://shangjingbo1226.github.io/">Jingbo Shang</a>. Previously, I was a resident at <strong>Google AI</strong>, working with the Natural Language Understanding (NLU) team. I received my B.A. in <strong>Computational and Applied Linguistics</strong> from <strong>Peking University</strong>. My academic interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding.</p>
+I"z2<p>I am a Ph.D. student in Computer Science at UCSD advised by <a href="https://shangjingbo1226.github.io/">Jingbo Shang</a>. Previously, I was a resident at <strong>Google AI</strong>, working with the Natural Language Understanding (NLU) team. I received my B.A. in <strong>Computational and Applied Linguistics</strong> from <strong>Peking University</strong>. My academic interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding.</p>
 
 <h2 id="education">Education</h2>
 <ul>
@@ -54,8 +54,8 @@ Research Assistant, Advisor: <a href="http://eecs.pku.edu.cn/info/1501/6753.htm"
 <h2 id="selected-publication-">Selected Publication <a href="https://scholar.google.com/citations?user=kgZYttUAAAAJ&amp;hl=en"><span class="ai ai-google-scholar-square fa-1x" href=""></span></a></h2>
 <ul>
   <li>
-    <p><strong>Neural-Symbolic Inference for Robust Autoregressive Graph Parsing via Compositional Uncertainty Quantification</strong> <br />
-<strong>Zi Lin</strong>, Jeremiah Liu, Du Phan, Panupong Pasupat, Jingbo Shang  <br />
+    <p><strong>On Compositional Uncertainty Quantification for Seq2seq Graph Parsing</strong> <br />
+<strong>Zi Lin</strong>, Du Phan, Panupong Pasupat, Jeremiah Liu, Jingbo Shang  <br />
 <em>ICLR 2023</em><br />
 <a href="https://openreview.net/pdf?id=rJcLocAJpA6"><span class="fas fa-file-pdf fa-lg"></span> Paper</a> | <a href="https://github.com/google/uncertainty-baselines/tree/main/baselines/t5/data/deepbank"><span class="fab fa-github-square fa-lg" href=""></span> Code</a></p>
   </li>

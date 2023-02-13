@@ -54,7 +54,7 @@ Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/675
 * **Neural-Symbolic Inference for Robust Autoregressive Graph Parsing via Compositional Uncertainty Quantification**   
 **Zi Lin**, Jeremiah Liu, Jingbo Shang    
 *EMNLP 2022*  
-[<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2107.04212) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/tree/main/baselines/t5/data/deepbank) 
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://aclanthology.org/2022.emnlp-main.314.pdf) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2301.11459) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/tree/main/baselines/t5/data/deepbank) 
 
 
 * **Towards Collaborative Neural-Symbolic Graph Semantic Parsing via Uncertainty**   

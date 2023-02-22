@@ -51,6 +51,12 @@ Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/675
 [<span class="fas fa-file-pdf fa-lg"></span> Paper](https://openreview.net/pdf?id=rJcLocAJpA6) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/tree/main/baselines/t5/data/deepbank) 
 
 
+* **A Simple Approach to Improve Single-Model Deep Uncertainty via Distance-Awareness**   
+Jeremiah Liu, Shreyas Padhy, Jie Ren, **Zi Lin**, Yeming Wen, Ghassen Jerfel, Zachary Nado, Jasper Snoek, Dustin Tran, Balaji Lakshminarayanan    
+*JMLR 2023*  
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://jmlr.org/papers/volume24/22-0479/22-0479.pdf) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2205.00403) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/)
+
+
 * **Neural-Symbolic Inference for Robust Autoregressive Graph Parsing via Compositional Uncertainty Quantification**   
 **Zi Lin**, Jeremiah Liu, Jingbo Shang    
 *EMNLP 2022*  

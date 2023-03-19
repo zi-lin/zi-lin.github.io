@@ -5,7 +5,7 @@ excerpt: "Zi Lin's homepage"
 search_omit: true
 ---
 
-I am a Ph.D. student in Computer Science at UCSD advised by [Jingbo Shang](https://shangjingbo1226.github.io/). Previously, I was a resident at **Google AI**, working with the Natural Language Understanding (NLU) team. I received my B.A. in **Computational and Applied Linguistics** from **Peking University**. My academic interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding.
+I am a Ph.D. student in Computer Science at UCSD advised by [Jingbo Shang](https://shangjingbo1226.github.io/). Previously, I was a visiting scholar at **Google**, working with the Google Language team. I received my B.A. in **Computational and Applied Linguistics** from **Peking University**. My academic interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding.
 
 ## Education
 * University of California, San Diego  
@@ -26,23 +26,26 @@ Student Researcher
 
 * **Natural Language Understanding Team, Google MTV**  
 *Oct. 2019 - Sep. 2021*  
-AI resident, Collaborator: [**Dan Roth**](https://www.cis.upenn.edu/~danroth/), [**Jeremiah Liu**](http://jereliu.info/), [**Zi Yang**](https://www.aclweb.org/anthology/people/z/zi-yang/), Nan Hua, [**Ian Kivlichan**](https://scholar.google.com/citations?user=FRBObOwAAAAJ&hl=en)
+Visiting Scholar
+<!-- Collaborator: [**Dan Roth**](https://www.cis.upenn.edu/~danroth/), [**Jeremiah Liu**](http://jereliu.info/), [**Zi Yang**](https://www.aclweb.org/anthology/people/z/zi-yang/), Nan Hua, [**Ian Kivlichan**](https://scholar.google.com/citations?user=FRBObOwAAAAJ&hl=en) -->
 
-* **Knowledge Computing Group, Microsoft Research Asia**  
+<!-- * **Knowledge Computing Group, Microsoft Research Asia**  
 *Apr. 2019 - Jul. 2019*  
-Research Intern, Mentor: [**Jin-Ge Yao**](https://aclweb.org/anthology/people/jin-ge-yao)
+Research Intern, Mentor: [**Jin-Ge Yao**](https://aclweb.org/anthology/people/jin-ge-yao) -->
 
-* **Language Computing and Web Mining Group, Wangxuan Institute of Computer Technology, Peking University**  
+<!-- * **Language Computing and Web Mining Group, Wangxuan Institute of Computer Technology, Peking University**  
 *Aug. 2017 - Apr. 2019*  
-Research Assistant, Advisor: [**Weiwei Sun**](https://www.cl.cam.ac.uk/~ws390/) (now at the University of Cambridge)
+Research Assistant, Advisor: [**Weiwei Sun**](https://www.cl.cam.ac.uk/~ws390/) (now at the University of Cambridge) -->
 
 * **Chinese Language Processing Group, Computer Science Department, Brandeis University**  
 *Jul. 2018 - Sept. 2018*  
-Research Assistant, Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/)
+Research Assistant
+<!-- Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/) -->
 
 * **Key Laboratory of Computational Linguistics, Peking University**  
 *Jul. 2016 - Feb. 2018*  
-Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/6753.htm)
+Research Assistant
+<!-- Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/6753.htm) -->
 
 ## Selected Publication [<span class="ai ai-google-scholar-square fa-1x" href=""></span>](https://scholar.google.com/citations?user=kgZYttUAAAAJ&hl=en)
 * **On Compositional Uncertainty Quantification for Seq2seq Graph Parsing**   
@@ -51,10 +54,10 @@ Research Assistant, Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/675
 [<span class="fas fa-file-pdf fa-lg"></span> Paper](https://openreview.net/pdf?id=rJcLocAJpA6) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/tree/main/baselines/t5/data/deepbank) 
 
 
-* **A Simple Approach to Improve Single-Model Deep Uncertainty via Distance-Awareness**   
+<!-- * **A Simple Approach to Improve Single-Model Deep Uncertainty via Distance-Awareness**   
 Jeremiah Liu, Shreyas Padhy, Jie Ren, **Zi Lin**, Yeming Wen, Ghassen Jerfel, Zachary Nado, Jasper Snoek, Dustin Tran, Balaji Lakshminarayanan    
 *JMLR 2023*  
-[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://jmlr.org/papers/volume24/22-0479/22-0479.pdf) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2205.00403) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/)
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://jmlr.org/papers/volume24/22-0479/22-0479.pdf) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2205.00403) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/) -->
 
 
 * **Neural-Symbolic Inference for Robust Autoregressive Graph Parsing via Compositional Uncertainty Quantification**   
@@ -81,10 +84,10 @@ Jeremiah Liu, **Zi Lin**, Shreyas Padhy, Dustin Tran, Tania Bedrax-Weiss, Balaji
 [<span class="fas fa-file-pdf fa-lg"></span> Paper](https://proceedings.neurips.cc/paper/2020/file/543e83748234f7cbab21aa0ade66565f-Paper.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Poster](https://drive.google.com/file/d/1ov8FUogW2ofGK1_GAmxDB9SlTRYCnSMQ/view?usp=sharing) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2006.10108) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines)    
 
 
-* **Pruning Redundant Mappings in Transformer Models via Spectral-Normalized Identity Prior**  
+<!-- * **Pruning Redundant Mappings in Transformer Models via Spectral-Normalized Identity Prior**  
 **Zi Lin**, Jeremiah Zhe Liu, Zi Yang, Nan Hua, Dan Roth  
 *EMNLP Findings 2020*    
-[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://www.aclweb.org/anthology/2020.findings-emnlp.64.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1yeGVqZ_-VcoBwiXibXmcsPILOE96ZngT/view?usp=sharing) | [<span class="fas fa-file-video fa-lg" href=""></span> Video](https://slideslive.com/38940112/pruning-redundant-mappings-in-transformer-models-via-spectralnormalized-identity-prior) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2010.01791v1)  
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://www.aclweb.org/anthology/2020.findings-emnlp.64.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1yeGVqZ_-VcoBwiXibXmcsPILOE96ZngT/view?usp=sharing) | [<span class="fas fa-file-video fa-lg" href=""></span> Video](https://slideslive.com/38940112/pruning-redundant-mappings-in-transformer-models-via-spectralnormalized-identity-prior) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2010.01791v1)   -->
 
 
 * **Comparing Knowledge-Intensive and Data-Intensive Models for English Resource Semantic Parsing**  
@@ -110,11 +113,11 @@ Zhiqing Sun, Zhuohan Li, Haoqing Wang, Di He, **Zi Lin**, Zhihong Deng
 *ACL 2019 Workshop on Designing Meaning Representations ([DMR](https://www.cs.brandeis.edu/~clp/dmr/))*  
 [<span class="fas fa-file-pdf fa-lg"></span> Paper](https://www.aclweb.org/anthology/W19-3304) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](./pdf/dmr_slides.pdf)
 
-
+<!-- 
 * **Implanting Rational Knowledge into Distributed Representation at Morpheme Level**  
 **Zi Lin**, Yang Liu  
 *AAAI 2019*  
-[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://www.aaai.org/ojs/index.php/AAAI/article/view/4151) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Poster](./pdf/aaai-poster.pdf) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/1811.10188) | [<span class="fas fa-list-alt fa-lg" href=""></span> Data](https://github.com/zi-lin/MC)
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://www.aaai.org/ojs/index.php/AAAI/article/view/4151) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Poster](./pdf/aaai-poster.pdf) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/1811.10188) | [<span class="fas fa-list-alt fa-lg" href=""></span> Data](https://github.com/zi-lin/MC) -->
 
 
 * **Semantic Role Labeling for Learner Chinese: the Importance of Syntactic Parsing and L2-L1 Parallel Data**  

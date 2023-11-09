@@ -5,7 +5,7 @@ excerpt: "Zi Lin's homepage"
 search_omit: true
 ---
 
-I am a Ph.D. student in Computer Science at UCSD advised by [Jingbo Shang](https://shangjingbo1226.github.io/). Previously, I was a visiting scholar at **Google**, working with the Google Language team. I received my B.A. in **Computational and Applied Linguistics** from **Peking University**. My academic interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding.
+I am a Ph.D. student in Computer Science at **UCSD** advised by [Jingbo Shang](https://shangjingbo1226.github.io/). Previously, I was an AI resident at **Google Research**. I received my B.A. in Computational Linguistics from **Peking University**. My academic interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding.
 
 ## Education
 * University of California, San Diego  
@@ -14,24 +14,25 @@ Ph.D. in **Computer Science**
 
 * The Department of Chinese Language and Literature, Peking University  
 *Sept. 2015 - Jul. 2019*  
-B.A. in **Computational and Applied Linguistics**
+B.A. in **Computational Linguistics**
 
 <!-- * Summer Session, University of California at Berkeley  
 *Summer 2017* -->
 
 ## Experience
-* **Natural Language Understanding Team, Google MTV**  
+* **Natural Language Understanding Team, Google Research**  
 *Jun. 2022 - Sep. 2022*  
 Student Researcher
 
-* **Natural Language Understanding Team, Google MTV**  
+* **Natural Language Understanding Team, Google Research**  
 *Oct. 2019 - Sep. 2021*  
-Visiting Scholar
+AI Resident
 <!-- Collaborator: [**Dan Roth**](https://www.cis.upenn.edu/~danroth/), [**Jeremiah Liu**](http://jereliu.info/), [**Zi Yang**](https://www.aclweb.org/anthology/people/z/zi-yang/), Nan Hua, [**Ian Kivlichan**](https://scholar.google.com/citations?user=FRBObOwAAAAJ&hl=en) -->
 
-<!-- * **Knowledge Computing Group, Microsoft Research Asia**  
+* **Knowledge Computing Group, Microsoft Research Asia**  
 *Apr. 2019 - Jul. 2019*  
-Research Intern, Mentor: [**Jin-Ge Yao**](https://aclweb.org/anthology/people/jin-ge-yao) -->
+Research Intern 
+<!-- Research Intern, Mentor: [**Jin-Ge Yao**](https://aclweb.org/anthology/people/jin-ge-yao) -->
 
 <!-- * **Language Computing and Web Mining Group, Wangxuan Institute of Computer Technology, Peking University**  
 *Aug. 2017 - Apr. 2019*  
@@ -48,16 +49,33 @@ Research Assistant
 <!-- Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/6753.htm) -->
 
 ## Selected Publication [<span class="ai ai-google-scholar-square fa-1x" href=""></span>](https://scholar.google.com/citations?user=kgZYttUAAAAJ&hl=en)
+* **Retrieval-Augmented Parsing for Complex Graphs by Exploiting Structure and Uncertainty**  
+**Zi Lin**, Quan Yuan, Panupong Pasupat, Jeremiah Zhe Liu, Jingbo Shang  
+*EMNLP findings 2023*  
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://openreview.net/pdf?id=dFvwxdSj0B) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/tree/main/baselines/t5/data/deepbank) 
+
+
+* **ToxicChat: Unveiling Hidden Challenges of Toxicity Detection in Real-World User-AI Conversation**  
+**Zi Lin\***, Zihan Wang*, Yongqi Tong, Yangkun Wang, Yuxin Guo, Yujia Wang, Jingbo Shang (\*:equal contribution)  
+*EMNLP findings 2023*  
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://openreview.net/pdf?id=jTiJPDv82w) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2310.17389) | [<span class="fa fa-rss-square"></span> Blog](https://lmsys.org/blog/2023-10-30-toxicchat/) | [<span class="fas fa-list-alt fa-lg" href=""></span> Data](https://huggingface.co/datasets/lmsys/toxic-chat)  
+
+
+* **Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality**  
+Wei-Lin Chiang, Zhuohan Li, **Zi Lin**, Ying Sheng, Zhanghao Wu, Hao Zhang, Lianmin Zheng, Siyuan Zhuang, Yonghao Zhuang, Joseph E. Gonzalez, Ion Stoica, Eric P. Xing    
+*Blogpost 2023*  
+[<span class="fa fa-rss-square"></span> Blog](https://lmsys.org/blog/2023-03-30-vicuna/) | [<span class="fa fa-desktop" href=""></span> Demo](https://arxiv.org/abs/2301.11459) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/lm-sys/FastChat) 
+
 * **On Compositional Uncertainty Quantification for Seq2seq Graph Parsing**   
 **Zi Lin**, Du Phan, Panupong Pasupat, Jeremiah Liu, Jingbo Shang    
 *ICLR 2023*  
 [<span class="fas fa-file-pdf fa-lg"></span> Paper](https://openreview.net/pdf?id=rJcLocAJpA6) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/tree/main/baselines/t5/data/deepbank) 
 
 
-<!-- * **A Simple Approach to Improve Single-Model Deep Uncertainty via Distance-Awareness**   
+* **A Simple Approach to Improve Single-Model Deep Uncertainty via Distance-Awareness**   
 Jeremiah Liu, Shreyas Padhy, Jie Ren, **Zi Lin**, Yeming Wen, Ghassen Jerfel, Zachary Nado, Jasper Snoek, Dustin Tran, Balaji Lakshminarayanan    
 *JMLR 2023*  
-[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://jmlr.org/papers/volume24/22-0479/22-0479.pdf) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2205.00403) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/) -->
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://jmlr.org/papers/volume24/22-0479/22-0479.pdf) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2205.00403) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/)
 
 
 * **Neural-Symbolic Inference for Robust Autoregressive Graph Parsing via Compositional Uncertainty Quantification**   

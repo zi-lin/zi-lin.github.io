@@ -5,7 +5,9 @@ excerpt: "Zi Lin's homepage"
 search_omit: true
 ---
 
-I am a Ph.D. student in Computer Science at **UCSD** advised by [Jingbo Shang](https://shangjingbo1226.github.io/). Previously, I was an AI resident at **Google Research**. I received my B.A. in Computational Linguistics from **Peking University**. My academic interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding.
+I am a Ph.D. student in Computer Science at **UCSD** advised by [Jingbo Shang](https://shangjingbo1226.github.io/). Previously, I was an AI resident at **Google Research**. I received my B.A. in Computational Linguistics from **Peking University**.
+
+My research interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding. I am honored to be selected as a [DeepMind Scholar](https://sites.google.com/google.com/deepmind-scholars-welcome/home).
 
 ## Education
 * University of California, San Diego  
@@ -48,7 +50,7 @@ Research Assistant
 Research Assistant
 <!-- Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/6753.htm) -->
 
-## Selected Publication [<span class="ai ai-google-scholar-square fa-1x" href=""></span>](https://scholar.google.com/citations?user=kgZYttUAAAAJ&hl=en)
+## Selected Publication [<span class="ai ai-google-scholar-square fa-1x" href=""></span>](https://scholar.google.com/citations?user=kgZYttUAAAAJ&hl=en) 
 * **Retrieval-Augmented Parsing for Complex Graphs by Exploiting Structure and Uncertainty**  
 **Zi Lin**, Quan Yuan, Panupong Pasupat, Jeremiah Zhe Liu, Jingbo Shang  
 *EMNLP findings 2023*  
@@ -56,13 +58,13 @@ Research Assistant
 
 
 * **ToxicChat: Unveiling Hidden Challenges of Toxicity Detection in Real-World User-AI Conversation**  
-**Zi Lin\***, Zihan Wang*, Yongqi Tong, Yangkun Wang, Yuxin Guo, Yujia Wang, Jingbo Shang (\*:equal contribution)  
+**Zi Lin\***, Zihan Wang\*, Yongqi Tong, Yangkun Wang, Yuxin Guo, Yujia Wang, Jingbo Shang  
 *EMNLP findings 2023*  
 [<span class="fas fa-file-pdf fa-lg"></span> Paper](https://openreview.net/pdf?id=jTiJPDv82w) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2310.17389) | [<span class="fa fa-rss-square"></span> Blog](https://lmsys.org/blog/2023-10-30-toxicchat/) | [<span class="fas fa-list-alt fa-lg" href=""></span> Data](https://huggingface.co/datasets/lmsys/toxic-chat)  
 
 
 * **Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality**  
-Wei-Lin Chiang, Zhuohan Li, **Zi Lin**, Ying Sheng, Zhanghao Wu, Hao Zhang, Lianmin Zheng, Siyuan Zhuang, Yonghao Zhuang, Joseph E. Gonzalez, Ion Stoica, Eric P. Xing    
+Wei-Lin Chiang\*, Zhuohan Li\*, **Zi Lin\***, Ying Sheng\*, Zhanghao Wu\*, Hao Zhang\*, Lianmin Zheng\*, Siyuan Zhuang\*, Yonghao Zhuang\*, Joseph E. Gonzalez, Ion Stoica, Eric P. Xing    
 *Blogpost 2023*  
 [<span class="fa fa-rss-square"></span> Blog](https://lmsys.org/blog/2023-03-30-vicuna/) | [<span class="fa fa-desktop" href=""></span> Demo](https://arxiv.org/abs/2301.11459) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/lm-sys/FastChat) 
 
@@ -91,7 +93,7 @@ Jeremiah Liu, Shreyas Padhy, Jie Ren, **Zi Lin**, Yeming Wen, Ghassen Jerfel, Za
 
 
 * **Measuring and Improving Model-Moderator Collaboration using Uncertainty Estimation**   
-Ian D. Kivlichan\*, **Zi Lin\***, Jeremiah Liu\*, Lucy Vasserman (\*:equal contribution)    
+Ian D. Kivlichan\*, **Zi Lin\***, Jeremiah Liu\*, Lucy Vasserman    
 *ACL 2021 workshop on Online Abuse and Harms ([WOAH](https://www.workshopononlineabuse.com/))*  
 [<span class="fas fa-file-pdf fa-lg"></span> Paper](https://aclanthology.org/2021.woah-1.5.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1HKkl-zzZje9OtnjodA2oVUSxm--ysjDr/view?usp=sharing) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2107.04212) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/tree/main/baselines/toxic_comments) 
 
@@ -109,7 +111,7 @@ Jeremiah Liu, **Zi Lin**, Shreyas Padhy, Dustin Tran, Tania Bedrax-Weiss, Balaji
 
 
 * **Comparing Knowledge-Intensive and Data-Intensive Models for English Resource Semantic Parsing**  
-Junjie Cao\*, **Zi Lin\***, Weiwei Sun, Xiaojun Wan (\*:equal contribution)  
+Junjie Cao\*, **Zi Lin\***, Weiwei Sun, Xiaojun Wan  
 *Computational Linguistics 47 (1), 43-68 (also presented in [EACL 2021](https://2021.eacl.org/))*  
 [<span class="fas fa-file-pdf fa-lg"></span> Paper](https://aclanthology.org/2021.cl-1.3.pdf) | [<span class="fas fa-file-powerpoint fa-lg" href=""></span> Slides](https://drive.google.com/file/d/1sGUoFKnY-YQfqopBgvNbch0NtqNRXsGz/view?usp=sharing) | [<span class="fas fa-file-video fa-lg" href=""></span> Video](https://slideslive.com/38954694/comparing-knowledgeintensive-and-dataintensive-models-for-english-resource-semantic-parsing) | [<span class="ai ai-arxiv-square fa-lg"></span> Arxiv](https://arxiv.org/abs/1907.02298)
 

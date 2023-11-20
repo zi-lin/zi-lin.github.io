@@ -54,13 +54,14 @@ Research Assistant
 * **Retrieval-Augmented Parsing for Complex Graphs by Exploiting Structure and Uncertainty**  
 **Zi Lin**, Quan Yuan, Panupong Pasupat, Jeremiah Zhe Liu, Jingbo Shang  
 *EMNLP findings 2023*  
-[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://openreview.net/pdf?id=dFvwxdSj0B) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/tree/main/baselines/t5/data/deepbank) 
+<!-- [Paper](https://openreview.net/pdf?id=dFvwxdSj0B) | [Code](https://github.com/google/uncertainty-baselines/tree/main/baselines/t5/data/deepbank)  -->
+[<span class="fas fa-file-pdf fa-lg"></span> Paper](./pdf/EMNLP_2023_retrieval.pdf) | [<span class="fab fa-github-square fa-lg" href=""></span> Code](https://github.com/google/uncertainty-baselines/tree/main/baselines/t5/data/deepbank) 
 
 
 * **ToxicChat: Unveiling Hidden Challenges of Toxicity Detection in Real-World User-AI Conversation**  
 **Zi Lin\***, Zihan Wang\*, Yongqi Tong, Yangkun Wang, Yuxin Guo, Yujia Wang, Jingbo Shang  
 *EMNLP findings 2023*  
-[<span class="fas fa-file-pdf fa-lg"></span> Paper](https://openreview.net/pdf?id=jTiJPDv82w) | [<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2310.17389) | [<span class="fa fa-rss-square"></span> Blog](https://lmsys.org/blog/2023-10-30-toxicchat/) | [<span class="fas fa-list-alt fa-lg" href=""></span> Data](https://huggingface.co/datasets/lmsys/toxic-chat)  
+[<span class="ai ai-arxiv-square fa-lg" href=""></span> Arxiv](https://arxiv.org/abs/2310.17389) | [<span class="fa fa-rss-square"></span> Blog](https://lmsys.org/blog/2023-10-30-toxicchat/) | [<span class="fas fa-list-alt fa-lg" href=""></span> Data](https://huggingface.co/datasets/lmsys/toxic-chat)  
 
 
 * **Vicuna: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality**  

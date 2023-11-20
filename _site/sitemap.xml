@@ -45,6 +45,10 @@
 <loc>http://localhost:4000/tag/tag/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/pdf/EMNLP_2023_retrieval.pdf</loc>
+<lastmod>2023-11-20T11:15:39-08:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/pdf/aaai-poster.pdf</loc>
 <lastmod>2022-02-23T13:18:53-08:00</lastmod>
 </url>

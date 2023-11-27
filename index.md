@@ -7,7 +7,7 @@ search_omit: true
 
 I am a Ph.D. student in Computer Science at **UCSD** advised by [Jingbo Shang](https://shangjingbo1226.github.io/). Previously, I was an AI resident at **Google Research**. I received my B.A. in Computational Linguistics from **Peking University**.
 
-My research interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding. I am honored to be selected as a [DeepMind Scholar](https://sites.google.com/google.com/deepmind-scholars-welcome/home).
+My research interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding. I am honored to be selected as a [DeepMind Scholar](https://deepmind.google/about/education/#scholarships).
 
 ## Education
 * University of California, San Diego  

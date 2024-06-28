@@ -7,7 +7,7 @@ search_omit: true
 
 I am a Ph.D. student in Computer Science at **UCSD** advised by [Jingbo Shang](https://shangjingbo1226.github.io/). Previously, I was an AI resident at **Google Research**. I received my B.A. in Computational Linguistics from **Peking University**.
 
-My research interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding. I am honored to be selected as a [DeepMind Scholar](https://deepmind.google/about/education/#scholarships).
+I pursued research in Natural Language Processing (NLP) because of my multidisciplinary education in both humanities and computer science. My goal is to develop cutting-edge language technologies that are deeply attuned to human behaviors and values, which I refer to as *human-centric* AI. This involves: (1) language capacity, (2) reasoning ability, and (3) human values. I am honored to be selected as a [DeepMind Scholar](https://deepmind.google/about/education/#scholarships).
 
 ## Education
 * University of California, San Diego  
@@ -22,16 +22,20 @@ B.A. in **Computational Linguistics**
 *Summer 2017* -->
 
 ## Experience
-* **Natural Language Understanding Team, Google Research**  
-*Jun. 2022 - Sep. 2022*  
+* **GenAI Team, Meta**  
+*Jun. 2024 - Sep. 2024*  
+Research Scientist Intern
+
+* **Google DeepMind**  
+*Jun. 2022 - Jun. 2024*  
 Student Researcher
 
-* **Natural Language Understanding Team, Google Research**  
+* **NLU Team, Google Research**  
 *Oct. 2019 - Sep. 2021*  
 AI Resident
 <!-- Collaborator: [**Dan Roth**](https://www.cis.upenn.edu/~danroth/), [**Jeremiah Liu**](http://jereliu.info/), [**Zi Yang**](https://www.aclweb.org/anthology/people/z/zi-yang/), Nan Hua, [**Ian Kivlichan**](https://scholar.google.com/citations?user=FRBObOwAAAAJ&hl=en) -->
 
-* **Knowledge Computing Group, Microsoft Research Asia**  
+* **Microsoft Research Asia**  
 *Apr. 2019 - Jul. 2019*  
 Research Intern 
 <!-- Research Intern, Mentor: [**Jin-Ge Yao**](https://aclweb.org/anthology/people/jin-ge-yao) -->
@@ -40,14 +44,14 @@ Research Intern
 *Aug. 2017 - Apr. 2019*  
 Research Assistant, Advisor: [**Weiwei Sun**](https://www.cl.cam.ac.uk/~ws390/) (now at the University of Cambridge) -->
 
-* **Chinese Language Processing Group, Computer Science Department, Brandeis University**  
+<!-- * **Brandeis University**  
 *Jul. 2018 - Sept. 2018*  
-Research Assistant
+Research Assistant -->
 <!-- Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/) -->
 
-* **Key Laboratory of Computational Linguistics, Peking University**  
+<!-- * **Key Laboratory of Computational Linguistics, Peking University**  
 *Jul. 2016 - Feb. 2018*  
-Research Assistant
+Research Assistant -->
 <!-- Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/6753.htm) -->
 
 ## Selected Publication [<span class="ai ai-google-scholar-square fa-1x" href=""></span>](https://scholar.google.com/citations?user=kgZYttUAAAAJ&hl=en) 

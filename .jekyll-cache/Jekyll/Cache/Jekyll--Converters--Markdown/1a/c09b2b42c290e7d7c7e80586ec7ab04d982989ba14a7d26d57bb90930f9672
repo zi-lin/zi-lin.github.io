@@ -1,6 +1,6 @@
 I"Ã;<p>I am a Ph.D. student in Computer Science at <strong>UCSD</strong> advised by <a href="https://shangjingbo1226.github.io/">Jingbo Shang</a>. Previously, I was an AI resident at <strong>Google Research</strong>. I received my B.A. in Computational Linguistics from <strong>Peking University</strong>.</p>
 
-<p>My research interests are interdisciplinary, including (1) using computational methods to investigate fundamental linguistic questions and (2) applying findings from linguistics to develop techniques for automatic natural language understanding. I am honored to be selected as a <a href="https://sites.google.com/google.com/deepmind-scholars-welcome/home">DeepMind Scholar</a>.</p>
+<p>I pursued research in Natural Language Processing (NLP) because of my multidisciplinary education in both humanities and computer science. My goal is to develop cutting-edge language technologies that are deeply attuned to human behaviors and values, which I refer to as <em>human-centric</em> AI. This includes: (1) language capacity, (2) reasoning ability, and (3) human values. I am honored to be selected as a <a href="https://deepmind.google/about/education/#scholarships">DeepMind Scholar</a>.</p>
 
 <h2 id="education">Education</h2>
 <ul>
@@ -22,18 +22,23 @@ B.A. in <strong>Computational Linguistics</strong></p>
 <h2 id="experience">Experience</h2>
 <ul>
   <li>
-    <p><strong>Natural Language Understanding Team, Google Research</strong><br />
-<em>Jun. 2022 - Sep. 2022</em><br />
+    <p><strong>GenAI Team, Meta</strong><br />
+<em>Jun. 2024 - Sep. 2024</em><br />
+Research Scientist Intern</p>
+  </li>
+  <li>
+    <p><strong>Google DeepMind</strong><br />
+<em>Jun. 2022 - Jun. 2024</em><br />
 Student Researcher</p>
   </li>
   <li>
-    <p><strong>Natural Language Understanding Team, Google Research</strong><br />
+    <p><strong>NLU Team, Google Research</strong><br />
 <em>Oct. 2019 - Sep. 2021</em><br />
 AI Resident
 <!-- Collaborator: [**Dan Roth**](https://www.cis.upenn.edu/~danroth/), [**Jeremiah Liu**](http://jereliu.info/), [**Zi Yang**](https://www.aclweb.org/anthology/people/z/zi-yang/), Nan Hua, [**Ian Kivlichan**](https://scholar.google.com/citations?user=FRBObOwAAAAJ&hl=en) --></p>
   </li>
   <li>
-    <p><strong>Knowledge Computing Group, Microsoft Research Asia</strong><br />
+    <p><strong>Microsoft Research Asia</strong><br />
 <em>Apr. 2019 - Jul. 2019</em><br />
 Research Intern 
 <!-- Research Intern, Mentor: [**Jin-Ge Yao**](https://aclweb.org/anthology/people/jin-ge-yao) --></p>
@@ -44,20 +49,15 @@ Research Intern
 *Aug. 2017 - Apr. 2019*  
 Research Assistant, Advisor: [**Weiwei Sun**](https://www.cl.cam.ac.uk/~ws390/) (now at the University of Cambridge) -->
 
-<ul>
-  <li>
-    <p><strong>Chinese Language Processing Group, Computer Science Department, Brandeis University</strong><br />
-<em>Jul. 2018 - Sept. 2018</em><br />
-Research Assistant
-<!-- Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/) --></p>
-  </li>
-  <li>
-    <p><strong>Key Laboratory of Computational Linguistics, Peking University</strong><br />
-<em>Jul. 2016 - Feb. 2018</em><br />
-Research Assistant
-<!-- Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/6753.htm) --></p>
-  </li>
-</ul>
+<!-- * **Brandeis University**  
+*Jul. 2018 - Sept. 2018*  
+Research Assistant -->
+<!-- Advisor: [**Nianwen Xue**](http://www.cs.brandeis.edu/~xuen/) -->
+
+<!-- * **Key Laboratory of Computational Linguistics, Peking University**  
+*Jul. 2016 - Feb. 2018*  
+Research Assistant -->
+<!-- Advisor: [**Yang Liu**](http://eecs.pku.edu.cn/info/1501/6753.htm) -->
 
 <h2 id="selected-publication-">Selected Publication <a href="https://scholar.google.com/citations?user=kgZYttUAAAAJ&amp;hl=en"><span class="ai ai-google-scholar-square fa-1x" href=""></span></a></h2>
 <ul>
